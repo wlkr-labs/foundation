@@ -22,7 +22,7 @@ Postiz keeps its required upstream Node runtime; the host's Rust-first policy ap
 
 ## Social setup coordination checkpoint — October 6, 2026
 
-The existing owner-only vault and social mailbox were reused. The shared Caddy container was present but had failed at host startup before this task. Its existing routes and ports were recovered, then the isolated Postiz route was added. Bluesky and Mastodon are connected; two synthetic drafts remain DRAFT with no queued or published posts. Provider apps and owner/provider gates have separate status in the execution record.
+The existing owner-only vault and social mailbox were reused. The shared Caddy container was present but had failed at host startup before this task. Its existing routes and ports were recovered, then the isolated Postiz route was added. Bluesky, Mastodon and Threads are connected; three synthetic drafts remain DRAFT with no queued or published posts. Provider apps and owner/provider gates have separate status in the execution record.
 ## 1. Inspect and prepare
 
 - [x] Confirm authorized Tailscale/SSH access to 0o10, actual host identity, deployment account and administrator capability. Keep IPs, credentials and private operator paths outside Git.
