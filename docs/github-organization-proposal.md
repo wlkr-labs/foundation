@@ -13,7 +13,7 @@ All eight foundation/catalog/supporting repositories inspected report their resp
 
 Detailed repo names, metadata and dependency indexes are local only in ignored `private/foundation/github-inventory.json` and `local-dependency-index.json`. Account-level app installation/package reads returned 403; account SSH/signing-key reads returned 404 under the existing token scopes. Private branch-protection/ruleset reads returned 403. Do not infer “none” from inaccessible reads. No extra scopes were requested and no secret values or key material were collected.
 
-A local high-signal scan of all reachable text blobs (up to 2 MB each) found no credential-pattern or sensitive-filename candidates in either the foundation or website history. Its private report records 16 foundation and 140 website text blobs. This bounded scan is preparation evidence, not a complete privacy/content approval for a new remote.
+A local high-signal scan of reachable text blobs (up to 2 MB each) found no credential-pattern or sensitive-filename candidates in either the foundation or website history. Its private report records the exact scope and counts. This bounded scan is preparation evidence, not a complete privacy/content approval for a new remote.
 
 ## Concrete recommendation
 
