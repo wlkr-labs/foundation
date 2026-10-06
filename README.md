@@ -19,6 +19,13 @@ Implementation starts with the [practical checklist](docs/implementation-checkli
 
 The updated [logo suite](brand/README.md) preserves the supplied originals, removes the wordmark slash and repairs its r at Shane's request, and includes an [asset gallery](brand/index.html), balanced outlined lockups, icons, social graphics and print templates.
 
+## Social publishing handoffs
+
+- [Social account setup](docs/social-setup-handoff.md) · [copyable prompt](templates/social-setup-prompt.md): `social@wlkrlabs.com`, the `scwlkr` profile, organized credentials and free professional accounts.
+- [Postiz on 0o10 / Octal8](docs/postiz-octal8-setup-checklist.md) · [copyable prompt](templates/postiz-octal8-setup-prompt.md): deployment, HTTPS, persistence, backups, integrations and verification.
+
+These are execution handoffs, not evidence that social accounts or Postiz have been set up.
+
 ## Folder map
 
 ```text
