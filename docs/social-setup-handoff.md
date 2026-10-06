@@ -1,6 +1,6 @@
 # WLKR Labs social setup handoff
 
-Prepared October 6, 2026. Execution has begun: email delivery and the dedicated owner-only vault are verified, eight public profiles are established and linked from the website, and the two-week launch draft pack is saved privately. MFA/recovery, provider approvals and Postiz hosting still have documented gates. The current account inventory, evidence and exact remaining actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
+Prepared October 6, 2026. Execution has begun: email delivery and the dedicated owner-only vault are verified, ten public profiles are established and linked from the website, and the two-week launch draft pack is saved privately. The remaining authenticator recovery, mobile-only profile field, YouTube approval and Postiz hosting gates are documented privately. LinkedIn’s Overview and Mastodon’s reciprocal website verification are complete. The current account inventory, evidence and exact remaining actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
 
 ## Outcome
 
@@ -29,14 +29,14 @@ Use `brand/icons/avatar-light.png` or `avatar-dark.png`. Existing LinkedIn, X an
 - [x] Confirm `social@wlkrlabs.com` reaches the owner's intended WLKR inbox. October 2 records show Purelymail catch-all delivery to the existing Shane inbox; that is historical evidence, not a current delivery test.
 - [x] If necessary, add only the `social@` alias through the existing Purelymail administration. Reuse the current mailbox; a separate mailbox is unnecessary unless delivery or account requirements justify it. Preserve all other routes, MX, SPF, DKIM and DMARC.
 - [x] Send an owner-scoped synthetic verification message to `social@`; verify receipt and a reply from that address with authentication passing. Keep message contents private.
-- [ ] Confirm platform verification and recovery messages arrive before completing account setup. Do not change personal Meta, Google or LinkedIn account emails just to match the brand address.
+- [x] Confirm platform verification and recovery messages arrive before completing account setup. Do not change personal Meta, Google or LinkedIn account emails just to match the brand address.
 
 ## 2. Organize credentials
 
 The owner confirmed **1Password** for this setup. Confirm the account connected to `scwlkr`; a browser profile name does not prove which 1Password account is selected.
 
 - [x] Reuse or create an owner-only vault named **WLKR Labs Social** in that account. Do not purchase a new plan or share the vault. If vault creation is unavailable, use the existing private vault with a `WLKR Labs/Social` tag and record the limitation. [1Password vault instructions](https://support.1password.com/create-share-vaults/)
-- [ ] Create one Login item per actual login, named `WLKR Labs — <Platform>`, with the correct login URL, handle, `social@` email and a generated unique password.
+- [x] Create one Login item per actual login, named `WLKR Labs — <Platform>`, with the correct login URL, handle, `social@` email and a generated unique password where supported. Record SSO and magic-link exceptions without inventing extra passwords.
 - [x] For Facebook Pages, LinkedIn Pages or other assets controlled by an existing personal login, reference the controlling item; do not invent a separate Page password or move unrelated personal credentials.
 - [ ] Save passkeys, MFA configuration and recovery codes in the appropriate secure items. Record which real account owns each asset and how to recover it.
 - [ ] Store developer credentials separately: `WLKR Labs — <Provider> Developer App`. Store Postiz owner access and deployment secrets as distinct items in the same vault, tagged `Hosting`.
