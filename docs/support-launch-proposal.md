@@ -56,7 +56,7 @@ Record masked references in the [verification template](../templates/support-acc
 | Legal recipient | Exact legal name and truthful individual/sole-proprietor status matching provider records | Shane Walker, Individual, verified in Stripe; not a nonprofit account |
 | Identity | Legal name, address, birth date, phone, taxpayer identifier and any ID the provider actually requests | Shane enters these directly; exact requirements depend on onboarding |
 | Payout | Account holder matches recipient; bank/currency confirmed; retain masked last four and reference only | Shane confirmed the verified payout destination; bank details remain private |
-| Public receipt | Actual recipient name, support email and statement descriptor shown before payment | Descriptor, email/URL and live policy URLs saved/read back; Shane confirmed mailbox receive/reply. Phone display on receipts/invoices off; required mailing address remains pending a non-home alternative. No paid receipt proof |
+| Public receipt | Actual recipient name, support email and statement descriptor shown before payment | Descriptor, email/URL and live policy URLs saved/read back; Shane confirmed mailbox receive/reply. Phone display on receipts/invoices off; mailing-address privacy deferred because no alternative is available. No paid receipt proof |
 | Fees and features | Actual platform/processor/refund/chargeback fees; USD one-time support; optional features off; fee pass-through off | USD/one-time/creator-covered card fees read back; domestic-card rate verified. Provider-specific additions apply; no paid receipt/refund test |
 | Tax records | Export/receipt locations, actual treatment and reserve before using receipts | No transactions or balance established |
 | Backup | MacBook private records and owner-only Drive recovery folder; no credentials, IDs or bank numbers | Local records exist; private Drive folder verified |
@@ -71,6 +71,8 @@ The processor sets exact requirements. [Stripe verification requirements](https:
 4. Stripe requires a support phone in this form, but **Show phone number on receipts and invoices** is saved off. The phone is retained privately with the provider; no claim covers every card issuer or platform surface. Stripe also requires the customer-support address, with no hiding control. If an authorized non-home mailing address is available, enter it in **WLKR LABS (Buy Me a Coffee) → Settings → Business → Business details → Public details → Edit → Customer support address**. Keep the separate legal/identity address unchanged. No paid mailbox was purchased. [Stripe receipt contact requirements](https://docs.stripe.com/receipts#support-requirements).
 
 Paid receipt, payout, refund and reconciled-balance proof remain unverified under the $0 constraint. No credentials, identity documents, personal address/phone values or bank numbers are retained in public records.
+
+Shane confirmed no alternative mailing address is available on October 6. The support-address change is deferred; the required home address remains in Stripe's customer-facing field. No further approval or setup action is pending now. This records the practical limit and does not claim that the address is hidden.
 
 ## Separate account investigation
 

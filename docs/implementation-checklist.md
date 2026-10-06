@@ -1,6 +1,6 @@
 # Foundation implementation checklist
 
-Updated October 6, 2026. The agreed mission is established. The approved foundation, website/GitHub setup, revised identity and voluntary-support launch are implemented. Legal formation is later; setup spending is **$0**. Shane confirmed the payout destination and support mailbox and adopted the terms/privacy notice. Stripe's required support mailing address remains the privacy decision below.
+Updated October 6, 2026. The agreed mission is established. The approved foundation, website/GitHub setup, revised identity and voluntary-support launch are implemented. Legal formation is later; setup spending is **$0**. Shane confirmed the payout destination and support mailbox and adopted the terms/privacy notice. Mailing-address privacy is deferred because Shane has no alternative address; Stripe's required support address remains.
 
 ## Completed
 
@@ -25,7 +25,7 @@ Updated October 6, 2026. The agreed mission is established. The approved foundat
 
 | Action | Responsible / done when | Dependency |
 | --- | --- | --- |
-| Finish mailing-address privacy | Shane identifies an authorized non-home mailing address if available; enter only Stripe's customer-support address | Stripe requires an address; no hiding control or invented replacement; [launch record](support-launch-proposal.md) |
+| Revisit mailing-address privacy later | Deferred: Shane has no alternative address. Revisit if an authorized non-home mailing address becomes available | Stripe requires an address; no hiding control or invented replacement; [launch record](support-launch-proposal.md) |
 | First maintained capability and teaching output | Use PatriBible's own workflow for a reading/search guide, or WalkLang's own CLI for one runnable beginner lesson | Coordinate existing product work; no formation dependency |
 | First monthly review | Use the existing template; reconcile actual receipts/fees/refunds and choose one useful next task | Actual records; no invented totals or newly scheduled automation |
 | Later product migrations | Follow the dependency map and build a repository-specific packet before each transfer | Separate approval; existing product ownership stays in place |
@@ -33,7 +33,7 @@ Updated October 6, 2026. The agreed mission is established. The approved foundat
 
 ## Decisions genuinely requiring Shane now
 
-1. An authorized non-home mailing address is needed to replace Stripe's required customer-support address. The home address remains in that customer-facing field; phone display on receipts/invoices is off. Do not send address values in public planning records or change the separate legal/identity address.
+None for the completed $0 foundation setup. Shane confirmed no alternative mailing address is available. The home address remains in Stripe's required customer-facing support-address field; phone display on receipts/invoices is off. This privacy limitation is deferred, not resolved. Revisit if an authorized non-home address becomes available; do not change the separate legal/identity address or publish address values in these records.
 
 Website publication, payout destination, support mailbox, funding/refund/privacy terms, profile copy, organization name/owner/contact/terms, public profile, private website import, planning transfer and local/Drive backup were approved in this chat and completed. No repeated approval is needed for them. The mission is not an open decision. No test charge is authorized.
 

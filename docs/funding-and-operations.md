@@ -1,6 +1,6 @@
 # Funding and operations
 
-Status: voluntary support launched with Shane's approval, October 6, 2026. The owned Buy Me a Coffee profile and distinct active WLKR Labs Stripe account are verified; Shane confirmed the payout destination and support mailbox and adopted the funding/refund/privacy terms. Stripe phone display on receipts/invoices is off. Its required support mailing address still needs an authorized non-home alternative for fuller privacy. No transaction or reconciled balance is established.
+Status: voluntary support launched with Shane's approval, October 6, 2026. The owned Buy Me a Coffee profile and distinct active WLKR Labs Stripe account are verified; Shane confirmed the payout destination and support mailbox and adopted the funding/refund/privacy terms. Stripe phone display on receipts/invoices is off. Mailing-address privacy is deferred because Shane has no alternative address; the required customer-facing support address remains. No transaction or reconciled balance is established.
 
 ## Start with voluntary support
 
