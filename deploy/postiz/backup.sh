@@ -13,7 +13,7 @@ mountpoint -q "$POSTIZ_BACKUP_MOUNT"
 exec 9>"$POSTIZ_ROOT/backup.lock"
 flock -n 9
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
-destination="$POSTIZ_ROOT/backups/$stamp"
+destination="$POSTIZ_ROOT/backups/.incomplete-$stamp"
 mkdir -p "$destination"
 resume() { ./project up -d >/dev/null; }
 trap resume EXIT
@@ -37,10 +37,11 @@ docker --host unix:///var/run/docker.sock run --rm --network none \
   --mount "type=bind,src=$destination,dst=/source,readonly" \
   --mount "type=bind,src=$POSTIZ_BACKUP_MOUNT,dst=/backup-drive" \
   -e BACKUP_STAMP="$stamp" "$POSTIZ_POSTGRES_IMAGE" sh -ec \
-  'umask 077; mkdir -p /backup-drive/postiz-snapshots; cp -a /source /backup-drive/postiz-snapshots/"$BACKUP_STAMP"; cd /backup-drive/postiz-snapshots/"$BACKUP_STAMP"; sha256sum -c SHA256SUMS'
-printf '%s\n' "$stamp" > "$POSTIZ_ROOT/backups/latest"
+  'umask 077; mkdir -p /backup-drive/postiz-snapshots; cp -a /source /backup-drive/postiz-snapshots/.incomplete-"$BACKUP_STAMP"; cd /backup-drive/postiz-snapshots/.incomplete-"$BACKUP_STAMP"; sha256sum -c SHA256SUMS; cd ..; mv .incomplete-"$BACKUP_STAMP" "$BACKUP_STAMP"'
 ./project up -d --wait --wait-timeout 240
 trap - EXIT
+mv "$destination" "$POSTIZ_ROOT/backups/$stamp"
+printf '%s\n' "$stamp" > "$POSTIZ_ROOT/backups/latest"
 # Retain 14 successful daily backups; older local snapshots follow host policy.
 mapfile -t old < <(find "$POSTIZ_ROOT/backups" -mindepth 1 -maxdepth 1 -type d -name '20*T*Z' | sort -r | tail -n +15)
 for directory in "${old[@]}"; do rm -rf -- "$directory"; done
