@@ -1,12 +1,12 @@
 # Voluntary support launch proposal
 
-Updated October 6, 2026 after Shane chose **Buy Me a Coffee** and Stripe. This is ready setup copy, not an activated account. Shane has no support-platform account. His existing Stripe account may contain unrelated activity; ownership, recipients and dependencies there remain unverified. The live website has no payment link.
+Updated October 6, 2026 after Shane chose **Buy Me a Coffee** and Stripe. This is ready setup copy, not an activated account. Shane has now signed into Buy Me a Coffee; the creator page and payout account are still being prepared. His existing Stripe account may contain unrelated activity; ownership, recipients and dependencies there remain unverified. The live website has no payment link.
 
 ## Chosen arrangement and proposed settings
 
 - Buy Me a Coffee, USD, ordinary one-time voluntary support; no paid subscription or setup purchase.
 - Display name: **WLKR Labs**. Proposed recipient: **Shane Walker operating WLKR Labs**, verified against the actual processor before launch.
-- Use a distinct WLKR Labs Stripe account with the correct personal operating identity. Do not connect, rename, close, disconnect or migrate the the unrelated account account during this setup.
+- Use a distinct WLKR Labs Stripe account with the correct personal operating identity. Do not connect, rename, close, disconnect or migrate the existing unrelated account during this setup.
 - Public support contact: **support@wlkrlabs.com**. Administrative login email is recorded privately. Confirm the public contact receives requests before launch.
 - Keep memberships, shop, rewards and paid extras off. Absorb processing fees so the displayed voluntary amount is the supporter’s total; read back the actual setting.
 - General support serves software, maintenance, education, formation preparation, reasonable development/teaching compensation and operating obligations. No fixed compensation amount or percentage.
@@ -14,7 +14,7 @@ Updated October 6, 2026 after Shane chose **Buy Me a Coffee** and Stripe. This i
 
 Buy Me a Coffee lists no monthly fee, a 5% platform fee, and Stripe processing of 2.9% + $0.30, with a listed 0.5% payout fee and possible international/subscription additions. Confirm the actual connected account’s schedule before activation; do not treat the published schedule as an account quote. [Official fee guide](https://help.buymeacoffee.com/en/articles/8105744-how-to-calculate-charges-on-your-payment).
 
-For US creators, the newer country list specifies **Stripe Standard Connect**. Some older articles still describe Express. Follow the actual US onboarding and verify which account it connects; a separate WLKR Labs account is the recommended way to avoid mixing the unrelated account records. This isolation recommendation is our inference, not a claim that the unrelated account must migrate first. [Country list](https://help.buymeacoffee.com/en/articles/6258038-supported-countries-for-payouts-on-buy-me-a-coffee), [Standard Connect setup](https://help.buymeacoffee.com/en/articles/10025793-how-payouts-work-on-accounts-with-stripe-standard-connect).
+For US creators, the newer country list specifies **Stripe Standard Connect**. Some older articles still describe Express. Follow the actual US onboarding and verify which account it connects; a separate WLKR Labs account is the recommended way to avoid mixing unrelated financial records. This isolation recommendation is our inference, not a claim that the unrelated account must migrate first. [Country list](https://help.buymeacoffee.com/en/articles/6258038-supported-countries-for-payouts-on-buy-me-a-coffee), [Standard Connect setup](https://help.buymeacoffee.com/en/articles/10025793-how-payouts-work-on-accounts-with-stripe-standard-connect).
 
 ## Ready profile copy
 
@@ -65,7 +65,7 @@ The processor sets exact requirements. [Stripe verification requirements](https:
 
 ## Owner steps and launch gate
 
-1. Open [Buy Me a Coffee](https://www.buymeacoffee.com/), choose Sign up, use the selected administrative email, and complete new credentials and provider terms yourself. Copy the prepared display name, headline and About text above.
+1. Open [Buy Me a Coffee](https://www.buymeacoffee.com/), choose Sign up, use the selected administrative email, and complete new credentials and [provider terms](https://buymeacoffee.com/terms) yourself. Copy the prepared display name, headline and About text above.
 2. Open Dashboard → Payouts → Set up payouts. At Stripe, choose or create a distinct WLKR Labs account with truthful personal operating status. Complete identity/tax/bank information directly. Stop if the only offered account is the unrelated account or the recipient is wrong. Opening/connecting the financial account is an owner action.
 3. Confirm USD, account/recipient match, payout requirements, fees, disabled optional features, public receipt/descriptor and working support contact. Preserve references only in the private verification record.
 4. Provide the actual profile URL and confirm that the account and payout recipient are yours. Approve these general-support/refund terms and publication of that verified link. No passwords, tax IDs, bank numbers or identity documents in chat.
@@ -73,4 +73,4 @@ The processor sets exact requirements. [Stripe verification requirements](https:
 
 ## Separate account investigation
 
-Before any the unrelated account migration, inventory its legal owner, account ID reference, active products/prices/subscriptions, balances, disputes, tax/financial exports, API/webhook dependents, connected platforms and payout destination. Keep details private. This setup neither authorizes that migration nor establishes that it is necessary. No the unrelated account account change has been made.
+Before migrating the unrelated account, inventory its legal owner, account ID reference, active products/prices/subscriptions, balances, disputes, tax/financial exports, API/webhook dependents, connected platforms and payout destination. Keep details private. This setup neither authorizes that migration nor establishes that it is necessary. No unrelated account change has been made.

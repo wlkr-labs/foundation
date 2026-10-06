@@ -6,9 +6,9 @@ Verified October 6, 2026 against local Git roots, the website's four YAML record
 
 | Area | Current location / ownership | Prepared next action |
 | --- | --- | --- |
-| Foundation plan | `/Users/shanewalker/Desktop/dev/WLKRLABS`; public `WLKRLABS/WLKRLABS`, personal account | Checklist and proposals on `codex/foundation-implementation`; review publication later |
-| Website | `website` shortcut to the existing Astro checkout; independent history, no remote | Review `codex/foundation-website`; use existing manual Cloudflare procedure after approval |
-| Private operations | Ignored `private/`: empty ledger, reviews, authenticated account metadata | Choose an encrypted backup before gathering identity/bank or supporter records |
+| Foundation plan | `/Users/shanewalker/Desktop/dev/WLKRLABS`; public `wlkr-labs/foundation`, original repository transferred to organization | Use the checklist; full history retained |
+| Website | `website` shortcut to the existing Astro checkout; independent history; private `wlkr-labs/website` remote | Mission release published; use the existing manual Cloudflare maintenance procedure |
+| Private operations | Ignored `private/`: empty ledger, reviews, authenticated account metadata | MacBook records and verified owner-only Drive recovery folder; sensitive identity/bank data stays with provider |
 | Local verification | Ignored `.local/foundation-2026-10-06/` | Exact commit receipts, logs, previews and Git bundles |
 
 ## Initial programs

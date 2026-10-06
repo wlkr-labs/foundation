@@ -1,16 +1,16 @@
 # Setup and GitHub plan
 
-Verified October 6, 2026. This is a local organization plan; remote migrations are future decisions.
+Verified October 6, 2026. The approved Free organization, profile, private website history import and planning-repository transfer are complete. Product migrations remain future decisions.
 
 Implementation inventory now includes authenticated reads of both accounts. See the [organization proposal](github-organization-proposal.md) for counts, dependency gates, and the concrete first stage, and the [project inventory](project-inventory.md) for program scope. Detailed private account metadata stays under ignored `private/foundation/`.
 
 ## One organizing home
 
-Use `/Users/shanewalker/Desktop/dev/WLKRLABS` for these plans and as the folder to open in an editor or add as a Codex project. It is the existing clone of the public `WLKRLABS/WLKRLABS` repository, expanded locally on a planning branch.
+Use `/Users/shanewalker/Desktop/dev/WLKRLABS` for these plans and as the folder to open in an editor or add as a Codex project. It is the existing clone of the public `wlkr-labs/foundation` repository, transferred from `WLKRLABS/WLKRLABS` with its original history. Remote: `git@github-scwlkr:wlkr-labs/foundation.git`.
 
-The `website` shortcut opens the existing Astro source at `/Users/shanewalker/Documents/Codex/2026-09-30/task/wlkrlabs.com`. That source has independent Git history and no remote. Keep the shortcut local and ignored by Git. It preserves the source path used by the established maintenance procedure.
+The `website` shortcut opens the existing Astro source at `/Users/shanewalker/Documents/Codex/2026-09-30/task/wlkrlabs.com`. That source retains independent Git history, with private remote `git@github-scwlkr:wlkr-labs/website.git`. Keep the shortcut local and ignored by Git. It preserves the source path used by the established maintenance procedure.
 
-Do not use `/Users/shanewalker/Desktop/dev/wlkrlabs-website` for live-site changes: it is an older Vite/Three.js prototype. The Astro checkout's commit matches the live site's build record.
+Do not use `/Users/shanewalker/Desktop/dev/wlkrlabs-website` for live-site changes: it is an older Vite/Three.js prototype. The live release is `2c6a359`; the subsequent maintenance-only record changes no served asset.
 
 ## What belongs where
 
@@ -20,11 +20,11 @@ Do not use `/Users/shanewalker/Desktop/dev/wlkrlabs-website` for live-site chang
 | Website source, project catalog, public notes, deployment procedure | `WLKRLABS/website/` shortcut | Follow the website's own Git and release process |
 | Product implementation | Each existing product repository | Retain current visibility and licensing |
 | Empty operating examples | `WLKRLABS/templates/` | Safe to share |
-| Receipts, supporter identifiers, account inventory, payout records | `WLKRLABS/private/` | Local only; encrypted backup |
+| Receipts, supporter identifiers, account inventory, payout records | `WLKRLABS/private/` | Ignored MacBook records; owner-only Drive backup |
 | Check logs and exact commit receipts | `WLKRLABS/.local/` | Local only |
 | Passwords, recovery codes, keys, taxpayer IDs | Existing password manager or appropriate secure system | Never Git or public website |
 
-Git ignore rules prevent accidental tracking; they do not encrypt files or provide a backup. Back up private records through an encrypted location and record its location privately.
+Git ignore rules prevent accidental tracking; they do not encrypt files or provide a backup. Shane approved MacBook storage and a private Drive backup. Sharing was verified owner-only; record its pointer privately. Credentials, identity documents, taxpayer IDs and bank numbers stay with the provider or existing secure system.
 
 ## Product inventory
 
@@ -50,7 +50,7 @@ Preferred starting option: create a separate free organization under an approved
 
 Automatic conversion preserves the brand namespace but is irreversible and changes personal-account access and attribution. SSH keys, OAuth tokens, and installed GitHub Apps do not carry over. Review that route only after an account inventory and backup. [GitHub account reference](https://docs.github.com/en/account-and-profile/reference/personal-account-reference), [moving work while keeping the personal account](https://docs.github.com/en/account-and-profile/concepts/account-management).
 
-## Migration sequence when ready
+## Sequence for later migrations when ready
 
 1. Confirm control of both accounts; inventory all repositories, integrations, releases, Pages, packages, and authentication dependencies, including private ones.
 2. Save repository/history backups and recovery information in appropriate secure locations.
@@ -62,4 +62,4 @@ Automatic conversion preserves the brand namespace but is irreversible and chang
 
 Repository transfers can change permissions and integrations; verify each dependency. [GitHub transfer guidance](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository).
 
-The present preparation requires no account rename, repository transfer, new subscription, or change to the live hosting setup.
+The first stage retained both personal accounts, original histories and hosting/DNS. The original planning URL redirects to the foundation repository; do not recreate the old same-name personal profile repository, because reusing that namespace would break the redirect. The public organization profile is the mission’s current GitHub home. Hosted Actions are disabled on the foundation, website and profile repositories; use local checks.

@@ -16,7 +16,7 @@ Personal support does not become a deductible charitable contribution solely bec
 
 Shane selected **Buy Me a Coffee**, using ordinary one-time support in USD. It lists $0 monthly cost, a 5% platform fee, Stripe processing and applicable payout fees. Confirm the actual fee schedule and connected account before launch. [Official fee guide](https://help.buymeacoffee.com/en/articles/8105744-how-to-calculate-charges-on-your-payment).
 
-Current US guidance specifies Stripe Standard Connect. Prepare a distinct WLKR Labs account to avoid mixing the existing, unverified the unrelated account activity. Do not alter or migrate the unrelated account in this setup. [US payout setup](https://help.buymeacoffee.com/en/articles/10025793-how-payouts-work-on-accounts-with-stripe-standard-connect).
+Current US guidance specifies Stripe Standard Connect. Prepare a distinct WLKR Labs account to avoid mixing the existing, unverified unrelated activity. Do not alter or migrate the unrelated account in this setup. [US payout setup](https://help.buymeacoffee.com/en/articles/10025793-how-payouts-work-on-accounts-with-stripe-standard-connect).
 
 Before connecting a page, approve the platform's terms, recipient identity, processor, public disclosure, payout method, and refund process. Confirm current fees in the actual account. Use one link and ordinary one-time support initially; avoid rewards that create extra delivery commitments.
 

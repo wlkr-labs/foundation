@@ -35,13 +35,14 @@ WLKRLABS/
 
 ## Next practical steps
 
-- Review and approve publication of the locally prepared mission, About, and Support pages.
-- Approve the prepared one-time support arrangement, verify the actual recipient/profile, then connect its link.
-- Maintain PatriBible first; turn existing technical documentation into useful teaching material.
-- Record spending and formation savings; report public totals without supporter identities.
-- Approve a separate Free GitHub organization and staged setup after reviewing the inventory and dependencies.
+The mission, About and no-payment Support pages are [live](https://wlkrlabs.com). The Free [GitHub organization](https://github.com/wlkr-labs) and its public profile are established. This repository is now [wlkr-labs/foundation](https://github.com/wlkr-labs/foundation); the canonical website has a separate private remote with its history preserved.
 
-Preparation costs $0 in new filing or subscription fees. Formation is a later milestone, not a condition for maintaining useful software now.
+- Finish Buy Me a Coffee/Stripe recipient and payout verification, adopt the prepared support terms, then approve the actual payment link.
+- Maintain PatriBible first and turn current documentation into useful teaching material.
+- Reconcile actual receipts/fees/refunds; report public totals without supporter identities.
+- Use the dependency proposal before considering later product transfers.
+
+Setup spent $0. Formation is a later milestone, not a condition for useful software now. Private MacBook records and an owner-only Drive recovery folder are established; credentials and sensitive identity/bank data stay with the provider or secure system.
 
 ## Local checks
 
@@ -53,4 +54,4 @@ For website development, enter `website`, read its `AGENTS.md` and `MAINTENANCE.
 
 ## Planning status
 
-Updated October 6, 2026. The mission is established. Local website implementation and operating proposals are prepared on focused branches; see the checklist for verification and remaining actions. Funding activation, public release, account changes, and corporate formation remain separate approvals. No spending or legal filing is part of this preparation.
+Updated October 6, 2026. The mission is established. The approved website and GitHub foundation setup are complete; see the checklist for verification and remaining owner steps. Funding activation requires exact recipient/profile approval. Legal formation and future product migrations remain later decisions. No money was spent and no legal filing was made.
