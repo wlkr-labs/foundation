@@ -1,6 +1,6 @@
 # WLKR Labs social setup handoff
 
-Prepared October 6, 2026. This is an execution handoff; accounts, email delivery and vault setup have not been verified by this task. Start with the [copyable prompt](../templates/social-setup-prompt.md).
+Prepared October 6, 2026. Execution has begun: email delivery and the dedicated owner-only vault are verified, eight public profiles are established and linked from the website, and the two-week launch draft pack is saved privately. MFA/recovery, provider approvals and Postiz hosting still have documented gates. The current account inventory, evidence and exact remaining actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
 
 ## Outcome
 
@@ -25,22 +25,22 @@ Use `brand/icons/avatar-light.png` or `avatar-dark.png`. Existing LinkedIn, X an
 
 ## 1. Verify email first
 
-- [ ] Read the owning email workspace: `/Users/shanewalker/Desktop/dev/email/AGENTS.md`, `README.md`, `inventory.yaml` and `MIGRATION.md`. Respect its excluded domains and existing senders.
-- [ ] Confirm `social@wlkrlabs.com` reaches the owner's intended WLKR inbox. October 2 records show Purelymail catch-all delivery to the existing Shane inbox; that is historical evidence, not a current delivery test.
-- [ ] If necessary, add only the `social@` alias through the existing Purelymail administration. Reuse the current mailbox; a separate mailbox is unnecessary unless delivery or account requirements justify it. Preserve all other routes, MX, SPF, DKIM and DMARC.
-- [ ] Send an owner-scoped synthetic verification message to `social@`; verify receipt and a reply from that address with authentication passing. Keep message contents private.
+- [x] Read the owning email workspace: `/Users/shanewalker/Desktop/dev/email/AGENTS.md`, `README.md`, `inventory.yaml` and `MIGRATION.md`. Respect its excluded domains and existing senders.
+- [x] Confirm `social@wlkrlabs.com` reaches the owner's intended WLKR inbox. October 2 records show Purelymail catch-all delivery to the existing Shane inbox; that is historical evidence, not a current delivery test.
+- [x] If necessary, add only the `social@` alias through the existing Purelymail administration. Reuse the current mailbox; a separate mailbox is unnecessary unless delivery or account requirements justify it. Preserve all other routes, MX, SPF, DKIM and DMARC.
+- [x] Send an owner-scoped synthetic verification message to `social@`; verify receipt and a reply from that address with authentication passing. Keep message contents private.
 - [ ] Confirm platform verification and recovery messages arrive before completing account setup. Do not change personal Meta, Google or LinkedIn account emails just to match the brand address.
 
 ## 2. Organize credentials
 
 The owner confirmed **1Password** for this setup. Confirm the account connected to `scwlkr`; a browser profile name does not prove which 1Password account is selected.
 
-- [ ] Reuse or create an owner-only vault named **WLKR Labs Social** in that account. Do not purchase a new plan or share the vault. If vault creation is unavailable, use the existing private vault with a `WLKR Labs/Social` tag and record the limitation. [1Password vault instructions](https://support.1password.com/create-share-vaults/)
+- [x] Reuse or create an owner-only vault named **WLKR Labs Social** in that account. Do not purchase a new plan or share the vault. If vault creation is unavailable, use the existing private vault with a `WLKR Labs/Social` tag and record the limitation. [1Password vault instructions](https://support.1password.com/create-share-vaults/)
 - [ ] Create one Login item per actual login, named `WLKR Labs — <Platform>`, with the correct login URL, handle, `social@` email and a generated unique password.
-- [ ] For Facebook Pages, LinkedIn Pages or other assets controlled by an existing personal login, reference the controlling item; do not invent a separate Page password or move unrelated personal credentials.
+- [x] For Facebook Pages, LinkedIn Pages or other assets controlled by an existing personal login, reference the controlling item; do not invent a separate Page password or move unrelated personal credentials.
 - [ ] Save passkeys, MFA configuration and recovery codes in the appropriate secure items. Record which real account owns each asset and how to recover it.
 - [ ] Store developer credentials separately: `WLKR Labs — <Provider> Developer App`. Store Postiz owner access and deployment secrets as distinct items in the same vault, tagged `Hosting`.
-- [ ] Use secure autofill or documented password-manager integration. Keep secrets out of chat, Git, screenshots, command arguments and logs; do not export the vault. 1Password Environments are not a replacement for Login items.
+- [x] Use secure autofill or documented password-manager integration. Keep secrets out of chat, Git, screenshots, command arguments and logs; do not export the vault. 1Password Environments are not a replacement for Login items.
 
 ## 3. Establish the accounts
 
@@ -70,10 +70,10 @@ Google Business Profile is conditional: online-only organizations are ineligible
 
 - [ ] Save each profile's correct name, bio, website, avatar, header, category and supported contact email; inspect its public view.
 - [ ] Enable supported MFA and verify secure credential storage and recovery settings. Record unsupported features explicitly.
-- [ ] Link only verified public profiles from the website, following `website/AGENTS.md` and `MAINTENANCE.md`. Do not publish placeholders or private administration links.
+- [x] Link only verified public profiles from the website, following `website/AGENTS.md` and `MAINTENANCE.md`. Do not publish placeholders or private administration links.
 - [ ] Coordinate Postiz connections with the [Octal8 setup checklist](postiz-octal8-setup-checklist.md). Register developer apps only for intended free publishing routes, using `social@` where supported.
-- [ ] Prepare an introduction and two weeks of platform-specific draft content from the established mission and actual released projects. Save drafts; public posts and automated replies require publishing instructions.
-- [ ] Continue independent platform setup while an approval or owner verification is pending. Do not repeatedly ask about already settled identity, email, budget or password organization.
+- [x] Prepare an introduction and two weeks of platform-specific draft content from the established mission and actual released projects. Save drafts; public posts and automated replies require publishing instructions.
+- [x] Continue independent platform setup while an approval or owner verification is pending. Do not repeatedly ask about already settled identity, email, budget or password organization.
 
 ## Record and handoff
 

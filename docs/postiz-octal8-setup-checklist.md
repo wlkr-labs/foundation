@@ -20,6 +20,10 @@ The required shape is **system Docker + a separate Postiz Compose project + the 
 
 Postiz keeps its required upstream Node runtime; the host's Rust-first policy applies to new first-party backend code, not a rewrite of this third-party application. Avoid building custom services unless a concrete deployment gap requires one.
 
+## Social setup coordination checkpoint — October 6, 2026
+
+The social-account execution verified email delivery and the owner-only vault, and prepared native launch drafts. Read-only host inspection found sufficient capacity but no Postiz stack; the proposed hostname has no DNS record, and the required shared edge is absent from the current baseline. No deployment, developer apps, connection credentials or connected channels are claimed. Preserve existing services and resolve the shared-edge dependency in the owning hosting workflow before connecting accounts. Exact baseline details and account gates remain in ignored `private/social/`.
+
 ## 1. Inspect and prepare
 
 - [ ] Confirm authorized Tailscale/SSH access to 0o10, actual host identity, deployment account and administrator capability. Keep IPs, credentials and private operator paths outside Git.
