@@ -44,6 +44,8 @@ existing mailbox Login; do not move or replace it.
 Stage a clean committed copy of this directory under `releases/<commit>/`.
 Create state directories for config, uploads, postgres, redis, temporal-postgres
 and elasticsearch. Elasticsearch writes as UID 1000. Confirm the existing
+upload root is mode 0755 so the image's nginx worker can traverse it; keep the
+project/operator directories mode 0700 and secret files mode 0600. Confirm the
 Docker `RequiresMountsFor` and `After` include the assigned mount. The wrapper
 also refuses an absent/wrong mount before any Compose operation.
 
@@ -84,7 +86,7 @@ do not establish independent external reachability.
 ## Backups and isolated restore
 
 `backup.sh` briefly stops only Postiz/Temporal/Elasticsearch/Redis, makes logical
-PostgreSQL dumps of application and both Temporal databases, and archives cold
+PostgreSQL dumps of application and Temporal, and archives cold
 Elasticsearch/Redis files, media, configuration, secrets and releases. It restarts
 only this stack and requires health readiness. Protected bundles retain 14 runs
 on the data drive and secondary backup drive, verified by SHA-256. The existing
@@ -100,7 +102,7 @@ systemctl --user status wlkrlabs-postiz-backup.timer
 
 The restore verifies a copy read from the protected secondary drive and creates
 two database containers on a dedicated internal network,
-restores all three SQL dumps with errors fatal, clears live channel/API/user
+restores both SQL dumps with errors fatal, clears live channel/API/user
 credentials, and extracts media and cold workflow files. It runs no application
 or worker, exposes no ports, and removes its containers/network on exit. Test
 state/evidence stays on the assigned drive. Compare restored record counts and

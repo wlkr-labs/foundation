@@ -19,7 +19,8 @@ resume() { ./project up -d >/dev/null; }
 trap resume EXIT
 ./project stop postiz temporal temporal-elasticsearch postiz-redis
 ./project exec -T postiz-postgres pg_dump -U postiz-user -d postiz-db-local -Fc > "$destination/postiz.dump"
-for database in temporal temporal_visibility; do
+# This upstream deployment uses Elasticsearch for visibility, not a second SQL DB.
+for database in temporal; do
   ./project exec -T temporal-postgresql pg_dump -U temporal -d "$database" -Fc > "$destination/$database.dump"
 done
 docker --host unix:///var/run/docker.sock run --rm --network none \

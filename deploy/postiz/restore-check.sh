@@ -57,7 +57,7 @@ SELECT count(*) AS restored_users FROM "User";
 SELECT count(*) AS restored_drafts FROM "Post" WHERE state='DRAFT';
 SELECT count(*) AS usable_channel_credentials FROM "Integration" WHERE token<>'' OR "refreshToken" IS NOT NULL;
 SQL
-for database in temporal temporal_visibility; do
+for database in temporal; do
   tp createdb -U postgres "$database"
   tp pg_restore -U postgres -d "$database" --no-owner --no-privileges --exit-on-error < "$backup/$database.dump"
   tp psql -U postgres -d "$database" -Atc "SELECT count(*) FROM information_schema.tables WHERE table_schema='public';"
