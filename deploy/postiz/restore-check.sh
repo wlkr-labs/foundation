@@ -9,11 +9,21 @@ source "${POSTIZ_OPERATOR_ENV:?Set operator.env}"
 set +a
 stamp=${1:?Backup timestamp required}
 [[ "$stamp" =~ ^[0-9]{8}T[0-9]{6}Z$ ]]
-backup="$POSTIZ_ROOT/backups/$stamp"
-(cd "$backup" && sha256sum -c SHA256SUMS)
+mountpoint -q "$POSTIZ_DATA_MOUNT"
+mountpoint -q "$POSTIZ_BACKUP_MOUNT"
+[[ "$(findmnt -n -o TARGET --target "$POSTIZ_ROOT")" == "$POSTIZ_DATA_MOUNT" ]]
 testroot="$POSTIZ_ROOT/restore-check-$stamp"
 [[ ! -e "$testroot" ]]
 mkdir -p "$testroot"
+# Read the secondary drive without changing its protected backup permissions.
+docker --host unix:///var/run/docker.sock run --rm --network none \
+  --mount "type=bind,src=$POSTIZ_BACKUP_MOUNT/postiz-snapshots/$stamp,dst=/backup,readonly" \
+  --mount "type=bind,src=$testroot,dst=/restore" \
+  -e OPERATOR_UID="$(id -u)" -e OPERATOR_GID="$(id -g)" \
+  "$POSTIZ_POSTGRES_IMAGE" sh -ec \
+  'cp -a /backup /restore/backup; chown -R "$OPERATOR_UID:$OPERATOR_GID" /restore/backup'
+backup="$testroot/backup"
+(cd "$backup" && sha256sum -c SHA256SUMS)
 network="wlkrlabs-postiz-restore-$stamp"
 docker --host unix:///var/run/docker.sock network create --internal "$network" >/dev/null
 cleanup() {

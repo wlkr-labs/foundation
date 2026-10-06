@@ -25,8 +25,9 @@ done
 docker --host unix:///var/run/docker.sock run --rm --network none \
   --mount "type=bind,src=$POSTIZ_ROOT,dst=/source,readonly" \
   --mount "type=bind,src=$destination,dst=/backup" \
+  -e OPERATOR_UID="$(id -u)" -e OPERATOR_GID="$(id -g)" \
   "$POSTIZ_POSTGRES_IMAGE" sh -ec \
-  'tar czf /backup/files.tar.gz -C /source state/config state/uploads state/redis state/elasticsearch operator releases'
+  'umask 077; tar czf /backup/files.tar.gz -C /source state/config state/uploads state/redis state/elasticsearch operator releases; chown "$OPERATOR_UID:$OPERATOR_GID" /backup/files.tar.gz'
 (
   cd "$destination"
   sha256sum ./*.dump files.tar.gz > SHA256SUMS

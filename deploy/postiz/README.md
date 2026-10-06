@@ -98,7 +98,8 @@ seven snapshots; no existing backup job is changed. Offsite backup is deferred.
 systemctl --user status wlkrlabs-postiz-backup.timer
 ```
 
-The restore creates two database containers on a dedicated internal network,
+The restore verifies a copy read from the protected secondary drive and creates
+two database containers on a dedicated internal network,
 restores all three SQL dumps with errors fatal, clears live channel/API/user
 credentials, and extracts media and cold workflow files. It runs no application
 or worker, exposes no ports, and removes its containers/network on exit. Test
