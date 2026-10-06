@@ -9,7 +9,7 @@ from reportlab.graphics import renderPDF
 from reportlab import rl_config
 from svglib.svglib import svg2rlg
 
-from brand_geometry import BRAND, GREEN, INK, PAPER, ROOT, SOURCE, WHITE, WORDMARK_SOURCE, centered_text, lockup, mark, rect, text, wordmark, wordmark_height, write
+from brand_geometry import BRAND, GREEN, INK, PAPER, ROOT, SOURCE, WHITE, WORDMARK_ORIGINAL_SOURCE, WORDMARK_SOURCE, centered_text, lockup, lockup_height, mark, rect, stacked_lockup, text, wordmark, wordmark_height, write
 
 rl_config.invariant = 1
 
@@ -18,12 +18,12 @@ def logos():
     for mode in ("primary", "reverse", "black", "white"):
         dark, mono = mode in ("reverse", "white"), mode in ("black", "white")
         write(f"logos/mark-{mode}.svg", 904, 904, mark(dark=dark, mono=mono))
-        write(f"logos/horizontal-{mode}.svg", 930, 300,
-              lockup(30, 30, 240, dark, mono=mono))
+        write(f"logos/horizontal-{mode}.svg", 930, 220,
+              lockup(40, (220 - lockup_height(850)) / 2, 850, dark, mono))
         write(f"logos/wordmark-{mode}.svg", 800, wordmark_height(800),
               wordmark(width=800, dark=dark, mono=mono))
         write(f"logos/stacked-{mode}.svg", 800, 600,
-              mark(250, 68, 300, dark, mono) + wordmark(55, 420, 690, dark, mono))
+              stacked_lockup(400, 78, 640, dark, mono))
     for mode, background in (("light", WHITE), ("dark", INK)):
         write(f"icons/avatar-{mode}.svg", 1024, 1024,
               rect(0, 0, 1024, 1024, background) + mark(162, 162, 700, mode == "dark"))
@@ -39,28 +39,26 @@ def social():
     for mode, background, color in (("light", WHITE, INK), ("dark", INK, WHITE)):
         dark = mode == "dark"
         write(f"social/open-graph-{mode}.svg", 1200, 630,
-              rect(0, 0, 1200, 630, background) + mark(70, 75, 270, dark)
-              + wordmark(390, 140, 640, dark)
+              rect(0, 0, 1200, 630, background) + lockup(90, 105, 1000, dark)
               + text("Free software. Useful technology.", 88, 445, 44, color, 500)
               + text("Biblical purpose.", 88, 505, 44, color, 500)
               + text("wlkrlabs.com", 90, 574, 20, color, 500))
         write(f"social/square-{mode}.svg", 1080, 1080,
-              rect(0, 0, 1080, 1080, background) + mark(330, 120, 420, dark)
-              + wordmark(210, 615, 660, dark)
+              rect(0, 0, 1080, 1080, background) + stacked_lockup(540, 185, 700, dark)
               + centered_text("Free software. Useful technology.", 540, 840, 43, color, 500)
               + centered_text("Biblical purpose.", 540, 901, 43, color, 500))
     for name, w, h in (("x-header", 1500, 500), ("linkedin-header", 1584, 396)):
         write(f"social/{name}.svg", w, h,
-              rect(0, 0, w, h, INK) + lockup(w * .24, h * .17, h * .48, dark=True)
+              rect(0, 0, w, h, INK) + lockup(w * .24, h * .17, w * .58, dark=True)
               + text("Free software. Useful technology. Biblical purpose.", w * .24, h * .83, 28, WHITE, 500))
     write("social/youtube-banner.svg", 2560, 1440,
-          rect(0, 0, 2560, 1440, INK) + lockup(640, 550, 270, dark=True)
-          + text("Free software. Useful technology. Biblical purpose.", 650, 905, 42, WHITE, 500))
+          rect(0, 0, 2560, 1440, INK) + lockup(705, 565, 1150, dark=True)
+          + centered_text("Free software. Useful technology. Biblical purpose.", 1280, 900, 36, WHITE, 500))
 
 
 def print_assets():
     write("print/business-card-front.svg", 270, 162,
-          rect(0, 0, 270, 162, WHITE) + lockup(23, 45, 64))
+          rect(0, 0, 270, 162, WHITE) + lockup(25, (162 - lockup_height(220)) / 2, 220))
     write("print/business-card-back.svg", 270, 162,
           rect(0, 0, 270, 162, INK)
           + text("Free software.", 22, 43, 19, WHITE)
@@ -69,7 +67,7 @@ def print_assets():
           + text("wlkrlabs.com", 22, 136, 10, WHITE, 500))
     for name, w, h in (("letterhead-us-letter", 612, 792), ("letterhead-a4", 595.276, 841.89)):
         write(f"print/{name}.svg", w, h,
-              rect(0, 0, w, h, WHITE) + lockup(42, 33, 50)
+              rect(0, 0, w, h, WHITE) + lockup(42, 38, 220)
               + rect(42, 105, w - 84, .75, "#CED6CE")
               + text("wlkrlabs.com", 42, h - 35, 9, INK, 500)
               + text("Free software. Useful technology. Biblical purpose.", 210, h - 35, 9, INK, 500))
@@ -86,7 +84,7 @@ def board():
                  "06 / TYPE", "07 / PROFILE", "08 / PRINT", "09 / REVERSE"][i]
         content += text(label, x + 25, y + 32, 13, color, 500)
         if i == 0:
-            content += mark(x + 154, y + 58, 188) + wordmark(x + 78, y + 265, 340)
+            content += stacked_lockup(x + 248, y + 72, 340)
         elif i == 1:
             for k in range(4):
                 content += rect(x + 105 + 90 * k, y + 67, .5, 255, "#CFD8CF")
@@ -95,7 +93,7 @@ def board():
         elif i == 2:
             content += rect(x + 22, y + 76, 452, 250, "#181D18", 12)
             content += text("wlkrlabs.com", x + 45, y + 105, 17, WHITE, 500)
-            content += lockup(x + 48, y + 151, 80, dark=True)
+            content += lockup(x + 48, y + 165, 348, dark=True)
             content += text("Build. Share. Teach.", x + 50, y + 290, 24, WHITE, 500)
         elif i == 3:
             for j, line in enumerate(("Free software.", "Useful technology.", "Biblical purpose.")):
@@ -112,9 +110,10 @@ def board():
             content += rect(x + 40, y + 91, 184, 184, WHITE, 40) + mark(x + 65, y + 116, 134)
             content += rect(x + 265, y + 91, 184, 184, "#202820", 40) + mark(x + 290, y + 116, 134, True)
         elif i == 7:
-            content += rect(x + 52, y + 99, 392, 205, WHITE, 8) + lockup(x + 85, y + 167, 80)
+            content += rect(x + 52, y + 99, 392, 205, WHITE, 8)
+            content += lockup(x + 98, y + 201.5 - lockup_height(300) / 2, 300)
         else:
-            content += lockup(x + 35, y + 113, 120, dark=True)
+            content += lockup(x + 35, y + 150, 426, dark=True)
             content += text("Six blocks. One accent.", x + 37, y + 293, 23, WHITE, 500)
     write("overview.svg", 1600, 1200, content, "WLKR Labs identity suite overview")
 
@@ -134,10 +133,11 @@ def main():
             files.append({"path": str(item.relative_to(BRAND)), "bytes": item.stat().st_size,
                           "sha256": hashlib.sha256(item.read_bytes()).hexdigest()})
     manifest = {"source_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
-                "wordmark_source_sha256": hashlib.sha256(WORDMARK_SOURCE.read_bytes()).hexdigest(),
+                "wordmark_source_sha256": hashlib.sha256(WORDMARK_ORIGINAL_SOURCE.read_bytes()).hexdigest(),
+                "wordmark_master_sha256": hashlib.sha256(WORDMARK_SOURCE.read_bytes()).hexdigest(),
                 "colors": {"ink": INK, "green": GREEN, "white": WHITE, "paper": PAPER}, "files": files}
     (BRAND / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    print(f"Built {len(files)} brand files from unchanged supplied mark and wordmark geometry.")
+    print(f"Built {len(files)} brand files from the supplied mark and approved wordmark revision.")
 
 
 if __name__ == "__main__":

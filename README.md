@@ -17,7 +17,7 @@ This folder is the organizing home for the mission, website access, operating pl
 
 Implementation starts with the [practical checklist](docs/implementation-checklist.md). The [project inventory](docs/project-inventory.md), [support launch proposal](docs/support-launch-proposal.md), and [GitHub organization proposal](docs/github-organization-proposal.md) give the concrete next steps and approval boundaries.
 
-The updated [logo suite](brand/README.md) preserves Shane's official mark and wordmark SVGs, corrects the wordmark colors to match, and includes an [asset gallery](brand/index.html), outlined lockups, icons, social graphics and print templates.
+The updated [logo suite](brand/README.md) preserves the supplied originals, removes the wordmark slash and repairs its r at Shane's request, and includes an [asset gallery](brand/index.html), balanced outlined lockups, icons, social graphics and print templates.
 
 ## Folder map
 

@@ -1,4 +1,4 @@
-"""Verify hashes, supplied mark/wordmark geometry, portable vectors and print size."""
+"""Verify originals, revised production geometry, portable vectors and print size."""
 
 import hashlib
 import json
@@ -16,9 +16,21 @@ source = BRAND / "source/wlkrlabs-logo.original.svg"
 wordmark_source = BRAND / "source/wlkrlabs-wordmark.original.svg"
 assert hashlib.sha256(source.read_bytes()).hexdigest() == manifest["source_sha256"]
 assert hashlib.sha256(wordmark_source.read_bytes()).hexdigest() == manifest["wordmark_source_sha256"]
-wordmark_paths = list(ET.parse(wordmark_source).iter(f"{NS}path"))
-assert len(wordmark_paths) == 9
-assert [path.attrib["fill"] for path in wordmark_paths] == [*(["#181919"] * 8), "#C8F046"]
+original_wordmark_paths = list(ET.parse(wordmark_source).iter(f"{NS}path"))
+assert len(original_wordmark_paths) == 9
+assert [path.attrib["fill"] for path in original_wordmark_paths] == [*(["#181919"] * 8), "#C8F046"]
+wordmark_master = BRAND / "source/wlkrlabs-wordmark.svg"
+assert hashlib.sha256(wordmark_master.read_bytes()).hexdigest() == manifest["wordmark_master_sha256"]
+wordmark_paths = list(ET.parse(wordmark_master).iter(f"{NS}path"))
+assert len(wordmark_paths) == 8
+for index, path in enumerate(wordmark_paths):
+    expected = original_wordmark_paths[index].attrib["d"]
+    if index == 4:
+        expected = expected.replace('v0.46l3.24 3.63v-3.93', 'v5.2h3.24v-5.04')
+    assert path.attrib["d"] == expected
+    assert path.attrib["fill"] == "#010101"
+    assert path.attrib.get("transform") == ("translate(0.7 0)" if index in (2, 4, 5, 6, 7) else None)
+production_paths = [(path.attrib["d"], path.attrib.get("transform")) for path in wordmark_paths]
 for entry in manifest["files"]:
     target = BRAND / entry["path"]
     assert target.stat().st_size == entry["bytes"], target
@@ -37,8 +49,8 @@ for mode, ink, accent in (("primary", "#010101", "#33F282"), ("reverse", "#FFFFF
     assert [rect.attrib["fill"] for rect in rectangles] == [accent, *([ink] * 5)]
     root = ET.parse(BRAND / f"logos/wordmark-{mode}.svg")
     paths = list(root.iter(f"{NS}path"))
-    assert [path.attrib["d"] for path in paths] == [path.attrib["d"] for path in wordmark_paths]
-    assert [path.attrib["fill"] for path in paths] == [*([ink] * 8), accent]
+    assert [(path.attrib["d"], path.attrib.get("transform")) for path in paths] == production_paths
+    assert [path.attrib["fill"] for path in paths] == [ink] * 8
 
 wordmark_count = 0
 for item in [*sorted((BRAND / "logos").glob("*.svg")), *sorted((BRAND / "social").glob("*.svg")),
@@ -52,11 +64,10 @@ for item in [*sorted((BRAND / "logos").glob("*.svg")), *sorted((BRAND / "social"
             continue
         wordmark_count += 1
         paths = list(group.iter(f"{NS}path"))
-        assert [path.attrib["d"] for path in paths] == [path.attrib["d"] for path in wordmark_paths], item
+        assert [(path.attrib["d"], path.attrib.get("transform")) for path in paths] == production_paths, item
         mode = group.attrib["data-wordmark"]
         ink = "#FFFFFF" if mode in ("reverse", "white") else "#010101"
-        accent = ink if mode in ("black", "white") else "#33F282"
-        assert [path.attrib["fill"] for path in paths] == [*([ink] * 8), accent], item
+        assert [path.attrib["fill"] for path in paths] == [ink] * 8, item
 assert wordmark_count == 26
 
 for name, dimensions in (("business-card-front", (270, 162)), ("business-card-back", (270, 162)),
@@ -86,4 +97,4 @@ for index in range(5):
     length, offset = struct.unpack_from("<II", ico, 6 + index * 16 + 8)
     assert ico[offset:offset + 8] == b"\x89PNG\r\n\x1a\n" and offset + length <= len(ico)
 subprocess.run(["node", str(ROOT / "scripts/check_brand_images.mjs")], check=True)
-print(f"PASS: {len(manifest['files'])} file hashes, source geometry/fills, {wordmark_count} exact official wordmarks, portable vectors, icon/social dimensions and physical print PDFs")
+print(f"PASS: {len(manifest['files'])} file hashes, original mark geometry/fills, revised r/spacing, {wordmark_count} exact production wordmarks without accent, portable vectors, icon/social dimensions and physical print PDFs")

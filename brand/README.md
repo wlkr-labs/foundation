@@ -1,8 +1,8 @@
 # WLKR Labs logo suite
 
-Built October 6, 2026 from Shane's supplied official logo and wordmark SVGs. The six rounded rectangles, proportions, spacing and corner radii are preserved, as are all nine wordmark paths and their spacing. Both originals are retained byte for byte in `source/`.
+Built October 6, 2026 from Shane's supplied official logo and wordmark SVGs. The six rounded rectangles, proportions, spacing and corner radii are preserved. Both originals are retained byte for byte in `source/`.
 
-Open [the asset gallery](index.html) or [the overview](overview.png). The overview presents the actual exported vectors. The official lowercase wordmark uses Shane's supplied paths; its incorrect charcoal/lime fills are corrected to Ink and Green. Reverse and one-color variants use the same geometry. SVG/PDF logo files need no installed font.
+Open [the asset gallery](index.html) or [the overview](overview.png). The overview presents the actual exported vectors. At Shane's request, the lowercase wordmark has no accent slash: the **r** has a complete vertical stem and the **k–r** spacing is repaired. The remaining letter shapes are preserved; **r** and the following letters move together to keep the rest of the spacing intact. The revised master is `source/wlkrlabs-wordmark.svg`, entirely Ink (or White in reverse). SVG/PDF logo files need no installed font.
 
 ## Choose an asset
 
@@ -25,7 +25,7 @@ Open [the asset gallery](index.html) or [the overview](overview.png). The overvi
 ## Color and typography
 
 - Ink: **#010101**, RGB 1 / 1 / 1.
-- Green: **#33F282**, RGB 51 / 242 / 130. Preserve it on the top block and wordmark accent in full-color versions.
+- Green: **#33F282**, RGB 51 / 242 / 130. Preserve it on the top block in full-color versions. The wordmark has no green accent.
 - White: **#FFFFFF**. Supporting paper: **#F0F3F0**.
 - Use Ink for text on light backgrounds and White on dark backgrounds. Green is a logo/accent color; it is too light for small text on white.
 - The wordmark is the official custom outlined artwork; do not retype or substitute its letters. Use the written name **WLKR Labs** in ordinary copy.
@@ -41,9 +41,19 @@ The print PDFs contain vector shapes and outlined type. They use RGB color; requ
 
 These assets describe WLKR Labs' identity; they do not claim incorporation, nonprofit recognition or new product availability. The font retains its included OFL license; existing project licenses are unchanged.
 
+## Lockup construction
+
+Size from visible artwork, excluding the SVG canvas padding. Let **H** be the official wordmark's full visible letter height, including its ascenders.
+
+- Horizontal: symbol height **1.16H**, visible gap **0.45H**. Raise the symbol **0.06H** relative to geometric center alignment to compensate for the heavier bottom rows. The former pairing made the symbol about **2.10H** tall.
+- Stacked: symbol height **2.10H**, vertical gap **0.60H**. Shift the symbol left by **10% of its visible width** relative to the wordmark center, accounting for the staircase's right-heavy shape.
+- Scale each finished lockup uniformly. Do not reconstruct it by independently resizing the mark and wordmark. All branded social/print templates and the gallery header use these same masters.
+
+These ratios are WLKR-specific design choices, evaluated on light/dark backgrounds and at small sizes; they are not universal logo rules. The research informed the method: [Docusign's guidance](https://brand.docusign.com/logo) considers visual weight and fixed icon/wordmark relationships; [Williams' guidance](https://identity.williams.edu/) calls for optical alignment and margins; [Atlassian's guidance](https://atlassian.design/foundations/logos) measures clearance using letterforms. No other brand's artwork is included.
+
 ## Rebuild and verify
 
-The generator reads both original SVGs in `source/` and the included licensed Geist font for supporting typography. It does not redraw the logo or wordmark. Python tools stay in ignored `.local/`; Node uses the existing website's Sharp dependency.
+The generator reads the original mark and the revised wordmark master in `source/`, with the included licensed Geist font for supporting typography. It preserves the approved artwork rather than retyping it. Python tools stay in ignored `.local/`; Node uses the existing website's Sharp dependency.
 
 ```sh
 python3 -m venv .local/brand-tools
@@ -53,4 +63,4 @@ python3 -m venv .local/brand-tools
 ./project docs:check
 ```
 
-`manifest.json` records file sizes and SHA-256 hashes. Checks validate hashes, unchanged rectangle geometry, exact official wordmark paths and corrected fills in every application, portable outlined lettering, icon/social dimensions, transparent logo alpha, ICO contents, and physical print PDF sizes. The completed zip is saved under ignored `.local/foundation-2026-10-06/support/`.
+`manifest.json` records file sizes and SHA-256 hashes. Checks validate hashes, unchanged rectangle geometry, the repaired r/spacing and removed slash, exact production wordmark paths and fills in every application, portable outlined lettering, rendered lockup proportions/spacing/alignment, icon/social dimensions, transparent logo alpha, ICO contents, and physical print PDF sizes. The completed zip is saved under ignored `.local/foundation-2026-10-06/support/`.

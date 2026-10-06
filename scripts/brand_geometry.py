@@ -1,4 +1,4 @@
-"""Preserve the supplied mark/wordmark and outline supporting Geist typography."""
+"""Combine the supplied mark and revised wordmark; outline supporting typography."""
 
 from html import escape
 from pathlib import Path
@@ -11,10 +11,13 @@ from fontTools.varLib.instancer import instantiateVariableFont
 ROOT = Path(__file__).resolve().parent.parent
 BRAND = ROOT / "brand"
 SOURCE = BRAND / "source/wlkrlabs-logo.original.svg"
-WORDMARK_SOURCE = BRAND / "source/wlkrlabs-wordmark.original.svg"
+WORDMARK_SOURCE = BRAND / "source/wlkrlabs-wordmark.svg"
+WORDMARK_ORIGINAL_SOURCE = BRAND / "source/wlkrlabs-wordmark.original.svg"
 SVG_NS = "http://www.w3.org/2000/svg"
 INK, GREEN, WHITE, PAPER = "#010101", "#33F282", "#FFFFFF", "#F0F3F0"
 FONTS = {}
+MARK_INK = (63.25, 61.5, 777.5, 781)
+WORDMARK_INK = (3.88625, 33.2, 72.97375, 13.58)
 
 
 def font(weight=650):
@@ -71,8 +74,8 @@ def wordmark(x=0, y=0, width=800, dark=False, mono=False):
     mode = ("white" if dark else "black") if mono else ("reverse" if dark else "primary")
     paths = []
     for path in root.iter(f"{{{SVG_NS}}}path"):
-        fill = GREEN if path.attrib["fill"] == "#C8F046" and not mono else ink
-        paths.append(f'<path d="{path.attrib["d"]}" fill="{fill}"/>')
+        transform = f' transform="{path.attrib["transform"]}"' if "transform" in path.attrib else ""
+        paths.append(f'<path d="{path.attrib["d"]}" fill="{ink}"{transform}/>')
     return (f'<g data-wordmark="{mode}" aria-label="WLKR Labs" '
             f'transform="translate({x:g} {y:g}) scale({width / source_width:.15g})">'
             f'<g transform="translate({-left:.15g} {-top:.15g})">'
@@ -82,6 +85,33 @@ def wordmark(x=0, y=0, width=800, dark=False, mono=False):
 def wordmark_height(width):
     box = ET.parse(WORDMARK_SOURCE).getroot().attrib["viewBox"].split()
     return width * float(box[3]) / float(box[2])
+
+
+def mark_ink(x, y, height, dark=False, mono=False):
+    left, top, _, source_height = MARK_INK
+    scale = height / source_height
+    return mark(x - left * scale, y - top * scale, 904 * scale, dark, mono)
+
+
+def wordmark_ink(x, y, height, dark=False, mono=False):
+    box = list(map(float, ET.parse(WORDMARK_SOURCE).getroot().attrib["viewBox"].split()))
+    left, top, _, source_height = WORDMARK_INK
+    scale = height / source_height
+    return wordmark(x - (left - box[0]) * scale, y - (top - box[1]) * scale,
+                    box[2] * scale, dark, mono)
+
+
+def lockup_height(width):
+    return width * 1.16 / (1.16 * MARK_INK[2] / MARK_INK[3] + .45 + WORDMARK_INK[2] / WORDMARK_INK[3])
+
+
+def stacked_lockup(center, y, width, dark=False, mono=False):
+    height = width * WORDMARK_INK[3] / WORDMARK_INK[2]
+    symbol_height = height * 2.1
+    symbol_width = symbol_height * MARK_INK[2] / MARK_INK[3]
+    return (mark_ink(center - symbol_width * .6, y, symbol_height, dark, mono)
+            + wordmark_ink(center - width / 2, y + symbol_height + height * .6,
+                           height, dark, mono))
 
 
 def rect(x, y, w, h, fill, radius=0):
@@ -102,8 +132,12 @@ def write(relative, w, h, content, title="WLKR Labs"):
     target.write_text(document)
 
 
-def lockup(x, y, size, dark=False, mono=False):
-    width = size * 2.3
-    return (mark(x, y, size, dark, mono)
-            + wordmark(x + size * 1.22, y + (size - wordmark_height(width)) / 2,
-                       width, dark, mono))
+def lockup(x, y, width, dark=False, mono=False):
+    height = lockup_height(width) / 1.16
+    symbol_height = height * 1.16
+    symbol_width = symbol_height * MARK_INK[2] / MARK_INK[3]
+    return (f'<g data-lockup="horizontal" data-wordmark-height="{height:.15g}">'
+            + mark_ink(x, y, symbol_height, dark, mono)
+            + wordmark_ink(x + symbol_width + height * .45,
+                           y + (symbol_height - height) / 2 + height * .06,
+                           height, dark, mono) + '</g>')
