@@ -1,0 +1,3 @@
+social.wlkrlabs.com {
+	reverse_proxy wlkrlabs-postiz:5000
+}

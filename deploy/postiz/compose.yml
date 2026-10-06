@@ -1,0 +1,262 @@
+services:
+  postiz:
+    image: ${POSTIZ_IMAGE:?Load images.env}
+    restart: unless-stopped
+    environment:
+      MAIN_URL: https://social.wlkrlabs.com
+      FRONTEND_URL: https://social.wlkrlabs.com
+      NEXT_PUBLIC_BACKEND_URL: https://social.wlkrlabs.com/api
+      BACKEND_INTERNAL_URL: http://localhost:3000
+      REDIS_URL: redis://postiz-redis:6379
+      TEMPORAL_ADDRESS: temporal:7233
+      TEMPORAL_NAMESPACE: default
+      IS_GENERAL: 'true'
+      DISABLE_REGISTRATION: 'true'
+      RUN_CRON: 'true'
+      DISALLOW_PLUS: 'true'
+      STORAGE_PROVIDER: local
+      UPLOAD_DIRECTORY: /uploads
+      NEXT_PUBLIC_UPLOAD_DIRECTORY: /uploads
+      NEXT_PUBLIC_UPLOAD_STATIC_DIRECTORY: https://social.wlkrlabs.com/uploads
+      API_LIMIT: '30'
+      EMAIL_PROVIDER: nodemailer
+      EMAIL_HOST: smtp.purelymail.com
+      EMAIL_PORT: '465'
+      EMAIL_SECURE: 'true'
+      EMAIL_FROM_ADDRESS: social@wlkrlabs.com
+      EMAIL_FROM_NAME: WLKR Labs Social
+      TZ: America/Chicago
+    volumes:
+    - ${POSTIZ_ROOT:?Set assigned data directory}/state/config:/config
+    - ${POSTIZ_ROOT:?Set assigned data directory}/state/uploads:/uploads
+    networks:
+      application:
+        gw_priority: 1
+      workflow: {}
+      edge:
+        aliases:
+        - wlkrlabs-postiz
+    healthcheck:
+      test:
+      - CMD
+      - node
+      - -e
+      - const r=require('http').get('http://localhost:5000/',res=>process.exit(res.statusCode<500?0:1));r.on('error',()=>process.exit(1));r.setTimeout(4000,()=>{r.destroy();process.exit(1)})
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    depends_on:
+      postiz-postgres:
+        condition: service_healthy
+      postiz-redis:
+        condition: service_healthy
+      temporal:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    env_file:
+    - ${POSTIZ_ROOT}/operator/postiz.env
+  postiz-postgres:
+    image: ${POSTIZ_POSTGRES_IMAGE:?Load images.env}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postiz-user
+      POSTGRES_DB: postiz-db-local
+    volumes:
+    - ${POSTIZ_ROOT:?Set assigned data directory}/state/postgres:/var/lib/postgresql/data
+    networks:
+    - application
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U postiz-user -d postiz-db-local
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    env_file:
+    - ${POSTIZ_ROOT}/operator/postgres.env
+  postiz-redis:
+    image: ${POSTIZ_REDIS_IMAGE:?Load images.env}
+    restart: unless-stopped
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - redis-cli ping | grep -q PONG
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    volumes:
+    - ${POSTIZ_ROOT:?Set assigned data directory}/state/redis:/data
+    networks:
+    - application
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    command:
+    - redis-server
+    - --appendonly
+    - 'yes'
+  temporal-elasticsearch:
+    image: ${TEMPORAL_ELASTICSEARCH_IMAGE:?Load images.env}
+    restart: unless-stopped
+    environment:
+    - cluster.routing.allocation.disk.threshold_enabled=true
+    - cluster.routing.allocation.disk.watermark.low=512mb
+    - cluster.routing.allocation.disk.watermark.high=256mb
+    - cluster.routing.allocation.disk.watermark.flood_stage=128mb
+    - discovery.type=single-node
+    - ES_JAVA_OPTS=-Xms256m -Xmx256m
+    - xpack.security.enabled=false
+    networks:
+    - workflow
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS "http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s" || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+    volumes:
+    - ${POSTIZ_ROOT:?Set assigned data directory}/state/elasticsearch:/usr/share/elasticsearch/data
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+  temporal-postgresql:
+    image: ${TEMPORAL_POSTGRESQL_IMAGE:?Load images.env}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: temporal
+    networks:
+    - workflow
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U temporal
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    volumes:
+    - ${POSTIZ_ROOT:?Set assigned data directory}/state/temporal-postgres:/var/lib/postgresql/data
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    env_file:
+    - ${POSTIZ_ROOT}/operator/temporal-postgres.env
+  temporal:
+    restart: unless-stopped
+    image: ${TEMPORAL_IMAGE:?Load images.env}
+    depends_on:
+      temporal-postgresql:
+        condition: service_healthy
+      temporal-elasticsearch:
+        condition: service_healthy
+    environment:
+    - DB=postgres12
+    - DB_PORT=5432
+    - POSTGRES_USER=temporal
+    - POSTGRES_SEEDS=temporal-postgresql
+    - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/production-sql.yaml
+    - ENABLE_ES=true
+    - ES_SEEDS=temporal-elasticsearch
+    - ES_VERSION=v7
+    - TEMPORAL_NAMESPACE=default
+    networks:
+    - workflow
+    healthcheck:
+      test:
+      - CMD
+      - temporal
+      - operator
+      - cluster
+      - health
+      - --address
+      - temporal:7233
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    volumes:
+    - ./dynamicconfig:/etc/temporal/config/dynamicconfig:ro
+    labels:
+      kompose.volume.type: configMap
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    env_file:
+    - ${POSTIZ_ROOT}/operator/temporal.env
+  temporal-admin-tools:
+    image: ${TEMPORAL_ADMIN_TOOLS_IMAGE:?Load images.env}
+    restart: unless-stopped
+    environment:
+    - TEMPORAL_ADDRESS=temporal:7233
+    - TEMPORAL_CLI_ADDRESS=temporal:7233
+    networks:
+    - workflow
+    stdin_open: true
+    depends_on:
+      temporal:
+        condition: service_healthy
+    tty: true
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    profiles:
+    - operations
+  temporal-ui:
+    image: ${TEMPORAL_UI_IMAGE:?Load images.env}
+    restart: unless-stopped
+    environment:
+    - TEMPORAL_ADDRESS=temporal:7233
+    - TEMPORAL_CORS_ORIGINS=http://127.0.0.1:3000
+    networks:
+    - workflow
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -f
+      - http://localhost:8080/healthz
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    depends_on:
+      temporal:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    profiles:
+    - operations
+networks:
+  application: {}
+  workflow:
+    internal: true
+  edge:
+    external: true
+    name: octal8-postiz

@@ -1,0 +1,11 @@
+services:
+  caddy:
+    volumes:
+      - ${POSTIZ_RELEASE_ROOT:?Set the Postiz release directory}/postiz.caddy:/etc/caddy/sites/postiz.caddy:ro
+    networks:
+      postiz:
+
+networks:
+  postiz:
+    external: true
+    name: octal8-postiz

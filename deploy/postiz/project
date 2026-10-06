@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+export DOCKER_HOST=unix:///var/run/docker.sock
+unset DOCKER_CONTEXT
+set -a
+source ./images.env
+source "${POSTIZ_OPERATOR_ENV:?Set the protected operator.env path}"
+set +a
+mountpoint -q "$POSTIZ_DATA_MOUNT"
+[[ "$(findmnt -n -o TARGET --target "$POSTIZ_ROOT")" == "$POSTIZ_DATA_MOUNT" ]]
+exec docker compose -p wlkrlabs-postiz -f compose.yml "$@"
