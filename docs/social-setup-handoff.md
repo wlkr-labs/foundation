@@ -4,7 +4,7 @@ Prepared October 6, 2026. This is an execution handoff; accounts, email delivery
 
 ## Outcome
 
-Establish WLKR Labs' professional presence across the free platforms below. Use **social@wlkrlabs.com** for new brand registrations, notifications and recovery wherever supported. Organize credentials in the existing **1Password** account associated with **scwlkr**, in an owner-only **WLKR Labs Social** vault. Account creation and Postiz integration have separate completion states.
+Establish WLKR Labs' professional presence across the free platforms below. Use **social@wlkrlabs.com** for new brand registrations, notifications and recovery wherever supported. Organize credentials in the existing **1Password** account associated with **scwlkr**, in an owner-only **WLKR Labs Social** vault. Account creation and Postiz integration have separate completion states. Pinterest is permanently excluded at the owner's direction on October 6, 2026; do not create an account, connection or launch drafts for it.
 
 ## Identity and ownership
 
@@ -55,7 +55,6 @@ Audit existing accounts before creating anything. Reuse owner-controlled profile
 | YouTube | WLKR Labs channel using a Brand Account | YouTube Studio; public API uploads require an audited API project |
 | Bluesky | WLKR Labs account, then domain handle `wlkrlabs.com` | Free API connection using an app password |
 | Mastodon | WLKR Labs account on a suitable existing free instance | Verify instance rules permit organizational use; connect its API |
-| Pinterest | WLKR Labs business account | App approval for Postiz |
 | Tumblr | WLKR Labs blog/profile | Developer credentials for Postiz |
 | X | WLKR Labs account and available handle | Free native posting; leave paid API integration disconnected |
 | TikTok | WLKR Labs brand account; Business type if suitable | Native posting initially; do not promise approval for an internal-only direct-post app |
