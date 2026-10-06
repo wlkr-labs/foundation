@@ -50,8 +50,8 @@ Record masked references in the [verification template](../templates/support-acc
 
 | Field | Exact information / verification needed | Current state |
 | --- | --- | --- |
-| Login | Controlled Buy Me a Coffee login, confirmed email and recovery/MFA | New account needed; administrative email selected privately |
-| Public profile | Actual full URL, display name, About text and authenticated ownership | No profile exists; no URL guessed |
+| Login | Controlled Buy Me a Coffee login, confirmed email and recovery/MFA | Signed-in creator profile saved; administrative email selected privately |
+| Public profile | Actual full URL, display name, About text and authenticated ownership | Mission/name/site/brandmark saved; actual profile URL still unverified |
 | Processor | Actual Stripe account reference, US country if truthful, USD, business type and connected-account mode | Stripe selected; distinct WLKR Labs account recommended |
 | Legal recipient | Exact legal name and truthful individual/sole-proprietor status matching provider records | Shane Walker proposed; legal match unverified; never select nonprofit |
 | Identity | Legal name, address, birth date, phone, taxpayer identifier and any ID the provider actually requests | Shane enters these directly; exact requirements depend on onboarding |
@@ -65,7 +65,7 @@ The processor sets exact requirements. [Stripe verification requirements](https:
 
 ## Owner steps and launch gate
 
-1. Open [Buy Me a Coffee](https://www.buymeacoffee.com/), choose Sign up, use the selected administrative email, and complete new credentials and [provider terms](https://buymeacoffee.com/terms) yourself. Copy the prepared display name, headline and About text above.
+1. Account sign-in and creator mission/name/site/brandmark are complete. The saved draft says financial support is not open. The current owner step is [Set up payouts](https://buymeacoffee.com/setup-payout), United States → Connect. Complete [provider terms](https://buymeacoffee.com/terms) and Stripe’s financial-account steps directly. The final funding About text above replaces the pending-support draft only after recipient verification and launch approval.
 2. Open Dashboard → Payouts → Set up payouts. At Stripe, choose or create a distinct WLKR Labs account with truthful personal operating status. Complete identity/tax/bank information directly. Stop if the only offered account is the unrelated account or the recipient is wrong. Opening/connecting the financial account is an owner action.
 3. Confirm USD, account/recipient match, payout requirements, fees, disabled optional features, public receipt/descriptor and working support contact. Preserve references only in the private verification record.
 4. Provide the actual profile URL and confirm that the account and payout recipient are yours. Approve these general-support/refund terms and publication of that verified link. No passwords, tax IDs, bank numbers or identity documents in chat.

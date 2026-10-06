@@ -41,6 +41,6 @@ Local receipts: `/Users/shanewalker/Desktop/dev/WLKRLABS/.local/foundation-2026-
 
 Published website commit: `2c6a359e62fa76eeaca4346639d0ed9394526fbe`; comparison base: `bdb9428ee0bd041e4d1c874e54c7fa79f26ae348`. Cloudflare version: `c6b5d0b2-3d37-4577-b829-542e3d467daf`; deployment: `8252a904-c8f5-4f31-bd30-d6ea6a94c0e0`. The subsequent maintenance-only commit changes no served asset; all 28 asset hashes still match. Full current commit/check receipts are local.
 
-Foundation preparation comparison base: `6c235466a0be3404478bd1e1a89ee66a713fc172`; original remote default commit retained in history: `c88804ce0e7a1277e5cbd3568c5169b1cd5fe238`. Source-history bundles verify locally. Cloud backup sharing and complete-file metadata/readback were verified; a full cloud restore/hash comparison was not performed.
+Foundation preparation comparison base: `6c235466a0be3404478bd1e1a89ee66a713fc172`; original remote default commit retained in history: `c88804ce0e7a1277e5cbd3568c5169b1cd5fe238`. Source-history bundles verify locally. Cloud backup sharing and complete raw binary readback were verified; its SHA-256 exactly matches the local archive.
 
 Restricted GitHub app/key/package/protection reads remain documented review limits for future migrations; a failed read never establishes absence. This setup preserves the product catalog and does not requalify new product releases. No filing, source-license change, product transfer, payment, payout or refund was performed. No funding balance is inferred from the empty ledger.
