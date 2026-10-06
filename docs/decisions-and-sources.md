@@ -14,8 +14,8 @@ Prepared October 6, 2026. This file separates agreed direction, proposed choices
 
 | Decision | Working recommendation | What settles it |
 | --- | --- | --- |
-| Mission wording | Use the mission document's first paragraph | Editorial adoption by Shane |
-| Public aspiration language | “Working toward becoming a nonprofit” with current status | Exact website copy and release decision |
+| Mission | Established by Shane; use the mission document's first paragraph | No new mission decision required |
+| Public aspiration language | Implemented locally: “working toward becoming a nonprofit” plus unincorporated/no IRS recognition | Approve publication of the prepared copy |
 | Initial support provider | Ko-fi Free, one-time support | Provider terms, payout identity, fee settings, funding-use terms |
 | Reserve target | $300 available for base streamlined filings | Actual eligibility, fees, tax/processor treatment, money received |
 | Founder compensation | Modest, documented, separately reported | An affordable budget now; disinterested board approval later |
@@ -27,14 +27,14 @@ No decision above is evidence that an account has been opened, funds raised, a b
 ## Verified local and public inventory
 
 - The existing planning/brand checkout is `/Users/shanewalker/Desktop/dev/WLKRLABS`, with public remote `WLKRLABS/WLKRLABS`. Baseline commit: `c88804c`.
-- The public GitHub `WLKRLABS` account is a User with three public repositories. This is not a complete inventory of private repositories or account integrations.
+- Authenticated ownership inventory confirms `WLKRLABS` is a User with three public and zero private owned repositories returned; `scwlkr` has 28 public and 35 private owned repositories. Private details stay under ignored `private/foundation/`; restricted app/package/authentication reads remain review gates.
 - The current GitHub CLI identity is `scwlkr`; SSH account aliases already exist. Private credentials were not gathered into these plans.
 - The Astro website source is `/Users/shanewalker/Documents/Codex/2026-09-30/task/wlkrlabs.com`, clean at `bdb9428ee0bd041e4d1c874e54c7fa79f26ae348` during inspection.
 - The live site's `/build-info.json` reports that same commit. This confirms the source revision relationship; it is not a new comprehensive functional audit or deployment.
 - The website has no Git remote. Its existing maintenance document identifies the Cloudflare static-assets workflow and existing weekly procedure.
 - `/Users/shanewalker/Desktop/dev/wlkrlabs-website` is an older Vite/Three.js prototype; it is not the source for current live edits.
 - The website's approved catalog contains PatriBible, WalkLang, OpenJob, and tellygrab. OpenJob is shared task management, not a job-search service.
-- GitHub reports Apache-2.0 for WalkLang, MIT for tellygrab, and no detected license for OpenJob. Confirm actual license files before future rights decisions.
+- Actual tracked license files confirm Apache-2.0 for WalkLang and MIT for tellygrab. OpenJob has no tracked LICENSE/COPYING or GitHub-detected license; no reuse rights or license change are promised.
 - Email records include historical arrangements. Current routing should be verified in its owning administration project before any mail changes.
 
 ## Sources
@@ -57,3 +57,7 @@ Sources were checked in this conversation on October 6, 2026. Recheck fees, elig
 | Conversion effects | [GitHub account reference](https://docs.github.com/en/account-and-profile/reference/personal-account-reference) |
 
 Existing website founding documents contain earlier company-model proposals. The current agreed mission in this plan supersedes conflicting planning ideas, while deployed behavior and the website's maintenance procedure remain authoritative until intentionally changed.
+
+## Implementation evidence
+
+The [checklist](implementation-checklist.md) is the working status record. The [support proposal](support-launch-proposal.md) and [organization proposal](github-organization-proposal.md) separate finished local preparation from activation/publication approvals. Full local commit receipts and preview artifacts are saved under ignored `.local/foundation-2026-10-06/`; preparation costs $0. No new legal-status verification or filing is claimed.

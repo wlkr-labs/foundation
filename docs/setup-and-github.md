@@ -2,6 +2,8 @@
 
 Verified October 6, 2026. This is a local organization plan; remote migrations are future decisions.
 
+Implementation inventory now includes authenticated reads of both accounts. See the [organization proposal](github-organization-proposal.md) for counts, dependency gates, and the concrete first stage, and the [project inventory](project-inventory.md) for program scope. Detailed private account metadata stays under ignored `private/foundation/`.
+
 ## One organizing home
 
 Use `/Users/shanewalker/Desktop/dev/WLKRLABS` for these plans and as the folder to open in an editor or add as a Codex project. It is the existing clone of the public `WLKRLABS/WLKRLABS` repository, expanded locally on a planning branch.
@@ -30,9 +32,9 @@ Git ignore rules prevent accidental tracking; they do not encrypt files or provi
 | --- | --- | --- |
 | PatriBible | `/Users/shanewalker/Desktop/dev/PatriBible` | Public site and app; source remains private |
 | PatriAI | `/Users/shanewalker/Desktop/dev/PatriAI` | Supporting implementation; retain private visibility |
-| WalkLang | `/Users/shanewalker/Desktop/dev/WalkLang` | `scwlkr/WalkLang`; GitHub reports Apache-2.0 |
-| OpenJob | `/Users/shanewalker/Desktop/dev/openjob` | `scwlkr/openjob`; license not reported by GitHub, so inspect before promising reuse rights |
-| tellygrab | `/Users/shanewalker/Desktop/dev/tellygrab` | `scwlkr/tellygrab`; GitHub reports MIT |
+| WalkLang | `/Users/shanewalker/Desktop/dev/WalkLang` | `scwlkr/WalkLang`; tracked Apache-2.0 LICENSE verified |
+| OpenJob | `/Users/shanewalker/Desktop/dev/openjob` | `scwlkr/openjob`; no tracked LICENSE/COPYING or GitHub-detected license; no reuse rights promised |
+| tellygrab | `/Users/shanewalker/Desktop/dev/tellygrab` | `scwlkr/tellygrab`; tracked MIT LICENSE verified |
 
 These are location/visibility observations, not a transfer of ownership or a fresh qualification of every feature. Keep private source URLs out of public website copy.
 
