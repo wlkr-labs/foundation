@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)"
+case "${1:-}" in
+  docs:check) exec python3 scripts/check_docs.py ;;
+  *) printf '%s\n' 'Usage: ./project docs:check' >&2; exit 2 ;;
+esac

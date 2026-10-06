@@ -1,16 +1,54 @@
-# WLKR LABS
+# WLKR Labs foundation plan
 
-> Always Exceptional Design.
+> Excellent free software, practical education, and biblical purpose.
 
-WLKR LABS is where software, systems, and design are built as one discipline.
+WLKR Labs is Shane Walker's independent initiative in Texas. It is preparing for a possible future nonprofit structure. It has not incorporated or received IRS recognition. These are planning drafts, not adopted corporate documents.
 
-I care about products that are clear, useful, elegant, and enjoyable to use. The goal is simple: make things that respect people's time and feel excellent in the hand.
+This folder is the organizing home for the mission, website access, operating plans, and eventual nonprofit preparation. Product code stays in its existing repositories.
 
-This repository holds the core WLKR LABS brand assets.
+## Start here
 
-## Assets
+1. Read the [mission and programs](docs/mission-and-programs.md).
+2. Use the [setup and GitHub plan](docs/setup-and-github.md) to find everything.
+3. Follow the [funding and operations plan](docs/funding-and-operations.md) before accepting support.
+4. Use the [nonprofit roadmap](docs/nonprofit-roadmap.md) when formation becomes affordable.
+5. Review the [website plan and starter copy](docs/website-plan.md) before publication.
+6. Consult the [decisions, evidence, and sources](docs/decisions-and-sources.md) when a fact or commitment changes.
 
-- [logo/logo-square-wlkr-labs.png](logo/logo-square-wlkr-labs.png)
-- [logo/logo-square-wlkr-labs.af](logo/logo-square-wlkr-labs.af)
-- [font/mirano.zip](font/mirano.zip)
-- [font/bezmiar.zip](font/bezmiar.zip)
+## Folder map
+
+```text
+WLKRLABS/
+  README.md                  Start here
+  docs/                      Six planning documents; safe for public review
+  templates/                 Empty operating templates
+  website -> existing Astro checkout
+  private/                   Local financial/account records; ignored by Git
+  .local/                    Local verification receipts; ignored by Git
+  project                    Local document check command
+  scripts/                   Document checker
+```
+
+`website` is a local shortcut to the verified existing source, not another copy. Its source remains at `/Users/shanewalker/Documents/Codex/2026-09-30/task/wlkrlabs.com`. Existing release history and maintenance instructions remain there.
+
+## Next practical steps
+
+- Finalize the mission and present it on the website with accurate current status.
+- Choose one support platform, approve its payout identity and public funding terms, then connect its verified link.
+- Maintain PatriBible first; turn existing technical documentation into useful teaching material.
+- Record spending and formation savings; report public totals without supporter identities.
+- Decide on a GitHub organization after reviewing the account inventory and migration effects.
+
+Preparation costs $0 in new filing or subscription fees. Formation is a later milestone, not a condition for maintaining useful software now.
+
+## Local checks
+
+```sh
+./project docs:check
+```
+
+For website development, enter `website`, read its `AGENTS.md` and `MAINTENANCE.md`, and use its existing npm commands. A document check does not authorize a website deployment.
+
+## Planning status
+
+Prepared October 6, 2026. The owner's mission and preparation scope are agreed; specific funding policies, public copy, account migrations, and corporate documents remain proposals. No fundraising account, incorporation, website release, or GitHub conversion is represented as completed by these plans.
