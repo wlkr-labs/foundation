@@ -63,7 +63,7 @@ Postiz keeps its required upstream Node runtime; the host's Rust-first policy ap
 
 - [ ] Coordinate account IDs, handles and vault references with the social handoff. Start with an available free connection such as Bluesky or Mastodon; add approved Meta and LinkedIn Page apps progressively. [Provider setup](https://docs.postiz.com/self-host/providers/overview)
 - [ ] Use exact current OAuth redirect URIs for this hostname. Store provider credentials in the vault and protected configuration. Confirm intended scopes and account identity before connecting.
-- [ ] Keep X disconnected from paid API access. Record TikTok, YouTube and Reddit approval restrictions accurately; native posting remains an available account-level route.
+- [ ] Keep X disconnected from paid API access. Keep Pinterest, Tumblr and TikTok permanently excluded. Record YouTube and Reddit approval restrictions accurately; native posting remains an available account-level route.
 - [ ] Verify login, draft creation/editing, media upload, channel connection and worker/workflow readiness. A saved draft or healthy worker does not establish successful scheduled publication.
 - [ ] If an owner-only test destination is available, explicitly scope a synthetic scheduled-delivery test to it, verify the result and check for duplicates. Do not send to other people or publish publicly without publishing instructions. Otherwise record scheduled delivery as unverified with its exact next test.
 - [ ] Restart only the Postiz project and verify persistence and recovery. Recheck the existing services against the baseline; report pre-existing failures separately.

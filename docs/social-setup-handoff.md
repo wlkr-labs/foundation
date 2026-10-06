@@ -4,7 +4,7 @@ Prepared October 6, 2026. This is an execution handoff; accounts, email delivery
 
 ## Outcome
 
-Establish WLKR Labs' professional presence across the free platforms below. Use **social@wlkrlabs.com** for new brand registrations, notifications and recovery wherever supported. Organize credentials in the existing **1Password** account associated with **scwlkr**, in an owner-only **WLKR Labs Social** vault. Account creation and Postiz integration have separate completion states. Pinterest and Tumblr are permanently excluded at the owner's direction on October 6, 2026; do not create accounts, connections or launch drafts for them.
+Establish WLKR Labs' professional presence across the free platforms below. Use **social@wlkrlabs.com** for new brand registrations, notifications and recovery wherever supported. Organize credentials in the existing **1Password** account associated with **scwlkr**, in an owner-only **WLKR Labs Social** vault. Account creation and Postiz integration have separate completion states. Pinterest, Tumblr and TikTok are permanently excluded at the owner's direction on October 6, 2026; do not create accounts, connections or launch drafts for them.
 
 ## Identity and ownership
 
@@ -56,14 +56,13 @@ Audit existing accounts before creating anything. Reuse owner-controlled profile
 | Bluesky | WLKR Labs account, then domain handle `wlkrlabs.com` | Free API connection using an app password |
 | Mastodon | WLKR Labs account on a suitable existing free instance | Verify instance rules permit organizational use; connect its API |
 | X | WLKR Labs account and available handle | Free native posting; leave paid API integration disconnected |
-| TikTok | WLKR Labs brand account; Business type if suitable | Native posting initially; do not promise approval for an internal-only direct-post app |
 | Reddit | WLKR Labs brand account | Native participation within community rules; API access requires approval |
 | Dev.to / Hashnode | Brand or organization presence where available | Optional technical articles; confirm current free plan and credential eligibility |
 | Discord / Telegram | Owner-controlled server/channel if useful | Optional community presence; do not invite or message other people as part of setup |
 
 Bluesky domain verification uses a scoped TXT record or the documented website route; read back the new handle. Add only the required record and preserve other DNS. [Bluesky guide](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial)
 
-For business publishing, recheck [LinkedIn Page access](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review), [YouTube upload restrictions](https://developers.google.com/youtube/v3/docs/videos/insert), [TikTok intended use](https://developers.tiktok.com/docs/en/content-sharing-guidelines), [Reddit access](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data) and [X API pricing](https://docs.x.com/x-api/getting-started/pricing). A free account does not establish free automated publishing.
+For business publishing, recheck [LinkedIn Page access](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review), [YouTube upload restrictions](https://developers.google.com/youtube/v3/docs/videos/insert), [Reddit access](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data) and [X API pricing](https://docs.x.com/x-api/getting-started/pricing). A free account does not establish free automated publishing.
 
 Google Business Profile is conditional: online-only organizations are ineligible. Do not create a Maps listing unless WLKR Labs actually meets [Google's eligibility requirements](https://support.google.com/business/answer/13763036).
 
