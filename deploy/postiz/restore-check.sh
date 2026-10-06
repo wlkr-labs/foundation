@@ -27,7 +27,7 @@ backup="$testroot/backup"
 network="wlkrlabs-postiz-restore-$stamp"
 docker --host unix:///var/run/docker.sock network create --internal "$network" >/dev/null
 cleanup() {
-  docker --host unix:///var/run/docker.sock rm -f "postiz-restore-$stamp" "temporal-restore-$stamp" >/dev/null 2>&1 || true
+  docker --host unix:///var/run/docker.sock rm -f "postiz-restore-$stamp" "temporal-restore-$stamp" "redis-restore-$stamp" "elasticsearch-restore-$stamp" >/dev/null 2>&1 || true
   docker --host unix:///var/run/docker.sock network rm "$network" >/dev/null
 }
 trap cleanup EXIT
@@ -66,5 +66,26 @@ docker --host unix:///var/run/docker.sock run --rm --network none \
   --mount "type=bind,src=$backup,dst=/backup,readonly" \
   --mount "type=bind,src=$testroot,dst=/restore" \
   "$POSTIZ_POSTGRES_IMAGE" sh -ec 'tar xzf /backup/files.tar.gz -C /restore state/uploads state/redis state/elasticsearch; find /restore/state/uploads -type f -exec sha256sum {} \; > /restore/media-sha256.txt'
-echo "Isolated logical database and media restore passed; no application/worker or live credentials started."
-echo "Cold Redis/Elasticsearch files recovered; service-level workflow resumption remains untested."
+docker --host unix:///var/run/docker.sock run -d --name "redis-restore-$stamp" \
+  --network "$network" --mount "type=bind,src=$testroot/state/redis,dst=/data" \
+  "$POSTIZ_REDIS_IMAGE" redis-server --appendonly yes >/dev/null
+docker --host unix:///var/run/docker.sock run -d --name "elasticsearch-restore-$stamp" \
+  --network "$network" --mount "type=bind,src=$testroot/state/elasticsearch,dst=/usr/share/elasticsearch/data" \
+  -e discovery.type=single-node -e xpack.security.enabled=false \
+  -e ES_JAVA_OPTS='-Xms512m -Xmx512m' "$TEMPORAL_ELASTICSEARCH_IMAGE" >/dev/null
+ready=false
+for attempt in $(seq 1 90); do
+  if docker --host unix:///var/run/docker.sock exec "elasticsearch-restore-$stamp" \
+    curl -fsS 'http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=2s' > "$testroot/elasticsearch-health.json"; then
+    ready=true
+    break
+  fi
+  sleep 2
+done
+[[ "$ready" == true ]]
+docker --host unix:///var/run/docker.sock exec "redis-restore-$stamp" redis-cli ping | grep -qx PONG
+docker --host unix:///var/run/docker.sock exec "redis-restore-$stamp" redis-cli dbsize
+docker --host unix:///var/run/docker.sock exec "elasticsearch-restore-$stamp" \
+  curl -fsS 'http://localhost:9200/_cat/indices?v'
+echo "Isolated SQL, media, Redis and Elasticsearch restore passed; no application/worker or live credentials started."
+echo "Publishing workflow execution remains untested."

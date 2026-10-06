@@ -101,13 +101,13 @@ systemctl --user status wlkrlabs-postiz-backup.timer
 ```
 
 The restore verifies a copy read from the protected secondary drive and creates
-two database containers on a dedicated internal network,
+database, Redis and Elasticsearch containers on a dedicated internal network,
 restores both SQL dumps with errors fatal, clears live channel/API/user
 credentials, and extracts media and cold workflow files. It runs no application
 or worker, exposes no ports, and removes its containers/network on exit. Test
 state/evidence stays on the assigned drive. Compare restored record counts and
-media hashes with production. SQL/media restore does not prove scheduled delivery
-or service-level Elasticsearch/Redis workflow resumption. Rehearse full recovery
+media hashes with production. Redis and Elasticsearch must start from recovered
+files; this does not prove scheduled delivery or worker execution. Rehearse full recovery
 with publishing blocked before using it for a real outage.
 
 ## Rollback
