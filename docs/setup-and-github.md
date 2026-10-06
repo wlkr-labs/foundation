@@ -10,7 +10,7 @@ Use `/Users/shanewalker/Desktop/dev/WLKRLABS` for these plans and as the folder 
 
 The `website` shortcut opens the existing Astro source at `/Users/shanewalker/Documents/Codex/2026-09-30/task/wlkrlabs.com`. That source retains independent Git history, with private remote `git@github-scwlkr:wlkr-labs/website.git`. Keep the shortcut local and ignored by Git. It preserves the source path used by the established maintenance procedure.
 
-Do not use `/Users/shanewalker/Desktop/dev/wlkrlabs-website` for live-site changes: it is an older Vite/Three.js prototype. The live release is `2c6a359`; the subsequent maintenance-only record changes no served asset.
+Do not use `/Users/shanewalker/Desktop/dev/wlkrlabs-website` for live-site changes: it is an older Vite/Three.js prototype. The approved support/identity release is `d03d3c4`; full verification is recorded in the implementation checklist and local receipts.
 
 ## What belongs where
 

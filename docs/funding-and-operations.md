@@ -1,6 +1,6 @@
 # Funding and operations
 
-Status: Buy Me a Coffee and a distinct WLKR Labs Stripe account are connected, October 6, 2026. Individual/Shane Walker recipient and active Payments/Payouts are verified. The website launch, adopted funding/refund terms, payout-destination confirmation and contact review remain pending; no transaction or reconciled balance is established.
+Status: voluntary support launched with Shane's approval, October 6, 2026. The owned Buy Me a Coffee profile and distinct active WLKR Labs Stripe account are verified; Shane confirmed the payout destination and support mailbox and adopted the funding/refund/privacy terms. Stripe phone display on receipts/invoices is off. Its required support mailing address still needs an authorized non-home alternative for fuller privacy. No transaction or reconciled balance is established.
 
 ## Start with voluntary support
 
@@ -20,7 +20,7 @@ Current US guidance specifies Stripe Standard Connect. Prepare a distinct WLKR L
 
 Before connecting a page, approve the platform's terms, recipient identity, processor, public disclosure, payout method, and refund process. Confirm current fees in the actual account. Use one link and ordinary one-time support initially; avoid rewards that create extra delivery commitments.
 
-The [support launch proposal](support-launch-proposal.md) contains ready-to-use profile/terms copy, the exact missing account fields, and the verification sequence. The live Support page is useful without payment activation and currently says financial support is not open.
+The [support launch record](support-launch-proposal.md) contains the adopted profile/terms copy and account verification sequence. The [live Support page](https://wlkrlabs.com/support) links the verified payment profile and explains the recipient, current nonprofit status, funding uses and refund requests.
 
 ## A formation reserve
 

@@ -16,7 +16,7 @@ Prepared October 6, 2026. This file separates agreed direction, proposed choices
 | --- | --- | --- |
 | Mission | Established by Shane; use the mission document's first paragraph | No new mission decision required |
 | Public aspiration language | Published: “working toward becoming a nonprofit” plus unincorporated/no IRS recognition | Approved release verified on both existing hostnames |
-| Initial support provider | Owned Buy Me a Coffee profile and distinct active WLKR Labs Stripe account verified; Individual/Shane Walker recipient | Payout-destination/contact confirmation, adopted terms and exact prepared release approval |
+| Initial support provider | Owned profile and distinct active Stripe account verified; Individual/Shane Walker recipient; owner confirmed payout/mailbox and adopted terms; support launch published | Authorized non-home mailing address for Stripe's required support-address field; actual financial records when received |
 | Reserve target | $300 available for base streamlined filings | Actual eligibility, fees, tax/processor treatment, money received |
 | Founder compensation | Modest, documented, separately reported | An affordable budget now; disinterested board approval later |
 | GitHub | Free `wlkr-labs` organization established; foundation transferred and private website imported | First-stage readbacks verified; each later product migration remains separate |
@@ -30,7 +30,7 @@ No decision above is evidence that an account has been opened, funds raised, a b
 - Authenticated ownership inventory confirms before migration `WLKRLABS` was a User with three public and zero private owned repositories returned; the foundation is now organization-owned, leaving two public repositories; `scwlkr` has 28 public and 35 private owned repositories. Private details stay under ignored `private/foundation/`; restricted app/package/authentication reads remain review gates.
 - The current GitHub CLI identity is `scwlkr`; SSH account aliases already exist. Private credentials were not gathered into these plans.
 - The Astro website source is `/Users/shanewalker/Documents/Codex/2026-09-30/task/wlkrlabs.com`, clean at `bdb9428ee0bd041e4d1c874e54c7fa79f26ae348` during inspection.
-- The approved mission release now reports `2c6a359e62fa76eeaca4346639d0ed9394526fbe`. Both hostnames, all built assets and removed-route behavior were verified against the release; Cloudflare serves its version at 100%.
+- The approved support/identity release reports `d03d3c4e3dfe175e2a6a7a9eaf9c195aea2697d1`. Both hostnames, all built assets and removed-route behavior were verified; 64 checks pass and Cloudflare serves the intended version at 100%. Earlier mission-release evidence is retained.
 - The website now has the approved private `wlkr-labs/website` remote; original history is preserved. Its existing maintenance document identifies the Cloudflare static-assets workflow and existing weekly procedure.
 - `/Users/shanewalker/Desktop/dev/wlkrlabs-website` is an older Vite/Three.js prototype; it is not the source for current live edits.
 - The website's approved catalog contains PatriBible, WalkLang, OpenJob, and tellygrab. OpenJob is shared task management, not a job-search service.
@@ -60,4 +60,4 @@ Existing website founding documents contain earlier company-model proposals. The
 
 ## Implementation evidence
 
-The [checklist](implementation-checklist.md) is the working status record. The [support proposal](support-launch-proposal.md) and [organization proposal](github-organization-proposal.md) separate finished local preparation from publication approvals. Full local commit receipts and preview artifacts are saved under ignored `.local/foundation-2026-10-06/`; setup spent $0. The approved remote first stage and private backup are complete; Shane completed payment-provider onboarding and the website support launch awaits approval. No new legal-status verification or filing is claimed.
+The [checklist](implementation-checklist.md) is the working status record. The [support launch record](support-launch-proposal.md) and [organization proposal](github-organization-proposal.md) distinguish verified outcomes from later decisions. Full local commit receipts and preview artifacts are saved under ignored `.local/foundation-2026-10-06/`; setup spent $0. The approved remote first stage, private backup and voluntary-support website/profile launch are complete. Stripe phone display on receipts/invoices is off; a non-home support mailing address is the remaining privacy decision. No paid transaction, new legal-status verification or filing is claimed.

@@ -1,6 +1,6 @@
 # Website plan and starter copy
 
-Status: implemented locally for publication review, October 6, 2026, on the canonical website's `codex/foundation-website` branch. The established mission is reflected in Home/About, metadata, Work context, principles, and a new mission note. A static Support page is prepared without payment links and says financial support is not open. This is not a website release or an active fundraiser.
+Status: published with Shane's approval, October 6, 2026. The established mission is reflected in Home/About, metadata, Work context, principles and the mission note. The updated logo assets, verified Buy Me a Coffee link, adopted Support terms and Privacy notice are live. Release `d03d3c4e3dfe175e2a6a7a9eaf9c195aea2697d1` matches both hostnames; 64 served asset/route checks pass and the existing Worker version is at 100%. Product visibility and licenses are unchanged.
 
 ## Keep the existing site simple
 

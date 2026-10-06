@@ -38,9 +38,9 @@ WLKRLABS/
 
 ## Next practical steps
 
-The mission, About and no-payment Support pages are [live](https://wlkrlabs.com). The Free [GitHub organization](https://github.com/wlkr-labs) and its public profile are established. This repository is now [wlkr-labs/foundation](https://github.com/wlkr-labs/foundation); the canonical website has a separate private remote with its history preserved.
+The mission, About, voluntary [Support](https://wlkrlabs.com/support), [Privacy](https://wlkrlabs.com/privacy), and updated website branding are live. The Free [GitHub organization](https://github.com/wlkr-labs) and its public profile are established. This repository is now [wlkr-labs/foundation](https://github.com/wlkr-labs/foundation); the canonical website has a separate private remote with its history preserved.
 
-- Confirm the payout destination and support mailbox, review receipt contact details, adopt the prepared support terms, then approve the locally prepared launch with the verified Buy Me a Coffee link.
+- Replace Stripe's required customer-support mailing address with an authorized non-home address if available. Phone display on receipts/invoices is disabled; support uses the confirmed public email. The payout destination, terms and launch were approved.
 - Maintain PatriBible first and turn current documentation into useful teaching material.
 - Reconcile actual receipts/fees/refunds; report public totals without supporter identities.
 - Use the dependency proposal before considering later product transfers.
@@ -58,4 +58,4 @@ For website development, enter `website`, read its `AGENTS.md` and `MAINTENANCE.
 
 ## Planning status
 
-Updated October 6, 2026. The mission is established. The approved website and GitHub foundation setup are complete; see the checklist for verification and remaining owner steps. Funding activation requires exact recipient/profile approval. Legal formation and future product migrations remain later decisions. No money was spent and no legal filing was made.
+Updated October 6, 2026. The mission, website, GitHub foundation and approved voluntary-support launch are implemented; see the checklist for verification and the remaining mailing-address privacy decision. Legal formation and future product migrations remain later decisions. No money was spent and no legal filing was made.

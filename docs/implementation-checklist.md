@@ -1,6 +1,6 @@
 # Foundation implementation checklist
 
-Updated October 6, 2026. The agreed mission is established. Foundation preparation and the approved website/GitHub setup are implemented. Legal formation is later; setup spending is **$0**. Shane completed provider onboarding; the verified support link and terms are prepared locally and await launch approval.
+Updated October 6, 2026. The agreed mission is established. The approved foundation, website/GitHub setup, revised identity and voluntary-support launch are implemented. Legal formation is later; setup spending is **$0**. Shane confirmed the payout destination and support mailbox and adopted the terms/privacy notice. Stripe's required support mailing address remains the privacy decision below.
 
 ## Completed
 
@@ -18,12 +18,14 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 - [x] Verify the actual owned Buy Me a Coffee profile and distinct WLKR Labs Stripe account, Individual/Shane Walker recipient, active Payments/Payouts, and domestic-card pricing. Set/read back USD, one-time support and creator-covered card fees; prepare the actual website link and funding/refund terms locally.
 - [x] Commit focused changes and save exact clean SHA/base/command receipts, screenshots, source hashes, provider/version IDs and history bundles locally.
 - [x] Build a full [logo suite](../brand/README.md) from Shane's official logo and wordmark SVGs. Preserve originals; remove the wordmark slash, repair its r/spacing and balance the lockups at Shane's request. Prepare website branding locally alongside the support launch; review gallery and export checks. Keep supporting font licensing.
+- [x] Merge private website PR #1 and publish the approved Support/Privacy/identity release. Fresh local checks pass on the merge commit; both hostnames match the full build record and all assets; 64 served checks pass; intended Worker version is at 100%.
+- [x] Publish and read back the adopted Buy Me a Coffee headline/About. Save/read back Stripe's live Privacy and Support policy URLs and disable phone display on receipts/invoices. Preserve required identity/contact records and both unrelated Stripe accounts.
 
 ## Next practical actions
 
 | Action | Responsible / done when | Dependency |
 | --- | --- | --- |
-| Publish voluntary support | Shane confirms payout destination and public contact; adopts terms and approves release. Agent updates creator copy and publishes the verified link | Exact launch approval and contact review; [ready setup packet](support-launch-proposal.md) |
+| Finish mailing-address privacy | Shane identifies an authorized non-home mailing address if available; enter only Stripe's customer-support address | Stripe requires an address; no hiding control or invented replacement; [launch record](support-launch-proposal.md) |
 | First maintained capability and teaching output | Use PatriBible's own workflow for a reading/search guide, or WalkLang's own CLI for one runnable beginner lesson | Coordinate existing product work; no formation dependency |
 | First monthly review | Use the existing template; reconcile actual receipts/fees/refunds and choose one useful next task | Actual records; no invented totals or newly scheduled automation |
 | Later product migrations | Follow the dependency map and build a repository-specific packet before each transfer | Separate approval; existing product ownership stays in place |
@@ -31,16 +33,15 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 
 ## Decisions genuinely requiring Shane now
 
-1. Confirm the payout destination belongs to Shane and that support@wlkrlabs.com receives requests. Review Stripe's current receipt settings, which include personal address/phone details.
-2. Adopt the [general-support/refund terms](support-launch-proposal.md), including the seven-day review target and fee treatment, and approve the prepared creator-copy update and website release with the verified payment link and updated logo assets. No test charge is authorized.
+1. An authorized non-home mailing address is needed to replace Stripe's required customer-support address. The home address remains in that customer-facing field; phone display on receipts/invoices is off. Do not send address values in public planning records or change the separate legal/identity address.
 
-Website publication, organization name/owner/contact/terms, public profile, private website import, planning transfer and local/Drive backup were approved in this chat and completed. No repeated approval is needed for them. The mission is not an open decision.
+Website publication, payout destination, support mailbox, funding/refund/privacy terms, profile copy, organization name/owner/contact/terms, public profile, private website import, planning transfer and local/Drive backup were approved in this chat and completed. No repeated approval is needed for them. The mission is not an open decision. No test charge is authorized.
 
 ## Evidence and limits
 
 Local receipts: `/Users/shanewalker/Desktop/dev/WLKRLABS/.local/foundation-2026-10-06/`. `execution/` records the approved remote work; the earlier preparation receipts remain intact. Account metadata stays in ignored `private/foundation/`. The private backup pointer is recorded there.
 
-Published website commit: `2c6a359e62fa76eeaca4346639d0ed9394526fbe`; comparison base: `bdb9428ee0bd041e4d1c874e54c7fa79f26ae348`. Cloudflare version: `c6b5d0b2-3d37-4577-b829-542e3d467daf`; deployment: `8252a904-c8f5-4f31-bd30-d6ea6a94c0e0`. The subsequent maintenance-only commit changes no served asset; all 28 asset hashes still match. Full current commit/check receipts are local.
+Published support/identity commit: `d03d3c4e3dfe175e2a6a7a9eaf9c195aea2697d1`; comparison base: `c1684f197292c7c187c84fe252f9c84347e8b090`. Cloudflare version: `5dbd365a-a8fe-444e-a13c-40ca7663df1c`; deployment: `b87ae6e4-1056-41b7-a5c6-9368544fd1ca`, at 100%. Both full build records and all 31 asset hashes match; 64 served asset/route checks pass. Full current commit/check receipts are in local `support/launch-*` files. The earlier mission release and its recovery evidence are retained.
 
 Foundation preparation comparison base: `6c235466a0be3404478bd1e1a89ee66a713fc172`; original remote default commit retained in history: `c88804ce0e7a1277e5cbd3568c5169b1cd5fe238`. Source-history bundles verify locally. Cloud backup sharing and complete raw binary readback were verified; its SHA-256 exactly matches the local archive.
 
