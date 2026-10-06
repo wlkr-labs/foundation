@@ -1,6 +1,6 @@
 # Foundation implementation checklist
 
-Updated October 6, 2026. The agreed mission is established. Foundation preparation and the approved website/GitHub setup are implemented. Legal formation is later; setup spending is **$0**. Financial support remains closed until verified activation.
+Updated October 6, 2026. The agreed mission is established. Foundation preparation and the approved website/GitHub setup are implemented. Legal formation is later; setup spending is **$0**. Shane completed provider onboarding; the verified support link and terms are prepared locally and await launch approval.
 
 ## Completed
 
@@ -15,14 +15,14 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 - [x] Back up planning-repository refs/history and GitHub metadata; verify no issues/PRs/releases/Pages dependency. Transfer the original public repository to [foundation](https://github.com/wlkr-labs/foundation), retaining its repository ID/history and URL redirects.
 - [x] End the temporary `WLKRLABS` member role while retaining its foundation repository access as an outside collaborator. Verify it cannot access the private website.
 - [x] Keep private records on the MacBook and create an owner-only Google Drive recovery folder. Sharing and binary size/readback verified; account/backup references stay private.
-- [x] Choose Buy Me a Coffee and Stripe; prepare profile, general-support/refund terms and exact account-verification fields. Shane signed into Buy Me a Coffee; payout recipient/account verification remains pending.
+- [x] Verify the actual owned Buy Me a Coffee profile and distinct WLKR Labs Stripe account, Individual/Shane Walker recipient, active Payments/Payouts, and domestic-card pricing. Set/read back USD, one-time support and creator-covered card fees; prepare the actual website link and funding/refund terms locally.
 - [x] Commit focused changes and save exact clean SHA/base/command receipts, screenshots, source hashes, provider/version IDs and history bundles locally.
 
 ## Next practical actions
 
 | Action | Responsible / done when | Dependency |
 | --- | --- | --- |
-| Open voluntary support | Shane completes payout onboarding; agent verifies actual profile/recipient/account/fees/checkout and publishes the single approved link | Owner-only identity/tax/bank steps and exact launch approval; [ready setup packet](support-launch-proposal.md) |
+| Publish voluntary support | Shane confirms payout destination and public contact; adopts terms and approves release. Agent updates creator copy and publishes the verified link | Exact launch approval and contact review; [ready setup packet](support-launch-proposal.md) |
 | First maintained capability and teaching output | Use PatriBible's own workflow for a reading/search guide, or WalkLang's own CLI for one runnable beginner lesson | Coordinate existing product work; no formation dependency |
 | First monthly review | Use the existing template; reconcile actual receipts/fees/refunds and choose one useful next task | Actual records; no invented totals or newly scheduled automation |
 | Later product migrations | Follow the dependency map and build a repository-specific packet before each transfer | Separate approval; existing product ownership stays in place |
@@ -30,8 +30,8 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 
 ## Decisions genuinely requiring Shane now
 
-1. Complete Buy Me a Coffee/Stripe payout onboarding with truthful personal operating status, legal recipient and bank destination. Use a distinct account to avoid mixing unrelated activity. New credentials and financial-account actions are performed directly by Shane.
-2. Confirm the exact owned profile URL and payout recipient. Adopt the [general-support/refund terms](support-launch-proposal.md), including the seven-day review target and fee treatment, then approve publication of that verified payment link. No test charge is authorized.
+1. Confirm the payout destination belongs to Shane and that support@wlkrlabs.com receives requests. Review Stripe's current receipt settings, which include personal address/phone details.
+2. Adopt the [general-support/refund terms](support-launch-proposal.md), including the seven-day review target and fee treatment, and approve the prepared creator-copy update and website release with the verified payment link. No test charge is authorized.
 
 Website publication, organization name/owner/contact/terms, public profile, private website import, planning transfer and local/Drive backup were approved in this chat and completed. No repeated approval is needed for them. The mission is not an open decision.
 

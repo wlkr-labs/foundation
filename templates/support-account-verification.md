@@ -10,7 +10,7 @@ Empty template. Copy into `private/support-account-verification.md`. Never enter
 - Recipient legal-name match:
 - Processor / account country / truthful account type:
 - Processor account reference (masked) / Standard Connect or Express readback:
-- Distinct from TMH account / dependency review reference:
+- Distinct from unrelated account / dependency review reference:
 - Identity verification complete / outstanding requirements:
 - Currency:
 - Bank/account holder match / masked destination:

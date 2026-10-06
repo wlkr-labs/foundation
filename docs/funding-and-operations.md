@@ -1,6 +1,6 @@
 # Funding and operations
 
-Status: Buy Me a Coffee and Stripe selected by Shane, October 6, 2026. Account activation, verified payout identity, funding/refund terms and financial balances remain pending.
+Status: Buy Me a Coffee and a distinct WLKR Labs Stripe account are connected, October 6, 2026. Individual/Shane Walker recipient and active Payments/Payouts are verified. The website launch, adopted funding/refund terms, payout-destination confirmation and contact review remain pending; no transaction or reconciled balance is established.
 
 ## Start with voluntary support
 

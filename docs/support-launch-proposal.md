@@ -1,18 +1,18 @@
 # Voluntary support launch proposal
 
-Updated October 6, 2026 after Shane chose **Buy Me a Coffee** and Stripe. This is ready setup copy, not an activated account. Shane has now signed into Buy Me a Coffee; the creator page and payout account are still being prepared. His existing Stripe account may contain unrelated activity; ownership, recipients and dependencies there remain unverified. The live website has no payment link.
+Updated October 6, 2026. Shane completed Buy Me a Coffee/Stripe onboarding and supplied [the actual profile](https://buymeacoffee.com/wlkrlabs). Authenticated creator controls confirm ownership. Stripe shows a distinct **WLKR LABS (Buy Me a Coffee)** account, **Individual** business type, **Shane Walker** recipient details, and active Payments/Payouts with no outstanding tasks. The unrelated account remains present and untouched. The local website launch is prepared; the live website has no payment link.
 
 ## Chosen arrangement and proposed settings
 
 - Buy Me a Coffee, USD, ordinary one-time voluntary support; no paid subscription or setup purchase.
-- Display name: **WLKR Labs**. Proposed recipient: **Shane Walker operating WLKR Labs**, verified against the actual processor before launch.
+- Display name: **WLKR Labs**. Verified processor recipient: **Shane Walker operating WLKR Labs**.
 - Use a distinct WLKR Labs Stripe account with the correct personal operating identity. Do not connect, rename, close, disconnect or migrate the existing unrelated account during this setup.
 - Public support contact: **support@wlkrlabs.com**. Administrative login email is recorded privately. Confirm the public contact receives requests before launch.
-- Keep memberships, shop, rewards and paid extras off. Absorb processing fees so the displayed voluntary amount is the supporter’s total; read back the actual setting.
+- USD, localized pricing off, monthly support off, and creator-covered card fees were saved and read back. Memberships and Shop remain unenabled. Keep rewards and paid extras off.
 - General support serves software, maintenance, education, formation preparation, reasonable development/teaching compensation and operating obligations. No fixed compensation amount or percentage.
 - Keep the $300 net formation-reserve target internal until actual records support it. No invented balance, gross goal or filing date.
 
-Buy Me a Coffee lists no monthly fee, a 5% platform fee, and Stripe processing of 2.9% + $0.30, with a listed 0.5% payout fee and possible international/subscription additions. Confirm the actual connected account’s schedule before activation; do not treat the published schedule as an account quote. [Official fee guide](https://help.buymeacoffee.com/en/articles/8105744-how-to-calculate-charges-on-your-payment).
+Buy Me a Coffee lists no monthly fee, a 5% platform fee, and Stripe processing of 2.9% + $0.30, with a listed 0.5% payout fee and possible international/subscription additions. The actual WLKR Labs Stripe pricing page confirms 2.9% + $0.30 for successful domestic-card charges; other payment methods and product-specific charges vary. No transaction was made and no exact net receipt is promised. [Official fee guide](https://help.buymeacoffee.com/en/articles/8105744-how-to-calculate-charges-on-your-payment).
 
 For US creators, the newer country list specifies **Stripe Standard Connect**. Some older articles still describe Express. Follow the actual US onboarding and verify which account it connects; a separate WLKR Labs account is the recommended way to avoid mixing unrelated financial records. This isolation recommendation is our inference, not a claim that the unrelated account must migrate first. [Country list](https://help.buymeacoffee.com/en/articles/6258038-supported-countries-for-payouts-on-buy-me-a-coffee), [Standard Connect setup](https://help.buymeacoffee.com/en/articles/10025793-how-payouts-work-on-accounts-with-stripe-standard-connect).
 
@@ -32,7 +32,7 @@ About field:
 >
 > Contributions go to Shane Walker operating WLKR Labs. WLKR Labs has not incorporated or received 501(c)(3) recognition. These payments are not tax-deductible charitable donations.
 
-The final paragraph is launch copy only after the recipient is verified. Use the existing brandmark; no paid design work is needed. Choose an available profile handle in the provider’s actual form; no guessed payment URL is prepared or published.
+Recipient verification is complete. The final copy awaits adoption of the terms and launch approval; the saved creator draft still says support is being prepared. The existing brandmark is in use. The verified URL is `https://buymeacoffee.com/wlkrlabs`; no guessed URL is used.
 
 ## Ready public funding terms
 
@@ -51,13 +51,13 @@ Record masked references in the [verification template](../templates/support-acc
 | Field | Exact information / verification needed | Current state |
 | --- | --- | --- |
 | Login | Controlled Buy Me a Coffee login, confirmed email and recovery/MFA | Signed-in creator profile saved; administrative email selected privately |
-| Public profile | Actual full URL, display name, About text and authenticated ownership | Mission/name/site/brandmark saved; actual profile URL still unverified |
-| Processor | Actual Stripe account reference, US country if truthful, USD, business type and connected-account mode | Stripe selected; distinct WLKR Labs account recommended |
-| Legal recipient | Exact legal name and truthful individual/sole-proprietor status matching provider records | Shane Walker proposed; legal match unverified; never select nonprofit |
+| Public profile | Actual full URL, display name, About text and authenticated ownership | Actual profile and ownership verified; final About copy awaits launch approval |
+| Processor | Actual Stripe account reference, US country if truthful, USD, business type and connected-account mode | Distinct WLKR LABS account associated with Buy Me a Coffee; US/Individual and USD observed; masked reference private |
+| Legal recipient | Exact legal name and truthful individual/sole-proprietor status matching provider records | Shane Walker, Individual, verified in Stripe; not a nonprofit account |
 | Identity | Legal name, address, birth date, phone, taxpayer identifier and any ID the provider actually requests | Shane enters these directly; exact requirements depend on onboarding |
 | Payout | Account holder matches recipient; bank/currency confirmed; retain masked last four and reference only | Unknown |
-| Public receipt | Actual recipient name, support email and statement descriptor shown before payment | Unknown |
-| Fees and features | Actual platform/processor/refund/chargeback fees; USD one-time support; optional features off; fee pass-through off | Documentation reviewed; account settings unverified |
+| Public receipt | Actual recipient name, support email and statement descriptor shown before payment | WLKR LABS descriptor verified; approved support email/URL saved. Owner review of existing personal address/phone and mailbox delivery remains |
+| Fees and features | Actual platform/processor/refund/chargeback fees; USD one-time support; optional features off; fee pass-through off | USD/one-time/creator-covered card fees read back; domestic-card rate verified. Provider-specific additions apply; no paid receipt/refund test |
 | Tax records | Export/receipt locations, actual treatment and reserve before using receipts | No transactions or balance established |
 | Backup | MacBook private records and owner-only Drive recovery folder; no credentials, IDs or bank numbers | Local records exist; private Drive folder verified |
 
@@ -65,11 +65,10 @@ The processor sets exact requirements. [Stripe verification requirements](https:
 
 ## Owner steps and launch gate
 
-1. Account sign-in and creator mission/name/site/brandmark are complete. The saved draft says financial support is not open. The current owner step is [Set up payouts](https://buymeacoffee.com/setup-payout), United States → Connect. Complete [provider terms](https://buymeacoffee.com/terms) and Stripe’s financial-account steps directly. The final funding About text above replaces the pending-support draft only after recipient verification and launch approval.
-2. Open Dashboard → Payouts → Set up payouts. At Stripe, choose or create a distinct WLKR Labs account with truthful personal operating status. Complete identity/tax/bank information directly. Stop if the only offered account is the unrelated account or the recipient is wrong. Opening/connecting the financial account is an owner action.
-3. Confirm USD, account/recipient match, payout requirements, fees, disabled optional features, public receipt/descriptor and working support contact. Preserve references only in the private verification record.
-4. Provide the actual profile URL and confirm that the account and payout recipient are yours. Approve these general-support/refund terms and publication of that verified link. No passwords, tax IDs, bank numbers or identity documents in chat.
-5. Agent reads back authenticated/public settings and checkout without paying, prepares the single website link, runs local checks/preview, and publishes only after that exact launch approval. Paid receipt, payout and refund proof remains unverified under the $0 constraint.
+1. Onboarding, owned profile URL, Individual recipient and active payment/payout status are verified. No repeated signup or account creation is needed.
+2. Confirm the payout destination belongs to Shane and that support@wlkrlabs.com receives requests. Review Stripe → Settings → Business → Business details → Public details: the current receipt settings include personal address/phone information. Do not alter the legal address casually; Stripe warns legal identity details can be shared across accounts.
+3. Adopt the general-support/refund terms above, including the seven-day review target, and approve updating the creator About copy and publishing the prepared website release with the actual link. No passwords, tax IDs, bank numbers or identity documents in chat.
+4. Agent completes the approved profile update and website release through the existing workflow, then verifies live source hashes and provider state. Paid receipt, payout and refund proof remains unverified under the $0 constraint.
 
 ## Separate account investigation
 

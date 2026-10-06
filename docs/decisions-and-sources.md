@@ -16,7 +16,7 @@ Prepared October 6, 2026. This file separates agreed direction, proposed choices
 | --- | --- | --- |
 | Mission | Established by Shane; use the mission document's first paragraph | No new mission decision required |
 | Public aspiration language | Published: “working toward becoming a nonprofit” plus unincorporated/no IRS recognition | Approved release verified on both existing hostnames |
-| Initial support provider | Buy Me a Coffee and Stripe selected by Shane | Actual recipient/profile, payout onboarding, account fee settings and launch terms |
+| Initial support provider | Owned Buy Me a Coffee profile and distinct active WLKR Labs Stripe account verified; Individual/Shane Walker recipient | Payout-destination/contact confirmation, adopted terms and exact prepared release approval |
 | Reserve target | $300 available for base streamlined filings | Actual eligibility, fees, tax/processor treatment, money received |
 | Founder compensation | Modest, documented, separately reported | An affordable budget now; disinterested board approval later |
 | GitHub | Free `wlkr-labs` organization established; foundation transferred and private website imported | First-stage readbacks verified; each later product migration remains separate |
@@ -60,4 +60,4 @@ Existing website founding documents contain earlier company-model proposals. The
 
 ## Implementation evidence
 
-The [checklist](implementation-checklist.md) is the working status record. The [support proposal](support-launch-proposal.md) and [organization proposal](github-organization-proposal.md) separate finished local preparation from activation/publication approvals. Full local commit receipts and preview artifacts are saved under ignored `.local/foundation-2026-10-06/`; setup spent $0. The approved remote first stage and private backup are complete; payment activation is pending. No new legal-status verification or filing is claimed.
+The [checklist](implementation-checklist.md) is the working status record. The [support proposal](support-launch-proposal.md) and [organization proposal](github-organization-proposal.md) separate finished local preparation from publication approvals. Full local commit receipts and preview artifacts are saved under ignored `.local/foundation-2026-10-06/`; setup spent $0. The approved remote first stage and private backup are complete; Shane completed payment-provider onboarding and the website support launch awaits approval. No new legal-status verification or filing is claimed.

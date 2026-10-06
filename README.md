@@ -37,7 +37,7 @@ WLKRLABS/
 
 The mission, About and no-payment Support pages are [live](https://wlkrlabs.com). The Free [GitHub organization](https://github.com/wlkr-labs) and its public profile are established. This repository is now [wlkr-labs/foundation](https://github.com/wlkr-labs/foundation); the canonical website has a separate private remote with its history preserved.
 
-- Finish Buy Me a Coffee/Stripe recipient and payout verification, adopt the prepared support terms, then approve the actual payment link.
+- Confirm the payout destination and support mailbox, review receipt contact details, adopt the prepared support terms, then approve the locally prepared launch with the verified Buy Me a Coffee link.
 - Maintain PatriBible first and turn current documentation into useful teaching material.
 - Reconcile actual receipts/fees/refunds; report public totals without supporter identities.
 - Use the dependency proposal before considering later product transfers.
