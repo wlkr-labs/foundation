@@ -10,7 +10,8 @@ deployment = root / "deploy/postiz"
 env = dict(os.environ, POSTIZ_ROOT="/assigned/postiz")
 result = subprocess.run(
     ["docker", "compose", "--env-file", str(deployment / "images.env"),
-     "-f", str(deployment / "compose.yml"), "config", "--no-env-resolution",
+     "-f", str(deployment / "compose.yml"), "--profile", "operations",
+     "config", "--no-env-resolution",
      "--no-path-resolution", "--format", "json"],
     env=env, capture_output=True, text=True, check=True,
 )
