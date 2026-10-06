@@ -1,4 +1,4 @@
-"""Verify deliverable hashes, exact mark geometry, portable vectors and print size."""
+"""Verify hashes, supplied mark/wordmark geometry, portable vectors and print size."""
 
 import hashlib
 import json
@@ -13,7 +13,12 @@ BRAND = ROOT / "brand"
 NS = "{http://www.w3.org/2000/svg}"
 manifest = json.loads((BRAND / "manifest.json").read_text())
 source = BRAND / "source/wlkrlabs-logo.original.svg"
+wordmark_source = BRAND / "source/wlkrlabs-wordmark.original.svg"
 assert hashlib.sha256(source.read_bytes()).hexdigest() == manifest["source_sha256"]
+assert hashlib.sha256(wordmark_source.read_bytes()).hexdigest() == manifest["wordmark_source_sha256"]
+wordmark_paths = list(ET.parse(wordmark_source).iter(f"{NS}path"))
+assert len(wordmark_paths) == 9
+assert [path.attrib["fill"] for path in wordmark_paths] == [*(["#181919"] * 8), "#C8F046"]
 for entry in manifest["files"]:
     target = BRAND / entry["path"]
     assert target.stat().st_size == entry["bytes"], target
@@ -30,13 +35,29 @@ for mode, ink, accent in (("primary", "#010101", "#33F282"), ("reverse", "#FFFFF
     assert [tuple(rect.attrib[k] for k in ("x", "y", "width", "height", "rx"))
             for rect in rectangles] == geometry
     assert [rect.attrib["fill"] for rect in rectangles] == [accent, *([ink] * 5)]
+    root = ET.parse(BRAND / f"logos/wordmark-{mode}.svg")
+    paths = list(root.iter(f"{NS}path"))
+    assert [path.attrib["d"] for path in paths] == [path.attrib["d"] for path in wordmark_paths]
+    assert [path.attrib["fill"] for path in paths] == [*([ink] * 8), accent]
 
+wordmark_count = 0
 for item in [*sorted((BRAND / "logos").glob("*.svg")), *sorted((BRAND / "social").glob("*.svg")),
              *sorted((BRAND / "print").glob("*.svg")), BRAND / "overview.svg"]:
     root = ET.parse(item)
     assert not list(root.iter(f"{NS}text")), f"Lettering must be outlined: {item}"
     assert not list(root.iter(f"{NS}image")), f"External raster dependency: {item}"
     assert not list(root.iter(f"{NS}script")), f"Script inside vector: {item}"
+    for group in root.iter(f"{NS}g"):
+        if "data-wordmark" not in group.attrib:
+            continue
+        wordmark_count += 1
+        paths = list(group.iter(f"{NS}path"))
+        assert [path.attrib["d"] for path in paths] == [path.attrib["d"] for path in wordmark_paths], item
+        mode = group.attrib["data-wordmark"]
+        ink = "#FFFFFF" if mode in ("reverse", "white") else "#010101"
+        accent = ink if mode in ("black", "white") else "#33F282"
+        assert [path.attrib["fill"] for path in paths] == [*([ink] * 8), accent], item
+assert wordmark_count == 26
 
 for name, dimensions in (("business-card-front", (270, 162)), ("business-card-back", (270, 162)),
                          ("letterhead-us-letter", (612, 792)), ("letterhead-a4", (595.276, 841.89))):
@@ -65,4 +86,4 @@ for index in range(5):
     length, offset = struct.unpack_from("<II", ico, 6 + index * 16 + 8)
     assert ico[offset:offset + 8] == b"\x89PNG\r\n\x1a\n" and offset + length <= len(ico)
 subprocess.run(["node", str(ROOT / "scripts/check_brand_images.mjs")], check=True)
-print(f"PASS: {len(manifest['files'])} file hashes, source geometry/fills, outlined vectors, icon/social dimensions and physical print PDFs")
+print(f"PASS: {len(manifest['files'])} file hashes, source geometry/fills, {wordmark_count} exact official wordmarks, portable vectors, icon/social dimensions and physical print PDFs")

@@ -9,7 +9,7 @@ from reportlab.graphics import renderPDF
 from reportlab import rl_config
 from svglib.svglib import svg2rlg
 
-from brand_geometry import BRAND, GREEN, INK, PAPER, ROOT, SOURCE, WHITE, centered_text, lettering, lockup, mark, rect, text, write
+from brand_geometry import BRAND, GREEN, INK, PAPER, ROOT, SOURCE, WHITE, WORDMARK_SOURCE, centered_text, lockup, mark, rect, text, wordmark, wordmark_height, write
 
 rl_config.invariant = 1
 
@@ -20,9 +20,10 @@ def logos():
         write(f"logos/mark-{mode}.svg", 904, 904, mark(dark=dark, mono=mono))
         write(f"logos/horizontal-{mode}.svg", 930, 300,
               lockup(30, 30, 240, dark, mono=mono))
-        name_width = lettering("WLKR Labs", 0, 0, 129, tracking=-.025)[1]
+        write(f"logos/wordmark-{mode}.svg", 800, wordmark_height(800),
+              wordmark(width=800, dark=dark, mono=mono))
         write(f"logos/stacked-{mode}.svg", 800, 600,
-              lockup((800 - name_width) / 2, 68, 300, dark, stacked=True, mono=mono))
+              mark(250, 68, 300, dark, mono) + wordmark(55, 420, 690, dark, mono))
     for mode, background in (("light", WHITE), ("dark", INK)):
         write(f"icons/avatar-{mode}.svg", 1024, 1024,
               rect(0, 0, 1024, 1024, background) + mark(162, 162, 700, mode == "dark"))
@@ -39,13 +40,13 @@ def social():
         dark = mode == "dark"
         write(f"social/open-graph-{mode}.svg", 1200, 630,
               rect(0, 0, 1200, 630, background) + mark(70, 75, 270, dark)
-              + text("WLKR Labs", 390, 265, 105, color, tracking=-.025)
+              + wordmark(390, 140, 640, dark)
               + text("Free software. Useful technology.", 88, 445, 44, color, 500)
               + text("Biblical purpose.", 88, 505, 44, color, 500)
               + text("wlkrlabs.com", 90, 574, 20, color, 500))
         write(f"social/square-{mode}.svg", 1080, 1080,
               rect(0, 0, 1080, 1080, background) + mark(330, 120, 420, dark)
-              + centered_text("WLKR Labs", 540, 695, 116, color, tracking=-.025)
+              + wordmark(210, 615, 660, dark)
               + centered_text("Free software. Useful technology.", 540, 840, 43, color, 500)
               + centered_text("Biblical purpose.", 540, 901, 43, color, 500))
     for name, w, h in (("x-header", 1500, 500), ("linkedin-header", 1584, 396)):
@@ -85,7 +86,7 @@ def board():
                  "06 / TYPE", "07 / PROFILE", "08 / PRINT", "09 / REVERSE"][i]
         content += text(label, x + 25, y + 32, 13, color, 500)
         if i == 0:
-            content += mark(x + 154, y + 58, 188) + text("WLKR Labs", x + 114, y + 307, 52)
+            content += mark(x + 154, y + 58, 188) + wordmark(x + 78, y + 265, 340)
         elif i == 1:
             for k in range(4):
                 content += rect(x + 105 + 90 * k, y + 67, .5, 255, "#CFD8CF")
@@ -133,9 +134,10 @@ def main():
             files.append({"path": str(item.relative_to(BRAND)), "bytes": item.stat().st_size,
                           "sha256": hashlib.sha256(item.read_bytes()).hexdigest()})
     manifest = {"source_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
+                "wordmark_source_sha256": hashlib.sha256(WORDMARK_SOURCE.read_bytes()).hexdigest(),
                 "colors": {"ink": INK, "green": GREEN, "white": WHITE, "paper": PAPER}, "files": files}
     (BRAND / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    print(f"Built {len(files)} brand files from unchanged supplied SVG geometry.")
+    print(f"Built {len(files)} brand files from unchanged supplied mark and wordmark geometry.")
 
 
 if __name__ == "__main__":

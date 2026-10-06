@@ -1,4 +1,4 @@
-"""Preserve the supplied SVG geometry and outline licensed Geist lettering."""
+"""Preserve the supplied mark/wordmark and outline supporting Geist typography."""
 
 from html import escape
 from pathlib import Path
@@ -11,6 +11,7 @@ from fontTools.varLib.instancer import instantiateVariableFont
 ROOT = Path(__file__).resolve().parent.parent
 BRAND = ROOT / "brand"
 SOURCE = BRAND / "source/wlkrlabs-logo.original.svg"
+WORDMARK_SOURCE = BRAND / "source/wlkrlabs-wordmark.original.svg"
 SVG_NS = "http://www.w3.org/2000/svg"
 INK, GREEN, WHITE, PAPER = "#010101", "#33F282", "#FFFFFF", "#F0F3F0"
 FONTS = {}
@@ -63,6 +64,26 @@ def mark(x=0, y=0, size=904, dark=False, mono=False):
             '<g transform="translate(53.25 51)">' + "".join(shapes) + "</g></g>")
 
 
+def wordmark(x=0, y=0, width=800, dark=False, mono=False):
+    root = ET.parse(WORDMARK_SOURCE).getroot()
+    left, top, source_width, _ = map(float, root.attrib["viewBox"].split())
+    ink = WHITE if dark else INK
+    mode = ("white" if dark else "black") if mono else ("reverse" if dark else "primary")
+    paths = []
+    for path in root.iter(f"{{{SVG_NS}}}path"):
+        fill = GREEN if path.attrib["fill"] == "#C8F046" and not mono else ink
+        paths.append(f'<path d="{path.attrib["d"]}" fill="{fill}"/>')
+    return (f'<g data-wordmark="{mode}" aria-label="WLKR Labs" '
+            f'transform="translate({x:g} {y:g}) scale({width / source_width:.15g})">'
+            f'<g transform="translate({-left:.15g} {-top:.15g})">'
+            + "".join(paths) + "</g></g>")
+
+
+def wordmark_height(width):
+    box = ET.parse(WORDMARK_SOURCE).getroot().attrib["viewBox"].split()
+    return width * float(box[3]) / float(box[2])
+
+
 def rect(x, y, w, h, fill, radius=0):
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{radius}" fill="{fill}"/>'
 
@@ -81,11 +102,8 @@ def write(relative, w, h, content, title="WLKR Labs"):
     target.write_text(document)
 
 
-def lockup(x, y, size, dark=False, stacked=False, mono=False):
-    color = WHITE if dark else INK
-    name, width = lettering("WLKR Labs", 0, 0, size * .43, color, 650, -.025)
-    if stacked:
-        return (mark(x + (width - size) / 2, y, size, dark, mono)
-                + f'<g transform="translate({x:g} {y + size * 1.48:g})">{name}</g>')
+def lockup(x, y, size, dark=False, mono=False):
+    width = size * 2.3
     return (mark(x, y, size, dark, mono)
-            + f'<g transform="translate({x + size * 1.22:g} {y + size * .66:g})">{name}</g>')
+            + wordmark(x + size * 1.22, y + (size - wordmark_height(width)) / 2,
+                       width, dark, mono))

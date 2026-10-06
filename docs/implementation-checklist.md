@@ -17,7 +17,7 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 - [x] Keep private records on the MacBook and create an owner-only Google Drive recovery folder. Sharing and binary size/readback verified; account/backup references stay private.
 - [x] Verify the actual owned Buy Me a Coffee profile and distinct WLKR Labs Stripe account, Individual/Shane Walker recipient, active Payments/Payouts, and domestic-card pricing. Set/read back USD, one-time support and creator-covered card fees; prepare the actual website link and funding/refund terms locally.
 - [x] Commit focused changes and save exact clean SHA/base/command receipts, screenshots, source hashes, provider/version IDs and history bundles locally.
-- [x] Build a full [logo suite](../brand/README.md) from Shane's updated SVG, preserving its geometry and font licensing. Prepare website branding locally alongside the support launch; review gallery and export checks.
+- [x] Build a full [logo suite](../brand/README.md) from Shane's official logo and wordmark SVGs, preserving geometry and correcting the wordmark to the logo's Ink/Green palette. Prepare website branding locally alongside the support launch; review gallery and export checks. Keep supporting font licensing.
 
 ## Next practical actions
 

@@ -9,7 +9,7 @@
     @font-face{font-family:Geist;src:url(fonts/geist-latin-wght-normal.woff2) format('woff2');font-weight:100 900;font-display:swap}
     *{box-sizing:border-box}body{margin:0;background:#f0f3f0;color:#010101;font:16px/1.5 Geist,Arial,sans-serif}
     main,header,footer{max-width:1300px;margin:auto;padding:32px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:16px;font-size:24px;font-weight:650}.brand img{width:50px}.label{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+    .brand{display:flex;align-items:center;gap:16px}.brand .symbol{width:50px}.brand .wordmark{width:150px}.label{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
     h1{font-size:clamp(42px,7vw,88px);line-height:1.04;letter-spacing:-.055em;margin:24px 0}h2{font-size:30px;letter-spacing:-.03em;margin:50px 0 20px}
     p{max-width:700px}a{color:inherit;text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:3px solid #010101;outline-offset:5px}
     .intro{margin-bottom:36px}.overview{display:block;width:100%;border-radius:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -21,27 +21,27 @@
     .note{background:#fff;border-left:5px solid #33f282;padding:22px;margin:30px 0}.card[hidden]{display:none}.skip{position:absolute;left:20px;top:0;transform:translateY(-150%);background:#fff;padding:12px}.skip:focus{transform:none}
     footer{border-top:1px solid #cdd5cd;font-size:14px;margin-top:45px}footer p{margin:0}.type{font-size:clamp(40px,6vw,76px);letter-spacing:-.04em;font-weight:650;margin:0}
     @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:600px){main,header,footer{padding:22px}.grid{grid-template-columns:1fr}.label{font-size:10px}header{align-items:flex-start}.brand{font-size:20px}.visual{height:210px}}
+    @media(max-width:600px){main,header,footer{padding:22px}.grid{grid-template-columns:1fr}.label{font-size:10px}header{align-items:flex-start}.brand{gap:10px}.brand .symbol{width:40px}.brand .wordmark{width:120px}.visual{height:210px}}
   </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header><div class="brand"><img src="logos/mark-primary.svg" alt="">WLKR Labs</div><span class="label">Identity suite / 2026</span></header>
+<header><div class="brand"><img class="symbol" src="logos/mark-primary.svg" alt=""><img class="wordmark" src="logos/wordmark-primary.svg" alt="WLKR Labs"></div><span class="label">Identity suite / 2026</span></header>
 <main id="main">
-  <section class="intro"><h1>Build. Share. Teach.</h1><p>Excellent free software, useful technology, and biblical purpose. A practical logo system built directly from the supplied six-block mark.</p><div class="links"><a href="README.md">Usage guide</a><a href="overview.pdf">Overview PDF</a><a href="manifest.json">Asset manifest</a></div></section>
+  <section class="intro"><h1>Build. Share. Teach.</h1><p>Excellent free software, useful technology, and biblical purpose. A practical logo system built directly from the official six-block mark and custom wordmark.</p><div class="links"><a href="README.md">Usage guide</a><a href="overview.pdf">Overview PDF</a><a href="manifest.json">Asset manifest</a></div></section>
   <img class="overview" src="overview.png" alt="Nine-panel WLKR Labs identity board showing the logo, construction, palette, typography, digital and print applications.">
   <h2>Logo system</h2>
   <div class="filters" aria-label="Logo versions"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="light" aria-pressed="false">Light surfaces</button><button type="button" data-filter="dark" aria-pressed="false">Dark surfaces</button><button type="button" data-filter="mono" aria-pressed="false">One color</button></div>
   <div class="grid" id="logos"></div>
   <h2>Icons and profiles</h2><div class="grid" id="icons"></div>
-  <p class="links"><a href="icons/favicon.ico" download>Favicon ICO</a><a href="icons/favicon-adaptive.svg" download>Adaptive SVG</a><a href="icons/apple-touch-icon.png" download>Apple icon</a><a href="icons/icon-16.png" download>16px</a><a href="icons/icon-32.png" download>32px</a><a href="icons/icon-48.png" download>48px</a><a href="icons/icon-64.png" download>64px</a><a href="icons/icon-192.png" download>192px</a><a href="icons/icon-512.png" download>512px</a></p>
+  <p class="links"><a href="icons/favicon.ico" download>Favicon ICO</a><a href="icons/favicon-adaptive.svg" download>Adaptive SVG</a><a href="icons/apple-touch-icon.png" download>Apple icon</a><a href="icons/icon-16.png" download>16px</a><a href="icons/icon-32.png" download>32px</a><a href="icons/icon-48.png" download>48px</a><a href="icons/icon-64.png" download>64px</a><a href="icons/icon-180.png" download>180px</a><a href="icons/icon-192.png" download>192px</a><a href="icons/icon-256.png" download>256px</a><a href="icons/icon-512.png" download>512px</a></p>
   <h2>Social assets</h2><div class="grid" id="social"></div>
   <h2>Print templates</h2><div class="grid" id="print"></div>
   <h2>Palette</h2><div class="palette"><div><div class="swatch" style="background:#010101"></div>Ink / #010101</div><div><div class="swatch" style="background:#33f282"></div>Green / #33F282</div><div><div class="swatch" style="background:#fff"></div>White / #FFFFFF</div></div>
-  <h2>Typography</h2><p class="type">Geist. Clear and useful.</p><p>400 for body copy, 650 for the wordmark and headings. SVG/PDF logo lettering is outlined. The original font and OFL license are included.</p>
+  <h2>Typography</h2><p class="type">Geist. Clear and useful.</p><p>400 for body copy, 650 for headings. The official wordmark is custom vector artwork; use the supplied paths rather than retyping it. SVG/PDF lettering is outlined. The supporting font and OFL license are included.</p>
   <div class="note"><strong>Keep the geometry.</strong><p>Six rounded blocks, ascending 3 / 2 / 1. Keep the green top block in full-color versions. Preserve the padding; use one-color variants when color is unavailable. Green works as an accent, with Ink or White for readable text.</p></div>
 </main>
-<footer><p>Original source preserved. Production assets exported from SVG; no new product, incorporation or nonprofit status is implied.</p><p><a href="source/wlkrlabs-logo.original.svg">Original SVG</a> · <a href="fonts/OFL.txt">Font license</a> · <a href="https://wlkrlabs.com">wlkrlabs.com</a></p></footer>
+<footer><p>Both original sources preserved. Production assets exported from SVG; no new product, incorporation or nonprofit status is implied.</p><p><a href="source/wlkrlabs-logo.original.svg">Original logo</a> · <a href="source/wlkrlabs-wordmark.original.svg">Original wordmark</a> · <a href="fonts/OFL.txt">Font license</a> · <a href="https://wlkrlabs.com">wlkrlabs.com</a></p></footer>
 <script>
   function card(target, title, path, theme='light', formats=['svg','png'], description='') {
     const article=document.createElement('article');article.className='card';article.dataset.theme=theme;
@@ -52,7 +52,7 @@
     const links=document.createElement('div');links.className='links';for(const format of formats){const a=document.createElement('a');a.href=path+'.'+format;a.download='';a.textContent=format.toUpperCase();links.append(a)}details.append(links);article.append(preview,details);document.getElementById(target).append(article);
   }
   for(const [version,theme] of [['primary','light'],['reverse','dark'],['black','mono'],['white','dark']]){
-    for(const layout of ['mark','horizontal','stacked'])card('logos',layout[0].toUpperCase()+layout.slice(1)+' / '+version,'logos/'+layout+'-'+version,theme,['svg','png','pdf']);
+    for(const layout of ['mark','wordmark','horizontal','stacked'])card('logos',layout[0].toUpperCase()+layout.slice(1)+' / '+version,'logos/'+layout+'-'+version,theme,['svg','png','pdf']);
   }
   for(const theme of ['light','dark'])card('icons','Profile / '+theme,'icons/avatar-'+theme,theme,['svg','png'],'1024 × 1024 · safe for circle crops');
   for(const theme of ['light','dark'])card('icons','Website and app icons / '+theme,'icons/app-'+theme,theme,['svg','png'],'PNG: 16, 32, 48, 64, 180, 192, 256, 512. ICO and adaptive SVG included.');
