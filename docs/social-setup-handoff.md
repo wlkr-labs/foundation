@@ -1,6 +1,6 @@
 # WLKR Labs social setup handoff
 
-Prepared October 6, 2026. Execution status: email delivery and the dedicated owner-only vault are verified, ten public profiles are established and linked from the website, and the two-week launch draft pack is saved privately. The remaining authenticator recovery, YouTube approval and Postiz hosting gates are documented privately. LinkedIn’s Overview and Mastodon’s reciprocal website verification are complete. The current account inventory, evidence and exact remaining actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
+Prepared October 6, 2026. Execution status: email delivery and the dedicated owner-only vault are verified, ten public profiles are established and linked from the website, and the two-week launch draft pack is saved privately. The remaining authenticator recovery, YouTube approval and provider-connection gates are documented privately. Postiz core hosting, recovery, secondary-drive restore and Bluesky/Mastodon drafts are verified; see the [Postiz execution status](postiz-deployment-status.md). LinkedIn’s Overview and Mastodon’s reciprocal website verification are complete. The current account inventory, evidence and exact remaining actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
 
 ## Outcome
 
@@ -39,7 +39,7 @@ The owner confirmed **1Password** for this setup. Confirm the account connected 
 - [x] Create one Login item per actual login, named `WLKR Labs — <Platform>`, with the correct login URL, handle, `social@` email and a generated unique password where supported. Record SSO and magic-link exceptions without inventing extra passwords.
 - [x] For Facebook Pages, LinkedIn Pages or other assets controlled by an existing personal login, reference the controlling item; do not invent a separate Page password or move unrelated personal credentials.
 - [ ] Save passkeys, MFA configuration and recovery codes in the appropriate secure items. Record which real account owns each asset and how to recover it.
-- [ ] Store developer credentials separately: `WLKR Labs — <Provider> Developer App`. Store Postiz owner access and deployment secrets as distinct items in the same vault, tagged `Hosting`.
+- [x] Store developer credentials separately: `WLKR Labs — <Provider> Developer App`. Store Postiz owner access and deployment secrets as distinct items in the same vault, tagged `Hosting`.
 - [x] Use secure autofill or documented password-manager integration. Keep secrets out of chat, Git, screenshots, command arguments and logs; do not export the vault. 1Password Environments are not a replacement for Login items.
 
 ## 3. Establish the accounts
@@ -71,7 +71,7 @@ Google Business Profile is conditional: online-only organizations are ineligible
 - [ ] Save each profile's correct name, bio, website, avatar, header, category and supported contact email; inspect its public view.
 - [ ] Enable supported MFA and verify secure credential storage and recovery settings. Record unsupported features explicitly.
 - [x] Link only verified public profiles from the website, following `website/AGENTS.md` and `MAINTENANCE.md`. Do not publish placeholders or private administration links.
-- [ ] Coordinate Postiz connections with the [Octal8 setup checklist](postiz-octal8-setup-checklist.md). Register developer apps only for intended free publishing routes, using `social@` where supported.
+- [x] Coordinate Postiz connections with the [Octal8 setup checklist](postiz-octal8-setup-checklist.md). Register developer apps only for intended free publishing routes, using `social@` where supported.
 - [x] Prepare an introduction and two weeks of platform-specific draft content from the established mission and actual released projects. Save drafts; public posts and automated replies require publishing instructions.
 - [x] Continue independent platform setup while an approval or owner verification is pending. Do not repeatedly ask about already settled identity, email, budget or password organization.
 
