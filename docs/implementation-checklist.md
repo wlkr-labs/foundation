@@ -17,6 +17,7 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 - [x] Keep private records on the MacBook and create an owner-only Google Drive recovery folder. Sharing and binary size/readback verified; account/backup references stay private.
 - [x] Verify the actual owned Buy Me a Coffee profile and distinct WLKR Labs Stripe account, Individual/Shane Walker recipient, active Payments/Payouts, and domestic-card pricing. Set/read back USD, one-time support and creator-covered card fees; prepare the actual website link and funding/refund terms locally.
 - [x] Commit focused changes and save exact clean SHA/base/command receipts, screenshots, source hashes, provider/version IDs and history bundles locally.
+- [x] Build a full [logo suite](../brand/README.md) from Shane's updated SVG, preserving its geometry and font licensing. Prepare website branding locally alongside the support launch; review gallery and export checks.
 
 ## Next practical actions
 
@@ -31,7 +32,7 @@ Updated October 6, 2026. The agreed mission is established. Foundation preparati
 ## Decisions genuinely requiring Shane now
 
 1. Confirm the payout destination belongs to Shane and that support@wlkrlabs.com receives requests. Review Stripe's current receipt settings, which include personal address/phone details.
-2. Adopt the [general-support/refund terms](support-launch-proposal.md), including the seven-day review target and fee treatment, and approve the prepared creator-copy update and website release with the verified payment link. No test charge is authorized.
+2. Adopt the [general-support/refund terms](support-launch-proposal.md), including the seven-day review target and fee treatment, and approve the prepared creator-copy update and website release with the verified payment link and updated logo assets. No test charge is authorized.
 
 Website publication, organization name/owner/contact/terms, public profile, private website import, planning transfer and local/Drive backup were approved in this chat and completed. No repeated approval is needed for them. The mission is not an open decision.
 

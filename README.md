@@ -17,6 +17,8 @@ This folder is the organizing home for the mission, website access, operating pl
 
 Implementation starts with the [practical checklist](docs/implementation-checklist.md). The [project inventory](docs/project-inventory.md), [support launch proposal](docs/support-launch-proposal.md), and [GitHub organization proposal](docs/github-organization-proposal.md) give the concrete next steps and approval boundaries.
 
+The updated [logo suite](brand/README.md) preserves Shane's supplied SVG and includes an [asset gallery](brand/index.html), outlined lockups, icons, social graphics and print templates.
+
 ## Folder map
 
 ```text
@@ -24,6 +26,7 @@ WLKRLABS/
   README.md                  Start here
   docs/                      Six plans plus implementation checklist/proposals
   templates/                 Empty operating templates
+  brand/                     Updated logo suite, gallery and usage guide
   website -> existing Astro checkout
   private/                   Local financial/account records; ignored by Git
   .local/                    Local verification receipts; ignored by Git
@@ -48,6 +51,7 @@ Setup spent $0. Formation is a later milestone, not a condition for useful softw
 
 ```sh
 ./project docs:check
+./project brand:check
 ```
 
 For website development, enter `website`, read its `AGENTS.md` and `MAINTENANCE.md`, and use its existing npm commands. A document check does not authorize a website deployment.

@@ -67,8 +67,8 @@ The processor sets exact requirements. [Stripe verification requirements](https:
 
 1. Onboarding, owned profile URL, Individual recipient and active payment/payout status are verified. No repeated signup or account creation is needed.
 2. Confirm the payout destination belongs to Shane and that support@wlkrlabs.com receives requests. Review Stripe → Settings → Business → Business details → Public details: the current receipt settings include personal address/phone information. Do not alter the legal address casually; Stripe warns legal identity details can be shared across accounts.
-3. Adopt the general-support/refund terms above, including the seven-day review target, and approve updating the creator About copy and publishing the prepared website release with the actual link. No passwords, tax IDs, bank numbers or identity documents in chat.
-4. Agent completes the approved profile update and website release through the existing workflow, then verifies live source hashes and provider state. Paid receipt, payout and refund proof remains unverified under the $0 constraint.
+3. Adopt the general-support/refund terms above, including the seven-day review target, and the prepared website privacy notice. Approve updating the creator About copy and publishing the prepared website release with the actual link and supplied updated logo. No passwords, tax IDs, bank numbers or identity documents in chat.
+4. Agent completes the approved profile update and website release through the existing workflow, then verifies live source hashes and provider state. Stripe's public editor requires a privacy policy: after the prepared `/privacy` page is published and verified, set its policy URL and use `/support` for the funding terms. Paid receipt, payout and refund proof remains unverified under the $0 constraint.
 
 ## Separate account investigation
 

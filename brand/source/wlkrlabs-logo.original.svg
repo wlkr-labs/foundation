@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="838.1" height="842.1" viewBox="-20.05 -20.05 838.1 842.1">
+  <defs>
+    
+  </defs>
+  <rect id="white-background" width="798" height="802" fill="#fff"/><g id="ascending-rounded-blocks" transform="translate(72.025 72.18) scale(0.82)">
+    <rect id="top-lime-block" x="545" y="10.5" width="242.5" height="242.5" rx="33" style="fill: rgb(51, 242, 130);"/>
+    <g id="black-blocks" fill="#010101">
+      <rect id="middle-center-block" x="277.5" y="279" width="243.5" height="243" rx="33"/>
+      <rect id="middle-right-block" x="545" y="279" width="242.5" height="243" rx="33"/>
+      <rect id="bottom-left-block" x="10" y="548.5" width="243.5" height="243" rx="33"/>
+      <rect id="bottom-center-block" x="277.5" y="548.5" width="243.5" height="243" rx="33"/>
+      <rect id="bottom-right-block" x="545" y="548.5" width="242.5" height="243" rx="33"/>
+    </g>
+  </g>
+  
+</svg>
