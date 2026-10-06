@@ -15,12 +15,14 @@ This folder is the organizing home for the mission, website access, operating pl
 5. Review the [website plan and starter copy](docs/website-plan.md) before publication.
 6. Consult the [decisions, evidence, and sources](docs/decisions-and-sources.md) when a fact or commitment changes.
 
+Implementation starts with the [practical checklist](docs/implementation-checklist.md). The [project inventory](docs/project-inventory.md), [support launch proposal](docs/support-launch-proposal.md), and [GitHub organization proposal](docs/github-organization-proposal.md) give the concrete next steps and approval boundaries.
+
 ## Folder map
 
 ```text
 WLKRLABS/
   README.md                  Start here
-  docs/                      Six planning documents; safe for public review
+  docs/                      Six plans plus implementation checklist/proposals
   templates/                 Empty operating templates
   website -> existing Astro checkout
   private/                   Local financial/account records; ignored by Git
@@ -33,11 +35,11 @@ WLKRLABS/
 
 ## Next practical steps
 
-- Finalize the mission and present it on the website with accurate current status.
-- Choose one support platform, approve its payout identity and public funding terms, then connect its verified link.
+- Review and approve publication of the locally prepared mission, About, and Support pages.
+- Approve the prepared one-time support arrangement, verify the actual recipient/profile, then connect its link.
 - Maintain PatriBible first; turn existing technical documentation into useful teaching material.
 - Record spending and formation savings; report public totals without supporter identities.
-- Decide on a GitHub organization after reviewing the account inventory and migration effects.
+- Approve a separate Free GitHub organization and staged setup after reviewing the inventory and dependencies.
 
 Preparation costs $0 in new filing or subscription fees. Formation is a later milestone, not a condition for maintaining useful software now.
 
@@ -51,4 +53,4 @@ For website development, enter `website`, read its `AGENTS.md` and `MAINTENANCE.
 
 ## Planning status
 
-Prepared October 6, 2026. The owner's mission and preparation scope are agreed; specific funding policies, public copy, account migrations, and corporate documents remain proposals. No fundraising account, incorporation, website release, or GitHub conversion is represented as completed by these plans.
+Updated October 6, 2026. The mission is established. Local website implementation and operating proposals are prepared on focused branches; see the checklist for verification and remaining actions. Funding activation, public release, account changes, and corporate formation remain separate approvals. No spending or legal filing is part of this preparation.

@@ -1,6 +1,6 @@
 # Website plan and starter copy
 
-Status: ready for editorial review, October 6, 2026. These drafts are not a website release or an active fundraiser.
+Status: implemented locally for publication review, October 6, 2026, on the canonical website's `codex/foundation-website` branch. The established mission is reflected in Home/About, metadata, Work context, principles, and a new mission note. A static Support page is prepared without payment links and says financial support is not open. This is not a website release or an active fundraiser.
 
 ## Keep the existing site simple
 
@@ -13,7 +13,7 @@ Keep the static Astro site, established design, and four-project catalog. Use th
 | Principles | Integrate free access, teaching, stewardship, and sustainable work with the existing twelve craft principles |
 | Work | Give PatriBible prominence; preserve accurate capabilities and source visibility in the four existing records |
 | Notes | Publish an initial mission note and subsequent useful education/progress reports |
-| Support | Add a small static page when its recipient, provider, terms, and public funding policy are approved |
+| Support | Prepared static page for free ways to help and accurate current status; activate a payment link only after actual recipient/profile and terms are approved and verified |
 
 Use one verified support link. Explain support at the point where a visitor decides to pay. Keep the free core resources accessible regardless of contribution.
 

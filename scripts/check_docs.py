@@ -39,8 +39,13 @@ for name in ["private/support-ledger.csv", "website", ".local/verification.json"
     if ignored.returncode != 0:
         errors.append(f"Local-only path is not ignored: {name}")
 
+tracked = subprocess.check_output(["git", "ls-files", "-z"], cwd=ROOT).decode().split("\0")
+for name in tracked:
+    if name == "website" or name.startswith(("website/", "private/", ".local/")):
+        errors.append(f"Local-only material is tracked: {name}")
+
 if errors:
     print("\n".join(errors), file=sys.stderr)
     sys.exit(1)
 print(f"PASS: {len(documents)} Markdown documents, local links, empty ledger, "
-      "website shortcut, and private-path exclusions")
+      "website shortcut, private-path exclusions, and tracked-file isolation")

@@ -1,6 +1,6 @@
 # Mission and programs
 
-Status: working draft, October 6, 2026. Direction reflects Shane's agreed goals; details are proposed operating choices.
+Status: established mission, October 6, 2026. Excellent free software, accessible technology, education, biblical purpose, and PatriBible as flagship are agreed. Program tasks and future legal arrangements are operating proposals.
 
 ## Mission
 
