@@ -1,6 +1,6 @@
 # Funding and operations
 
-Status: proposed policy, October 6, 2026. No fundraising account, payout identity, reserve balance, or compensation amount has been established by this plan.
+Status: Buy Me a Coffee and Stripe selected by Shane, October 6, 2026. Account activation, verified payout identity, funding/refund terms and financial balances remain pending.
 
 ## Start with voluntary support
 
@@ -14,16 +14,13 @@ Personal support does not become a deductible charitable contribution solely bec
 
 ## Platform choice
 
-| Option | Monthly platform cost | Platform fee | Proposed use |
-| --- | --- | --- | --- |
-| Ko-fi Free | $0 | 0% on one-time tips and goals; processor fees remain | First choice for a small formation goal |
-| Buy Me a Coffee | $0 | 5%, plus payment processing and applicable payout fees | Alternative if its experience is preferred |
+Shane selected **Buy Me a Coffee**, using ordinary one-time support in USD. It lists $0 monthly cost, a 5% platform fee, Stripe processing and applicable payout fees. Confirm the actual fee schedule and connected account before launch. [Official fee guide](https://help.buymeacoffee.com/en/articles/8105744-how-to-calculate-charges-on-your-payment).
 
-Ko-fi's help pages use “Standard,” “Contributor,” and “Get all of Ko-fi” for the optional fee setting; new creators start opted in. In Settings → Payment, turn that setting off and verify the account shows 0% platform fees for one-time tips. Processor fees remain; recurring tips and other features have different fees. The actual account readback settles the label and setting. [Ko-fi official fees](https://help.ko-fi.com/hc/en-us/articles/360002506494-Does-Ko-fi-take-a-fee), [Contributor setting](https://help.ko-fi.com/hc/en-us/articles/25143210488477-Contributor-status).
+Current US guidance specifies Stripe Standard Connect. Prepare a distinct WLKR Labs account to avoid mixing the existing, unverified the unrelated account activity. Do not alter or migrate the unrelated account in this setup. [US payout setup](https://help.buymeacoffee.com/en/articles/10025793-how-payouts-work-on-accounts-with-stripe-standard-connect).
 
 Before connecting a page, approve the platform's terms, recipient identity, processor, public disclosure, payout method, and refund process. Confirm current fees in the actual account. Use one link and ordinary one-time support initially; avoid rewards that create extra delivery commitments.
 
-The [support launch proposal](support-launch-proposal.md) contains ready-to-use profile/terms copy, the exact missing account fields, and the verification sequence. The local Support page is useful without payment activation and currently says financial support is not open.
+The [support launch proposal](support-launch-proposal.md) contains ready-to-use profile/terms copy, the exact missing account fields, and the verification sequence. The live Support page is useful without payment activation and currently says financial support is not open.
 
 ## A formation reserve
 
