@@ -34,9 +34,12 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
   explicitly targeting the WLKR Labs organization. Its native organization draft
   is unpublished and returns 404 to an unauthenticated API read. This key also
   grants personal author access; select the organization on every draft.
+  Facebook WLKR Labs Page and Instagram `@wlkrlabs`: owner-approved OAuth
+  restricted to current WLKR Labs assets, real callbacks, live identity reads
+  and media drafts passed. The existing Meta app was reused and stays unpublished.
   Developer credentials are distinct vault items.
 - Official Postiz CLI **2.0.16** targets this instance's `/api` base. Channel reads,
-  media upload, draft creation and draft editing passed. Four synthetic records
+  media upload, draft creation and draft editing passed. Six synthetic records
   remain **DRAFT**, with zero queued/published posts and null release URLs.
 - Chicago 9:00 AM is stored as 14:00 UTC on October 7 and 15:00 UTC on November 3.
   List view displays both correctly and is selected for the owner.
@@ -47,7 +50,7 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
   Own daily timer is enabled before the existing host snapshot; retention is
   14 successful bundles. Existing nightly backups and seven-snapshot policy remain.
 - Secondary-drive isolated restore of the October 7 backup verified one owner,
-  four drafts, zero usable
+  six drafts, zero usable
   channel credentials, 37 Temporal SQL tables, Redis startup and a green recovered
   visibility index. The restore ran no application/worker, had no host ports or
   outbound route, and removed its test containers/network afterward.
@@ -60,7 +63,7 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
 | Actual public-IP change | **Unverified.** CNAME and current DDNS execution/readback pass. Observe the next real IP change, target update and alias recovery; do not force a disruptive change. |
 | Full shared-host reboot | **Unverified.** The pre-existing Caddy failure reported that its reserved LAN bind was unavailable at startup. Current routing was recovered without a reboot. Qualify LAN readiness and all services at an owner-planned reboot. |
 | DST Day view | **Known upstream defect.** Its future-date row label uses today's offset. Use List view and verify UTC before scheduling across DST; no custom upstream image was introduced. |
-| Facebook / Instagram | The existing WLKR Labs Postiz Meta app includes Pages and Instagram alongside Threads, with exact callbacks saved. No duplicate app was created. Its separate main secret is saved in the owner vault and applied to Postiz. Meta's Page-content permission prerequisite is enabled and both OAuth flows reach consent; owner approval of account grants and read/draft tests remain pending. The app remains unpublished. |
+| Facebook / Instagram | **Connected.** Owner-approved grants selected only current WLKR Labs Page, portfolio and Instagram assets. Live provider identity reads and media drafts passed. The existing Meta app was reused, its distinct main secret is stored in the vault and protected runtime, and the app stays unpublished. Developer testing does not establish reviewed production access or publishing delivery. |
 | LinkedIn Page | Developer app created, Page association verified, callback and separate vault secret saved. Share on LinkedIn and OpenID Connect are provisioned; required organization permissions remain a provider gate. No inaccurate legal/business or advertising application was submitted. |
 | Other providers | YouTube Advanced features still show Pending on October 7; brand channel/API setup and Reddit approval remain separate provider gates. Exact steps and eligibility limits are in the private receipt. |
 | X / Hashnode | No paid API access enabled. Native account/publication routes remain. |
