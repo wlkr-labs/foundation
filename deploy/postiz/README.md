@@ -132,5 +132,7 @@ Temporal's existing workflows before resuming scheduling to avoid duplicates.
 Keep outbound publishing blocked until that audit is complete. The private receipt
 contains exact staged paths, DNS record identity and the pre-change edge snapshot.
 
-Actual host reboot, public-IP-change recovery and live scheduled publication are
+One live scheduled delivery was verified in a dedicated owner-only Discord
+server/private channel, including the provider message and Temporal completion.
+Public-channel publishing, actual host reboot and public-IP-change recovery remain
 separate checks. Do not reboot or force an IP change for initial qualification.
