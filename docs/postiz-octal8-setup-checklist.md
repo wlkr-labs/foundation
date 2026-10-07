@@ -1,6 +1,6 @@
 # Postiz on 0o10 / Octal8: setup checklist
 
-Executed October 6, 2026. Hosting target: **0o10 / Octal8**, operated by **octal8**. Application: **https://social.wlkrlabs.com**. Core deployment, owner access, independent HTTPS reachability, persistence, consistent secondary-drive backup and isolated restore are verified. See the [deployment runbook](../deploy/postiz/README.md) and [execution status](postiz-deployment-status.md). The [copyable prompt](../templates/postiz-octal8-setup-prompt.md) remains available for continuation.
+Executed October 6–7, 2026. Hosting target: **0o10 / Octal8**, operated by **octal8**. Application: **https://social.wlkrlabs.com**. Core deployment, owner access, independent HTTPS reachability, persistence, consistent secondary-drive backup and isolated restore are verified. See the [deployment runbook](../deploy/postiz/README.md) and [execution status](postiz-deployment-status.md). The [copyable prompt](../templates/postiz-octal8-setup-prompt.md) remains available for continuation.
 
 ## Outcome and operating contract
 
@@ -20,9 +20,9 @@ The required shape is **system Docker + a separate Postiz Compose project + the 
 
 Postiz keeps its required upstream Node runtime; the host's Rust-first policy applies to new first-party backend code, not a rewrite of this third-party application. Avoid building custom services unless a concrete deployment gap requires one.
 
-## Social setup coordination checkpoint — October 6, 2026
+## Social setup coordination checkpoint — October 7, 2026
 
-The existing owner-only vault and social mailbox were reused. The shared Caddy container was present but had failed at host startup before this task. Its existing routes and ports were recovered, then the isolated Postiz route was added. Bluesky, Mastodon and Threads are connected; three synthetic drafts remain DRAFT with no queued or published posts. Provider apps and owner/provider gates have separate status in the execution record.
+The existing owner-only vault and social mailbox were reused. The shared Caddy container was present but had failed at host startup before this task. Its existing routes and ports were recovered, then the isolated Postiz route was added. Bluesky, Mastodon, Threads and DEV are connected; four synthetic Postiz drafts remain DRAFT with no queued or published posts. DEV's account-wide author key was explicitly approved, and its draft targets the WLKR Labs organization. The existing Meta app is reused for Pages/Instagram; no duplicate was created. LinkedIn app creation and Page verification are complete, while organization permissions remain pending. Exact owner/provider gates have separate status in the execution record.
 ## 1. Inspect and prepare
 
 - [x] Confirm authorized Tailscale/SSH access to 0o10, actual host identity, deployment account and administrator capability. Keep IPs, credentials and private operator paths outside Git.

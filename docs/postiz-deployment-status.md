@@ -1,4 +1,4 @@
-# Postiz deployment status — October 6, 2026
+# Postiz deployment status — October 7, 2026
 
 **Core hosting verified:** https://social.wlkrlabs.com/auth/login, owner `social@wlkrlabs.com`.
 Credentials remain in the existing scwlkr 1Password account's owner-only
@@ -30,9 +30,13 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
   Mastodon `@wlkrlabs@mastodon.social`: profile read, posts write, media write.
   Threads `@wlkrlabs`: owner-approved tester and four requested scopes, real OAuth
   callback, CLI read and draft passed; developer app remains unpublished.
+  DEV: owner-approved `scwlkr` author API key, connected read and a Postiz draft
+  explicitly targeting the WLKR Labs organization. Its native organization draft
+  is unpublished and returns 404 to an unauthenticated API read. This key also
+  grants personal author access; select the organization on every draft.
   Developer credentials are distinct vault items.
 - Official Postiz CLI **2.0.16** targets this instance's `/api` base. Channel reads,
-  media upload, draft creation and draft editing passed. Three synthetic records
+  media upload, draft creation and draft editing passed. Four synthetic records
   remain **DRAFT**, with zero queued/published posts and null release URLs.
 - Chicago 9:00 AM is stored as 14:00 UTC on October 7 and 15:00 UTC on November 3.
   List view displays both correctly and is selected for the owner.
@@ -42,7 +46,8 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
   configuration, secrets and release files copied to the secondary backup drive.
   Own daily timer is enabled before the existing host snapshot; retention is
   14 successful bundles. Existing nightly backups and seven-snapshot policy remain.
-- Secondary-drive isolated restore verified one owner, three drafts, zero usable
+- Secondary-drive isolated restore of the October 7 backup verified one owner,
+  four drafts, zero usable
   channel credentials, 37 Temporal SQL tables, Redis startup and a green recovered
   visibility index. The restore ran no application/worker, had no host ports or
   outbound route, and removed its test containers/network afterward.
@@ -55,7 +60,9 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
 | Actual public-IP change | **Unverified.** CNAME and current DDNS execution/readback pass. Observe the next real IP change, target update and alias recovery; do not force a disruptive change. |
 | Full shared-host reboot | **Unverified.** The pre-existing Caddy failure reported that its reserved LAN bind was unavailable at startup. Current routing was recovered without a reboot. Qualify LAN readiness and all services at an owner-planned reboot. |
 | DST Day view | **Known upstream defect.** Its future-date row label uses today's offset. Use List view and verify UTC before scheduling across DST; no custom upstream image was introduced. |
-| Other providers | Facebook/Instagram app setup, LinkedIn Page approval, YouTube channel/API restrictions and Reddit approval remain separate provider/owner gates. Exact current steps and app state are in the private receipt. DEV requires a personal author API key; do not silently broaden access beyond the brand organization. |
+| Facebook / Instagram | The existing WLKR Labs Postiz Meta app now includes Pages and Instagram alongside Threads, with exact callback URLs saved. No duplicate app was created. Main app-secret access awaits owner password reauthentication; actual account grants and read/draft tests remain pending. The app remains unpublished. |
+| LinkedIn Page | Developer app created, Page association verified, callback and separate vault secret saved. Share on LinkedIn and OpenID Connect are provisioned; required organization permissions remain a provider gate. No inaccurate legal/business or advertising application was submitted. |
+| Other providers | YouTube channel/API restrictions and Reddit approval remain separate provider/owner gates. Exact steps and eligibility limits are in the private receipt. |
 | X / Hashnode | No paid API access enabled. Native account/publication routes remain. |
 | Excluded platforms | Pinterest, Tumblr and TikTok remain permanently excluded. |
 | Offsite / loss of both drives | **Deferred** under the existing host policy. Both verified backup copies are local. |
@@ -70,6 +77,6 @@ startup, backup, isolated restore and rollback. Exact protected paths, commands,
 credential references and verification receipts remain in ignored `private/postiz/`;
 the existing social inventory is coordinated in ignored `private/social/`.
 
-Local validation on the clean deployed tooling commit, compared with
+Local validation of the deployment tooling and handoff on a clean commit, compared with
 `e1c78281987b329e20793e183c053847310600c5`: `./project postiz:check`,
 `./project docs:check`, and `git diff <base> --check` passed. Hosted CI was not used.
