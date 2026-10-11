@@ -10,10 +10,12 @@ October 11 refresh: owner access, trusted HTTPS, all six runtime services, publi
 registration restriction, private port bindings and six public-provider identity
 reads passed. The daily backup succeeded, and SHA-256 verification passed for
 both local copies of bundle `20261011T063014Z`, which predates the new drafts.
-The unchanged daily timer will capture them on its next run. Six real starter introductions
-were added as Postiz drafts; four more were saved in native editors. YouTube's
-separate WLKR Labs Brand channel is now created and branded. Starter content is
-unscheduled and unpublished. The earlier private delivery and isolated restore
+The unchanged daily timer will capture the new records on its next run. After explicit
+owner authorization, all ten starter introductions were published: six through Postiz
+and four through native editors. Provider reads confirmed the six Postiz deliveries;
+public browser views confirmed LinkedIn, X, Reddit and Hashnode. YouTube's
+separate WLKR Labs Brand channel is created and branded; its video remains a script.
+The earlier private delivery and isolated restore
 results below remain October 7 evidence; they were not repeated in this refresh.
 
 ## Deployed and verified
@@ -55,10 +57,11 @@ results below remain October 7 evidence; they were not repeated in this refresh.
   no administrator permission or privileged gateway intents.
 - Official Postiz CLI **2.0.16** targets this instance's `/api` base. Channel reads,
   media upload, draft creation and draft editing passed. Seven channels are
-  connected. Twelve brand records now remain **DRAFT** with null release URLs
-  (six setup checks and six starter introductions); one
+  connected. Six setup checks remain **DRAFT** with null release URLs. The six
+  starter introductions are **PUBLISHED** with verified provider release IDs/URLs; one
   separately scoped Discord test is **PUBLISHED** in the private channel.
-  No posts remain queued and no public post or message to another person was sent.
+  No posts remain queued. The seven pre-existing records, including the private test,
+  are unchanged; the four native introductions also published. No direct messages were sent.
 - One synthetic post was scheduled for October 7 at 9:01:17 AM Chicago time.
   The private Discord channel received exactly one matching message, Postiz saved
   its release ID/URL, and Temporal completed at 9:01:18 AM. The server had only
@@ -86,13 +89,13 @@ results below remain October 7 evidence; they were not repeated in this refresh.
 | Check | Status / next action |
 | --- | --- |
 | Private scheduled delivery / duplicates | **Verified** for the dedicated owner-only Discord destination: one scheduled record, one matching provider message, Postiz release ID/URL and Temporal COMPLETED. Message count remained one after application/workflow restart. |
-| Public-channel publishing | **Unverified.** Bluesky, Mastodon, Threads, DEV, Facebook and Instagram passed read/draft checks; delivery to those public channels was not tested. |
+| Public-channel publishing | **Verified October 11** for one starter introduction each on Bluesky, Mastodon, Threads, DEV organization, Facebook Page and Instagram through Postiz. All six provider reads returned the expected content and media. LinkedIn Page, X, Reddit profile and Hashnode public introductions were verified through native browser routes. This proves these deliveries, not every future publishing operation. |
 | Actual public-IP change | **Unverified.** CNAME and current DDNS execution/readback pass. Observe the next real IP change, target update and alias recovery; do not force a disruptive change. |
 | Full shared-host reboot | **Unverified.** The pre-existing Caddy failure reported that its reserved LAN bind was unavailable at startup. Current routing was recovered without a reboot. Qualify LAN readiness and all services at an owner-planned reboot. |
 | DST Day view | **Known upstream defect.** Its future-date row label uses today's offset. Use List view and verify UTC before scheduling across DST; no custom upstream image was introduced. |
-| Facebook / Instagram | **Connected.** Owner-approved grants selected only current WLKR Labs Page, portfolio and Instagram assets. Live provider identity reads and media drafts passed. The existing Meta app was reused, its distinct main secret is stored in the vault and protected runtime, and the app stays unpublished. Developer testing does not establish reviewed production access or publishing delivery. |
+| Facebook / Instagram | **Connected; starter delivery verified.** Owner-approved grants selected only current WLKR Labs Page, portfolio and Instagram assets. The existing Meta app was reused, its distinct main secret is stored in the vault and protected runtime, and the developer app stays unpublished. Owner-asset publishing does not establish reviewed access for other users or assets. |
 | LinkedIn Page | Developer app created, Page association verified, callback and separate vault secret saved. Share on LinkedIn and OpenID Connect are provisioned; required organization permissions remain a provider gate. No inaccurate legal/business or advertising application was submitted. |
-| Other providers | YouTube verification is now Enabled on the controlling Google channel. The separate WLKR Labs Brand channel, avatar/banner, description, website and contact were saved and read back on October 11. Its starter video script is prepared; video production and API upload setup remain separate. Reddit API approval remains a provider gate; a native profile draft is saved. Exact locations are in the private receipt. |
+| Other providers | YouTube verification is now Enabled on the controlling Google channel. The separate WLKR Labs Brand channel, avatar/banner, description, website and contact were saved and read back on October 11. Its starter video script is prepared; video production and API upload setup remain separate. Reddit API approval remains a provider gate; native profile publication passed. Exact locations are in the private receipt. |
 | X / Hashnode | No paid API access enabled. Native account/publication routes remain. |
 | Excluded platforms | Pinterest, Tumblr and TikTok remain permanently excluded. |
 | Offsite / loss of both drives | **Deferred** under the existing host policy. Both verified backup copies are local. |
@@ -111,7 +114,7 @@ Local validation of the deployment tooling and handoff on a clean commit, compar
 `e1c78281987b329e20793e183c053847310600c5`: `./project postiz:check`,
 `./project docs:check`, and `git diff <base> --check` passed. Hosted CI was not used.
 
-The October 11 starter pack, native draft locations, image hashes and live check
-receipts are in ignored `private/social/drafts/starter-2026-10-11/`. Public-channel
-publishing, actual IP-change recovery and full host-reboot recovery remain
-unverified. No shared hosting configuration changed in this refresh.
+The October 11 starter pack, publication links, image hashes and live read receipts
+are in ignored `private/social/drafts/starter-2026-10-11/`; public links are in the
+[social handoff](social-setup-handoff.md). Actual IP-change recovery and full
+host-reboot recovery remain unverified. No shared hosting configuration changed.

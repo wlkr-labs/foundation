@@ -1,8 +1,23 @@
 # WLKR Labs social setup handoff
 
-Updated October 11, 2026. Email delivery and the dedicated owner-only vault are verified. Ten established public profiles are linked from the website, and the separate [WLKR Labs YouTube channel](https://www.youtube.com/@wlkrlabs) is now created and branded after provider verification and owner approval of terms. The two-week launch pack remains private. A new introduction is saved for each of the ten established accounts: six Postiz drafts and native LinkedIn Page, X, Reddit profile and Hashnode drafts. YouTube has a starter video script; no video was produced or uploaded. The new private review pack is `private/social/drafts/starter-2026-10-11/README.md`. Nothing in it is queued or publicly posted.
+Updated October 11, 2026. Email delivery and the dedicated owner-only vault are verified. Ten established public profiles are linked from the website, and the separate [WLKR Labs YouTube channel](https://www.youtube.com/@wlkrlabs) is created and branded. After explicit owner authorization, the ten starter introductions were published and read back: six through Postiz and four through native LinkedIn Page, X, Reddit profile and Hashnode editors. The two-week launch pack remains private. YouTube has a starter video script; no video was produced or uploaded. Exact publication receipts and screenshots are in `private/social/drafts/starter-2026-10-11/`. No Postiz posts remain queued; the six earlier setup drafts remain unpublished.
 
-Postiz HTTPS, owner access, six runtime services, registration restriction, six provider identity reads and both backup checksum copies passed on October 11; see the [Postiz execution status](postiz-deployment-status.md). Core recovery, secondary-drive isolated restore and one owner-only Discord scheduled delivery remain verified October 7 results. No public post or message to another person was sent. The existing Meta app is reused for Pages/Instagram, with connections restricted to current WLKR Labs assets. LinkedIn’s Overview, developer app/Page association and Mastodon’s reciprocal website verification are complete; LinkedIn organization API access remains pending. Remaining authenticator recovery, provider API access, public publishing, IP-change and host-reboot gates are documented privately. The current inventory, evidence and exact actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
+Postiz HTTPS, owner access, six runtime services, registration restriction, six provider identity reads and both backup checksum copies passed on October 11; see the [Postiz execution status](postiz-deployment-status.md). Core recovery, secondary-drive isolated restore and one owner-only Discord scheduled delivery remain verified October 7 results. The existing Meta app is reused for Pages/Instagram, with connections restricted to current WLKR Labs assets. LinkedIn organization API access remains pending despite verified native Page publication. No direct messages or invitations were sent. Remaining authenticator recovery, provider API access, IP-change and host-reboot gates are documented privately. The current inventory, evidence and exact actions are in ignored `private/social/`. Start with the [copyable prompt](../templates/social-setup-prompt.md) when continuing.
+
+## Published starter introductions
+
+| Account | Live introduction | Route |
+| --- | --- | --- |
+| Facebook — WLKR Labs Page | [Post](https://www.facebook.com/122110062417495762/posts/122110062411495762) | Postiz |
+| Instagram — @wlkrlabs | [Post](https://www.instagram.com/p/DeW-W_8iY4f/) | Postiz |
+| Threads — @wlkrlabs | [Post](https://www.threads.com/@wlkrlabs/post/DeW-XBjlaUA) | Postiz |
+| Bluesky — wlkrlabs.com | [Post](https://bsky.app/profile/did:plc:sx46xglap4sfcodbahktqiil/post/3mxmcs7tzcp22) | Postiz |
+| Mastodon — @wlkrlabs@mastodon.social | [Post](https://mastodon.social/@wlkrlabs/117422967080932101) | Postiz |
+| DEV — WLKR Labs organization | [Article](https://dev.to/wlkrlabs/meet-wlkr-labs-free-software-useful-technology-biblical-purpose-28p3) | Postiz |
+| LinkedIn — WLKR Labs company Page | [Post](https://www.linkedin.com/feed/update/urn:li:activity:7515069959270498304/) | Native |
+| X — @wlkr_labs | [Post](https://x.com/wlkr_labs/status/2109304345670062550) | Native |
+| Reddit — u/wlkrlabs profile | [Post](https://www.reddit.com/user/wlkrlabs/comments/1x3azec/meet_wlkr_labs/) | Native, profile only |
+| Hashnode — WLKR Labs publication | [Article](https://wlkrlabs.hashnode.dev/meet-wlkr-labs-free-software-useful-technology-biblical-purpose) | Native |
 
 ## Outcome
 
