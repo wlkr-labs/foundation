@@ -1,10 +1,20 @@
-# Postiz deployment status — October 7, 2026
+# Postiz deployment status — October 11, 2026
 
 **Core hosting verified:** https://social.wlkrlabs.com/auth/login, owner `social@wlkrlabs.com`.
 Credentials remain in the existing scwlkr 1Password account's owner-only
 **WLKR Labs Social** vault. Owner Login, application signing secret, both database
 passwords and organization API key have separate items. SMTP retains its original
 mailbox Login. No services, API subscriptions, AI or storage were purchased.
+
+October 11 refresh: owner access, trusted HTTPS, all six runtime services, public
+registration restriction, private port bindings and six public-provider identity
+reads passed. The daily backup succeeded, and SHA-256 verification passed for
+both local copies of bundle `20261011T063014Z`, which predates the new drafts.
+The unchanged daily timer will capture them on its next run. Six real starter introductions
+were added as Postiz drafts; four more were saved in native editors. YouTube's
+separate WLKR Labs Brand channel is now created and branded. Starter content is
+unscheduled and unpublished. The earlier private delivery and isolated restore
+results below remain October 7 evidence; they were not repeated in this refresh.
 
 ## Deployed and verified
 
@@ -18,11 +28,12 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
   dependency and service restart policies are retained.
 - Shared Caddy routing and trusted public TLS. Only one DNS-only CNAME was added:
   `social.wlkrlabs.com` → `search-origin.patribible.com`. The existing bounded
-  DDNS target/timer remains enabled and a fresh execution succeeded. No AAAA,
+  DDNS target/timer remains enabled; its October 7 execution succeeded. No AAAA,
   additional token scope, firewall changes or router forwards were added.
-- Independent US and Switzerland probes reached login, API, uploaded media and
+- October 7 independent US and Switzerland probes reached login, API, uploaded media and
   the callback page with HTTP 200; plain HTTP returned 308. A real Mastodon OAuth
-  callback completed. These checks establish current reachability.
+  callback completed. October 11 verified HTTPS from the owner's client;
+  independent external probes were not repeated.
 - Private first-owner registration, activation email, browser logout/login and API login,
   secure HttpOnly cookies, recovery email and successful password reset verified.
   Public registration is false and a second registration was rejected.
@@ -44,7 +55,8 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
   no administrator permission or privileged gateway intents.
 - Official Postiz CLI **2.0.16** targets this instance's `/api` base. Channel reads,
   media upload, draft creation and draft editing passed. Seven channels are
-  connected. Six brand records remain **DRAFT** with null release URLs; one
+  connected. Twelve brand records now remain **DRAFT** with null release URLs
+  (six setup checks and six starter introductions); one
   separately scoped Discord test is **PUBLISHED** in the private channel.
   No posts remain queued and no public post or message to another person was sent.
 - One synthetic post was scheduled for October 7 at 9:01:17 AM Chicago time.
@@ -80,7 +92,7 @@ mailbox Login. No services, API subscriptions, AI or storage were purchased.
 | DST Day view | **Known upstream defect.** Its future-date row label uses today's offset. Use List view and verify UTC before scheduling across DST; no custom upstream image was introduced. |
 | Facebook / Instagram | **Connected.** Owner-approved grants selected only current WLKR Labs Page, portfolio and Instagram assets. Live provider identity reads and media drafts passed. The existing Meta app was reused, its distinct main secret is stored in the vault and protected runtime, and the app stays unpublished. Developer testing does not establish reviewed production access or publishing delivery. |
 | LinkedIn Page | Developer app created, Page association verified, callback and separate vault secret saved. Share on LinkedIn and OpenID Connect are provisioned; required organization permissions remain a provider gate. No inaccurate legal/business or advertising application was submitted. |
-| Other providers | YouTube Advanced features still show Pending on October 7; brand channel/API setup and Reddit approval remain separate provider gates. Exact steps and eligibility limits are in the private receipt. |
+| Other providers | YouTube verification is now Enabled on the controlling Google channel. The separate WLKR Labs Brand channel, avatar/banner, description, website and contact were saved and read back on October 11. Its starter video script is prepared; video production and API upload setup remain separate. Reddit API approval remains a provider gate; a native profile draft is saved. Exact locations are in the private receipt. |
 | X / Hashnode | No paid API access enabled. Native account/publication routes remain. |
 | Excluded platforms | Pinterest, Tumblr and TikTok remain permanently excluded. |
 | Offsite / loss of both drives | **Deferred** under the existing host policy. Both verified backup copies are local. |
@@ -98,3 +110,8 @@ the existing social inventory is coordinated in ignored `private/social/`.
 Local validation of the deployment tooling and handoff on a clean commit, compared with
 `e1c78281987b329e20793e183c053847310600c5`: `./project postiz:check`,
 `./project docs:check`, and `git diff <base> --check` passed. Hosted CI was not used.
+
+The October 11 starter pack, native draft locations, image hashes and live check
+receipts are in ignored `private/social/drafts/starter-2026-10-11/`. Public-channel
+publishing, actual IP-change recovery and full host-reboot recovery remain
+unverified. No shared hosting configuration changed in this refresh.
