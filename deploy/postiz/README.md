@@ -4,7 +4,9 @@ This directory owns the free self-hosted deployment at https://social.wlkrlabs.c
 Follow the [setup checklist](../../docs/postiz-octal8-setup-checklist.md) and
 [social handoff](../../docs/social-setup-handoff.md). Execution evidence, actual
 operator paths, account/channel IDs and credential item IDs are in ignored
-`private/postiz/`. No public posting automation is enabled by this deployment.
+`private/postiz/`. The [deployment status](../../docs/postiz-deployment-status.md)
+and [October 22 maintenance record](../../docs/closeout-2026-10-22.md) contain dated
+check results and remaining actions. No public posting automation is enabled by this deployment.
 
 ## Release and architecture
 
@@ -134,5 +136,8 @@ contains exact staged paths, DNS record identity and the pre-change edge snapsho
 
 One live scheduled delivery was verified in a dedicated owner-only Discord
 server/private channel, including the provider message and Temporal completion.
-Public-channel publishing, actual host reboot and public-IP-change recovery remain
-separate checks. Do not reboot or force an IP change for initial qualification.
+Six public-provider starter introductions were separately verified October 11.
+October 22 checks restored the latest secondary-drive backup and observed recovery
+after a real October 16 host boot and a public-IP change. Recovery timing was not
+measured. See the status record for the evidence and its limits; do not force
+a reboot or IP change merely to repeat these checks.

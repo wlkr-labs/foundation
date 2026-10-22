@@ -1,6 +1,6 @@
 # Postiz on 0o10 / Octal8: setup checklist
 
-Executed October 6–7, 2026. Hosting target: **0o10 / Octal8**, operated by **octal8**. Application: **https://social.wlkrlabs.com**. Core deployment, owner access, independent HTTPS reachability, persistence, consistent secondary-drive backup and isolated restore are verified. See the [deployment runbook](../deploy/postiz/README.md) and [execution status](postiz-deployment-status.md). The [copyable prompt](../templates/postiz-octal8-setup-prompt.md) remains available for continuation.
+Initial setup executed October 6–7, 2026; maintenance checked October 22. Hosting target: **0o10 / Octal8**, operated by **octal8**. Application: **https://social.wlkrlabs.com**. Core deployment, owner access, independent HTTPS reachability, persistence, consistent secondary-drive backup and isolated restore are verified. See the [deployment runbook](../deploy/postiz/README.md) and [execution status](postiz-deployment-status.md). The [October 22 maintenance record](closeout-2026-10-22.md) tracks current checks and remaining owner actions. The [copyable prompt](../templates/postiz-octal8-setup-prompt.md) remains available for continuation.
 
 ## Outcome and operating contract
 
@@ -20,9 +20,12 @@ The required shape is **system Docker + a separate Postiz Compose project + the 
 
 Postiz keeps its required upstream Node runtime; the host's Rust-first policy applies to new first-party backend code, not a rewrite of this third-party application. Avoid building custom services unless a concrete deployment gap requires one.
 
-## Social setup coordination checkpoint — October 7, 2026
+## Social setup coordination checkpoint — October 7, 2026 (historical)
 
 The existing owner-only vault and social mailbox were reused. The shared Caddy container was present but had failed at host startup before this task. Its existing routes and ports were recovered, then the isolated Postiz route was added. Bluesky, Mastodon, Threads, DEV, Facebook and Instagram are connected; six synthetic brand drafts remain DRAFT. A seventh connection uses a dedicated owner-only Discord test server and locked channel: one explicitly authorized synthetic scheduled delivery passed, with one provider message, a Postiz release record and Temporal completion. No public post or message to another person was sent. DEV's account-wide author key was explicitly approved, and its draft targets the WLKR Labs organization. The existing Meta app is reused for Pages/Instagram; no duplicate was created. Owner-approved Meta grants are restricted to current WLKR Labs assets, and live identity reads plus media drafts passed. LinkedIn app creation and Page verification are complete, while organization permissions remain pending. Exact owner/provider gates have separate status in the execution record.
+
+October 11 update: six starter introductions were delivered through Postiz, and four through native editors; the [social handoff](social-setup-handoff.md) has the published links. The six synthetic setup drafts remain unpublished.
+
 ## 1. Inspect and prepare
 
 - [x] Confirm authorized Tailscale/SSH access to 0o10, actual host identity, deployment account and administrator capability. Keep IPs, credentials and private operator paths outside Git.
@@ -68,7 +71,7 @@ The existing owner-only vault and social mailbox were reused. The shared Caddy c
 - [x] Use exact current OAuth redirect URIs for this hostname. Store provider credentials in the vault and protected configuration. Confirm intended scopes and account identity before connecting.
 - [x] Keep X disconnected from paid API access. Keep Pinterest, Tumblr and TikTok permanently excluded. Record YouTube and Reddit approval restrictions accurately; native posting remains an available account-level route.
 - [x] Verify login, draft creation/editing, media upload, channel connection and worker/workflow readiness. A saved draft or healthy worker does not establish successful scheduled publication.
-- [x] If an owner-only test destination is available, explicitly scope a synthetic scheduled-delivery test to it, verify the result and check for duplicates. Do not send to other people or publish publicly without publishing instructions. Otherwise record scheduled delivery as unverified with its exact next test. **Verified October 7: one synthetic scheduled Discord message in an owner-only server/private channel, matching provider and Postiz release IDs, Temporal COMPLETED, and anonymous access denied. Public-channel delivery remains unverified.**
+- [x] If an owner-only test destination is available, explicitly scope a synthetic scheduled-delivery test to it, verify the result and check for duplicates. Do not send to other people or publish publicly without publishing instructions. Otherwise record scheduled delivery as unverified with its exact next test. **Verified October 7: one synthetic scheduled Discord message in an owner-only server/private channel, matching provider and Postiz release IDs, Temporal COMPLETED, and anonymous access denied. Public-channel starter delivery was separately verified October 11 for six Postiz providers; see the social handoff.**
 - [x] Restart only the Postiz project and verify persistence and recovery. Recheck the existing services against the baseline; report pre-existing failures separately.
 
 ## 6. Backup, rollback and finish
@@ -76,7 +79,7 @@ The existing owner-only vault and social mailbox were reused. The shared Caddy c
 - [x] Verify consistent PostgreSQL backups plus uploaded media, required Temporal state, release/configuration records and securely stored recovery secrets. Confirm retention, restore procedure and actual coverage on the existing backed-up drive.
 - [x] Restore a backup into an isolated test project with outbound publishing disabled and no usable live channel credentials. Verify restored records/media without triggering duplicate posts or changing production.
 - [x] Write exact rollback steps for the chosen release, database migrations, Caddy route and scoped DNS change. Retain compatible database backups and old images; an image downgrade alone may not reverse a migration.
-- [x] Verify restart policy and storage dependencies. Do not reboot the whole shared host solely for this setup. Mark actual host-reboot recovery as pending unless independently tested.
+- [x] Verify restart policy and storage dependencies. October 22 observations show Caddy running since the real October 16 host boot and all six Postiz services healthy; no bind-address errors appear in Caddy logs since that boot. No controlled reboot was performed or recovery time measured. See the execution status.
 - [x] Keep offsite backup explicitly deferred under the host's existing policy; do not claim local backups cover loss of the host/data drive.
 - [x] Finish with the application URL, deployed image digests, verified checks, credential item references, connected/pending channels, backup/restore result and exact owner actions. Store sensitive evidence privately.
 

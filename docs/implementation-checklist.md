@@ -1,6 +1,6 @@
 # Foundation implementation checklist
 
-Updated October 6, 2026. The agreed mission is established. The approved foundation, website/GitHub setup, revised identity and voluntary-support launch are implemented. Legal formation is later; setup spending is **$0**. Shane confirmed the payout destination and support mailbox and adopted the terms/privacy notice. Mailing-address privacy is deferred because Shane has no alternative address; Stripe's required support address remains.
+Updated October 22, 2026. The agreed mission is established. The [October 22 maintenance record](closeout-2026-10-22.md) contains the current recovery checks, file cleanup and remaining actions. The foundation launch checks below are dated October 6 unless stated otherwise. The approved foundation, website/GitHub setup, revised identity and voluntary-support launch are implemented. Legal formation is later; setup spending is **$0**. Shane confirmed the payout destination and support mailbox and adopted the terms/privacy notice. Mailing-address privacy is deferred because Shane has no alternative address; Stripe's required support address remains.
 
 ## Completed
 
@@ -21,19 +21,30 @@ Updated October 6, 2026. The agreed mission is established. The approved foundat
 - [x] Merge private website PR #1 and publish the approved Support/Privacy/identity release. Fresh local checks pass on the merge commit; both hostnames match the full build record and all assets; 64 served checks pass; intended Worker version is at 100%.
 - [x] Publish and read back the adopted Buy Me a Coffee headline/About. Save/read back Stripe's live Privacy and Support policy URLs and disable phone display on receipts/invoices. Preserve required identity/contact records and both unrelated Stripe accounts.
 
+## October maintenance
+
+- [x] Verify both repository remotes can be fetched; retain the separate website history and checkout.
+- [x] Move 129 duplicate, older or invalid local items into an ignored recovery archive and verify their hashes. No unique content was discarded.
+- [x] Read back current Postiz service health and the successful daily backup and DNS-updater timers.
+- [x] Restore the October 22 backup from the secondary drive in isolation; match production records and all 11 uploaded files, clear restored credentials, and remove temporary restore resources.
+- [x] Record observed recovery after the real October 16 host boot and a public-IP change. Recovery duration and any interruptions were not measured.
+- [x] Complete the owner account-recovery check on October 22; secure storage and the owner test passed. Exact account evidence and limits stay in ignored `private/social/`.
+- [x] Prepare the updated public documentation and maintenance changes for GitHub; keep private evidence excluded. Record the exact pushed commit in the tracker and local receipt after delivery.
+
 ## Next practical actions
 
 | Action | Responsible / done when | Dependency |
 | --- | --- | --- |
+| Later shared-host maintenance | Operator improves safe DNS-updater error logging under the existing host maintenance record | Historical request failures recovered; current checks pass, and available logs do not pinpoint their earlier cause |
 | Revisit mailing-address privacy later | Deferred: Shane has no alternative address. Revisit if an authorized non-home mailing address becomes available | Stripe requires an address; no hiding control or invented replacement; [launch record](support-launch-proposal.md) |
 | First maintained capability and teaching output | Use PatriBible's own workflow for a reading/search guide, or WalkLang's own CLI for one runnable beginner lesson | Coordinate existing product work; no formation dependency |
 | First monthly review | Use the existing template; reconcile actual receipts/fees/refunds and choose one useful next task | Actual records; no invented totals or newly scheduled automation |
 | Later product migrations | Follow the dependency map and build a repository-specific packet before each transfer | Separate approval; existing product ownership stays in place |
 | Later legal formation | Use the roadmap when affordable and actual directors/formation facts are settled | Separate consequential decisions and spending approval |
 
-## Decisions genuinely requiring Shane now
+## Foundation launch approvals
 
-None for the completed $0 foundation setup. Shane confirmed no alternative mailing address is available. The home address remains in Stripe's required customer-facing support-address field; phone display on receipts/invoices is off. This privacy limitation is deferred, not resolved. Revisit if an authorized non-home address becomes available; do not change the separate legal/identity address or publish address values in these records.
+No further approval is needed for the completed $0 foundation setup. The owner recovery check passed October 22; exact evidence and limits stay in the private account handoff. Shane confirmed no alternative mailing address is available. The home address remains in Stripe's required customer-facing support-address field; phone display on receipts/invoices is off. This privacy limitation is deferred, not resolved. Revisit if an authorized non-home address becomes available; do not change the separate legal/identity address or publish address values in these records.
 
 Website publication, payout destination, support mailbox, funding/refund/privacy terms, profile copy, organization name/owner/contact/terms, public profile, private website import, planning transfer and local/Drive backup were approved in this chat and completed. No repeated approval is needed for them. The mission is not an open decision. No test charge is authorized.
 

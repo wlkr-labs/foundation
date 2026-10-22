@@ -1,10 +1,22 @@
-# Postiz deployment status — October 11, 2026
+# Postiz deployment status — October 22, 2026
 
 **Core hosting verified:** https://social.wlkrlabs.com/auth/login, owner `social@wlkrlabs.com`.
 Credentials remain in the existing scwlkr 1Password account's owner-only
 **WLKR Labs Social** vault. Owner Login, application signing secret, both database
 passwords and organization API key have separate items. SMTP retains its original
 mailbox Login. No services, API subscriptions, AI or storage were purchased.
+
+## October 22 recovery check
+
+All six runtime services are healthy. The daily backup and existing DNS-updater timers are enabled and their latest runs succeeded. Checksums and manifests match for both copies of the October 22 backup `20261022T063008Z`. Historical DNS-updater request failures from October 10–19 later recovered. The current run succeeds; available logs do not pinpoint the earlier cause. Better error logging is later shared-host maintenance.
+
+An isolated restore read the secondary-drive copy and matched production: one user, six drafts, seven published records, zero queued posts, seven integrations and two Media rows. Identity hashes and SHA-256 hashes of all 11 uploaded files matched. Restored channel tokens, passwords, API keys, OAuth and webhook credentials were cleared. Redis had zero keys and Elasticsearch had 34 documents, matching production. The restore ran no application or worker, exposed no host ports, and had no outbound route. All temporary containers, the test network and restored test state were removed; real backup bundles were retained.
+
+The host has booted since the original setup: Caddy has run since the observed October 16 boot, and no bind-address error appears in its logs since that boot. The current public IP differs from the October 7 receipt; the existing DNS target/alias and trusted HTTPS work today. These are observations after real events, not a timed reboot or IP-change experiment. They do not establish uninterrupted service or measure recovery time. No reboot or forced IP change was performed for this maintenance pass.
+
+The owner account-recovery check passed October 22; exact account evidence and limits stay in ignored `private/social/`. See the [maintenance record](closeout-2026-10-22.md) and [social handoff](social-setup-handoff.md).
+
+## October 11 launch evidence
 
 October 11 refresh: owner access, trusted HTTPS, all six runtime services, public
 registration restriction, private port bindings and six public-provider identity
@@ -90,8 +102,8 @@ results below remain October 7 evidence; they were not repeated in this refresh.
 | --- | --- |
 | Private scheduled delivery / duplicates | **Verified** for the dedicated owner-only Discord destination: one scheduled record, one matching provider message, Postiz release ID/URL and Temporal COMPLETED. Message count remained one after application/workflow restart. |
 | Public-channel publishing | **Verified October 11** for one starter introduction each on Bluesky, Mastodon, Threads, DEV organization, Facebook Page and Instagram through Postiz. All six provider reads returned the expected content and media. LinkedIn Page, X, Reddit profile and Hashnode public introductions were verified through native browser routes. This proves these deliveries, not every future publishing operation. |
-| Actual public-IP change | **Unverified.** CNAME and current DDNS execution/readback pass. Observe the next real IP change, target update and alias recovery; do not force a disruptive change. |
-| Full shared-host reboot | **Unverified.** The pre-existing Caddy failure reported that its reserved LAN bind was unavailable at startup. Current routing was recovered without a reboot. Qualify LAN readiness and all services at an owner-planned reboot. |
+| Actual public-IP change | **Observed retrospectively October 22.** Current public IP differs from the October 7 receipt; the existing target/alias and trusted HTTPS work today. Transition timing and recovery duration were not captured. Continue observing real changes; do not force an outage. |
+| Shared-host reboot | **Observed retrospectively October 22.** Caddy has run since the October 16 host boot, with no bind-address error in its logs since that boot; all six Postiz services are healthy today. This provides post-boot recovery evidence. No controlled reboot, complete boot timeline or uninterrupted-service claim is made. |
 | DST Day view | **Known upstream defect.** Its future-date row label uses today's offset. Use List view and verify UTC before scheduling across DST; no custom upstream image was introduced. |
 | Facebook / Instagram | **Connected; starter delivery verified.** Owner-approved grants selected only current WLKR Labs Page, portfolio and Instagram assets. The existing Meta app was reused, its distinct main secret is stored in the vault and protected runtime, and the developer app stays unpublished. Owner-asset publishing does not establish reviewed access for other users or assets. |
 | LinkedIn Page | Developer app created, Page association verified, callback and separate vault secret saved. Share on LinkedIn and OpenID Connect are provisioned; required organization permissions remain a provider gate. No inaccurate legal/business or advertising application was submitted. |
@@ -116,5 +128,6 @@ Local validation of the deployment tooling and handoff on a clean commit, compar
 
 The October 11 starter pack, publication links, image hashes and live read receipts
 are in ignored `private/social/drafts/starter-2026-10-11/`; public links are in the
-[social handoff](social-setup-handoff.md). Actual IP-change recovery and full
-host-reboot recovery remain unverified. No shared hosting configuration changed.
+[social handoff](social-setup-handoff.md). The October 22 maintenance pass refreshed
+backup/restore evidence and observed recovery after a real host boot and public-IP
+change, with the timing limits stated above. No shared hosting configuration changed.

@@ -1,10 +1,14 @@
 #!/bin/sh
 set -eu
 cd "$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)"
+usage() {
+  printf '%s\n' 'Usage: ./project docs:check | postiz:check | brand:build | brand:check'
+}
 case "${1:-}" in
+  --help|-h) usage; exit 0 ;;
   docs:check) exec python3 scripts/check_docs.py ;;
   postiz:check) exec python3 scripts/check_postiz.py ;;
   brand:build) exec "${BRAND_PYTHON:-.local/brand-tools/bin/python}" scripts/build_brand.py ;;
   brand:check) exec python3 scripts/check_brand.py ;;
-  *) printf '%s\n' 'Usage: ./project docs:check | postiz:check | brand:build | brand:check' >&2; exit 2 ;;
+  *) usage >&2; exit 2 ;;
 esac
